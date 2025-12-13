@@ -19,11 +19,27 @@
       "title": "Screening & Profiling Assays",
       "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
       "icon": "📄"
-    },
-    {
-      "title": "Screening & Profiling Assays",
-      "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
-      "icon": "📄"
     }
-  ]
+  ],
+  "aboutSection": {
+    "tag": "WHO ARE WE",
+    "title": "Best Medical Test Lab Solution.",
+    "description": "We provide reliable and innovative laboratory testing solutions with modern equipment and expert professionals delivering accurate results.",
+    "features": [
+      {
+        "icon": "🧪",
+        "title": "Environmental Testing",
+        "text": "Accurate chemical and environmental analysis using advanced technologies."
+      },
+      {
+        "icon": "🔬",
+        "title": "Biological Evaluation",
+        "text": "Precision biological testing for reliable healthcare insights."
+      }
+    ],
+    "images": {
+      "main": "./assets/images/lab-main.jpg",
+      "overlay": "./assets/images/lab-overlay.jpg"
+    }
+  }
 }
