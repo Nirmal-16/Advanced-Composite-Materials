@@ -9,6 +9,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
+  background: linear-gradient(to bottom, #020f1f, #002132);
+  /* border:2px solid red; */
 }
 .logo {
   display: flex;
@@ -36,22 +38,47 @@ nav.desktop-nav ul {
 nav.desktop-nav li {
   position: relative;
 }
-nav.desktop-nav a {
+ nav.desktop-nav a {
   color: var(--text-light);
   text-decoration: none;
   padding: 0.5rem;
   display: block;
   font-size: 1.25rem;
   font-variant: small-caps;
-  /* border:2px solid red; */
   font-weight: 450;
+  position: relative;
 }
+  /*
 nav.desktop-nav a:hover {
   border-bottom: 2px solid var(--highlight);
+} */
+nav.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;          /* Start from the center */
+  bottom: 0;          /* At the bottom of the link */
+  width: 0;           /* Initial width 0 */
+  height: 2px;        /* Thickness of the underline */
+  background-color: var(--highlight);
+  transition: all 0.3s ease;
+  transform: translateX(-50%); /* Center it horizontally */
 }
-nav.desktop-nav .active {
-  border-bottom: 2px solid var(--highlight);
+
+nav.desktop-nav a:hover::after,
+nav.desktop-nav a.active::after {
+  width: 100%;
 }
+
+nav.desktop-nav a.active {
+  color: var(--highlight);
+}
+
+.sidebar a.active {
+  background: rgba(255,255,255,0.18);
+  color: var(--highlight);
+  font-weight: bold;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;

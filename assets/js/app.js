@@ -27,8 +27,27 @@ async function loadCarousel({ mountId, images }) {
   `;
 }
 
+function setActiveNav() {
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll("nav.desktop-nav a").forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+  document.querySelectorAll(".sidebar a").forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+      const parentDropdown = link.closest(".dropdown");
+      if (parentDropdown) parentDropdown.classList.add("open");
+    }
+  });
+}
+
+
 // Load Navbar
-loadHTML("navbar-placeholder", `${BASE_PATH}/components/navbar.html`);
+loadHTML("navbar-placeholder", `${BASE_PATH}/components/navbar.html`).then(() => setActiveNav());;
 
 // Load Footer
 loadHTML("footer-placeholder", `${BASE_PATH}/components/footer.html`);

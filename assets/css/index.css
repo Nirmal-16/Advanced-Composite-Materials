@@ -1,4 +1,7 @@
 /* Landing section starts */
+header {
+  background: transparent;
+}
 #landing {
   background: linear-gradient(to bottom, #020f1f, #002132, #00394a);
   width: 100%;
