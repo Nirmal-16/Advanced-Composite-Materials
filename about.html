@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About | CMRG</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/about.css">
+<link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/navbar.css"/>
+    <link rel="stylesheet" href="./assets/css/card.css"/>
+    <link rel="stylesheet" href="./assets/css/footer.css"/>
+    <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/stats.css"> -->
+</head>
+
+<body>
+<div id="navbar-placeholder"></div>
+<!-- loading header starts  -->
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
+    </script>
+    <!-- loading header ends  -->
+<div class="about-hero text-center">
+  <h1 id="aboutTitle"></h1>
+  <p id="aboutSubtitle"></p>
+</div>
+
+<section class="container py-5">
+  <div class="text-card-div row">
+    <div class="text-card col-md-5">
+      <h3>Mission</h3>
+      <p id="missionText"></p>
+    </div>
+    <div class="text-card col-md-5">
+      <h3>Vision</h3>
+      <p id="visionText"></p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light py-5">
+<div class="text-center">
+  <h2>What Sets Us Apart</h2>
+  <p class="text-muted">Our commitment to excellence and innovation guides everything we do</p>
+  <section class="services-section">
+      <div class="container services-container text-start" id="servicesContainer"></div>
+    </section>
+</div>
+</section>
+<!-- 
+<section class="services-section">
+      <div class="container services-container" id="servicesContainer"></div>
+    </section> -->
+
+<section class="container py-5 text-center">
+  <h2>Founder</h2>
+  <p class="text-muted">Talented researchers dedicated to pushing boundaries</p>
+  <div id="founderGrid"></div>
+</section>
+
+<section class="stats-bar">
+  <div id="statsGrid" class="container"></div>
+</section>
+
+<section class="container py-5">
+  <h2 class="mb-4">Education</h2>
+  <div id="educationList" class="row g-4"></div>
+</section>
+
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="mb-4">Experience</h2>
+    <div id="experienceTimeline"></div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="mb-4">Journal Publications</h2>
+  <table class="table table-striped">
+    <thead class="table-light">
+      <tr><th>Journal</th><th>Publications</th></tr>
+    </thead>
+    <tbody id="journalsTable"></tbody>
+  </table>
+</section>
+
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="mb-4">Professional Memberships</h2>
+    <ul id="membershipList" class="list-group list-group-flush"></ul>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="mb-4">Awards & Achievements</h2>
+  <div id="awardsGrid" class="row g-4"></div>
+</section>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="./assets/js/app.js"></script>
+<script type="module">
+  import { createCard } from "./components/card.js";
+
+  fetch("./data/about.json")
+.then(res => res.json())
+.then(data => {
+
+  aboutTitle.textContent = data.title;
+  aboutSubtitle.textContent = data.subtitle;
+  missionText.textContent = data.mission;
+  visionText.textContent = data.vision;
+
+   
+          const container = document.getElementById("servicesContainer");
+          if (!container) return;
+          data.features.forEach((service) => {
+            container.innerHTML += createCard(service);
+          });
+  // featuresGrid.innerHTML = data.features.map(f => `
+  //   <div class="col-md-3">
+  //     <div class="feature-card text-start">
+  //       <div class="icon-box">${f.icon}</div>
+  //       <h5>${f.title}</h5>
+  //       <p class="text-muted">${f.text}</p>
+  //     </div>
+  //   </div>
+  // `).join("");
+
+  founderGrid.innerHTML = data.founder.map(t => `
+    <div class="col-md-4 founderinnerGrid">
+      <div class="founder-card text-center">
+        <div class="founder-avatar">${t.initial}</div>
+        <h5 class="mt-3">${t.name}</h5>
+        <p class="text-dark">${t.role}</p>
+        <p class="text-muted">${t.bio}</p>
+        <button class="d-block founder-btn">View CV</button>
+        <button class="d-block founder-btn founder-btn1 highlight">Get Connect</button>
+      </div>
+    </div>
+  `).join("");
+
+  statsGrid.innerHTML = `
+    <div class="row">
+      ${data.stats.map(s => `
+        <div class="col-md-3">
+          <div class="stats-item">${s.value}<span>${s.label}</span></div>
+        </div>
+      `).join("")}
+    </div>
+  `;
+
+  educationList.innerHTML = data.education.map(e => `
+  <div class="col-md-6">
+    <div class="feature-card">
+      <h5>${e.degree}</h5>
+      <p class="text-muted">${e.institution} • ${e.year}</p>
+      <small>${e.details}</small>
+    </div>
+  </div>
+`).join("");
+
+experienceTimeline.innerHTML = data.experience.map(x => `
+  <div class="mb-4 ps-4 border-3 border-start border-info">
+    <h5>${x.role} – ${x.org}</h5>
+    <small class="text-muted">${x.period}</small>
+    <p>${x.desc}</p>
+  </div>
+`).join("");
+
+journalsTable.innerHTML = data.journals.map(j => `
+  <tr><td>${j.title}</td><td>${j.count}</td></tr>
+`).join("");
+
+membershipList.innerHTML = data.memberships.map(m => `
+  <li class="list-group-item">${m}</li>
+`).join("");
+
+awardsGrid.innerHTML = data.awards.map(a => `
+  <div class="col-md-4">
+    <div class="feature-card text-center">
+      <h5>${a.title}</h5>
+      <p class="text-muted">${a.year}</p>
+    </div>
+  </div>
+`).join("");
+
+});
+
+</script>
+</body>
+</html>

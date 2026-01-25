@@ -1,0 +1,80 @@
+{
+  "title": "About Our Group",
+  "subtitle": "Leading research in computational multiphysics with a commitment to innovation, collaboration, and open science.",
+
+  "mission": "To advance the frontiers of computational science through groundbreaking research in multiphysics modeling, simulation, and computing.",
+  "vision": "To become a globally recognized research group combining cutting-edge computational techniques with practical applications.",
+
+  "features": [
+    { "icon": "🎯", "title": "Research-Driven", "description": "Pushing the boundaries of computational science." },
+    { "icon": "🤝", "title": "Collaborative Culture", "description": "Working closely with international academic partners." },
+    { "icon": "🏆", "title": "Award-Winning Research", "description": "Recognized with multiple prestigious awards." },
+    { "icon": "🌍", "title": "Open Science", "description": "Committed to open-source and community knowledge." }
+  ],
+
+  "founder": [
+    { "initial": "D", "name": "Dr. Nagappa", "role": "Director & PI", "bio": "Ph.D in Advanced Composite, 15+ years research." }
+  ],
+
+  "stats": [
+    { "value": "15+", "label": "Team Members" },
+    { "value": "50+", "label": "Publications" },
+    { "value": "25+", "label": "Research Projects" },
+    { "value": "10+", "label": "Years of Excellence" }
+  ],
+"education": [
+  {
+    "degree": "Ph.D. in Computational Mechanics",
+    "institution": "Indian Institute of Technology Madras",
+    "year": "2012",
+    "details": "Multiphysics modeling and numerical simulation"
+  },
+  {
+    "degree": "M.Tech in Mechanical Engineering",
+    "institution": "NIT Trichy",
+    "year": "2008",
+    "details": "Thermal & Fluid Systems"
+  },
+  {
+    "degree": "M.Tech in Mechanical Engineering",
+    "institution": "NIT Trichy",
+    "year": "2008",
+    "details": "Thermal & Fluid Systems"
+  }
+],
+
+"experience": [
+  {
+    "role": "Professor",
+    "org": "IIT Madras",
+    "period": "2018 – Present",
+    "desc": "Leading multiphysics research and PhD supervision"
+  },
+  {
+    "role": "Associate Professor",
+    "org": "NIT Trichy",
+    "period": "2013 – 2018",
+    "desc": "Developed computational fluid labs"
+  }
+],
+
+"journals": [
+  { "title": "Journal of Computational Physics", "count": 18 },
+  { "title": "Computer Methods in Applied Mechanics", "count": 12 },
+  { "title": "International Journal of Heat & Mass Transfer", "count": 9 }
+],
+
+"memberships": [
+  "Indian National Academy of Engineering (INAE)",
+  "ASME",
+  "ACM",
+  "IEEE"
+],
+
+"awards": [
+  { "title": "Young Scientist Award", "year": "2015" },
+  { "title": "Best Research Paper Award", "year": "2019" },
+  { "title": "INAE Outstanding Faculty Award", "year": "2022" }
+]
+
+}
