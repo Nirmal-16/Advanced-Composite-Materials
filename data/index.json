@@ -38,9 +38,9 @@
       }
     ],
     "images": [
-    "${BASE_PATH}/assets/images/lab1.jpeg",
-    "${BASE_PATH}assets/images/lab2.jpeg",
-    "${BASE_PATH}assets/images/IIT_Madras_Logo.svg.png"
+    "http://127.0.0.1:5500/project-root/assets/images/lab1.jpeg",
+    "http://127.0.0.1:5500/project-root/assets/images/lab2.jpeg",
+    "http://127.0.0.1:5500/project-root/assets/images/IIT_Madras_Logo.svg.png"
   ]
   }
 }
