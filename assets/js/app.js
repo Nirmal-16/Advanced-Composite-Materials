@@ -45,9 +45,20 @@ function setActiveNav() {
   });
 }
 
-
+function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+      function toggleDropdown(element) {
+        const parentLi = element.parentElement;
+        parentLi.classList.toggle("open");
+      }
 // Load Navbar
 loadHTML("navbar-placeholder", `${BASE_PATH}/components/navbar.html`).then(() => setActiveNav());;
 
 // Load Footer
-loadHTML("footer-placeholder", `${BASE_PATH}/components/footer.html`);
+loadHTML("footer-placeholder", `${BASE_PATH}/components/footer.html`).then(() => {
+  const script = document.createElement("script");
+  script.src = `${BASE_PATH}/assets/js/footer.js`;
+  document.body.appendChild(script);
+});

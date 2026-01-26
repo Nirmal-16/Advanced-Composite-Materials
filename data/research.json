@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "type": "journal",
+    "image": "https://images.unsplash.com/photo-1558444479-c8a51bc73a51?auto=format&fit=crop&w=500&q=80",
+    "title": "Molecular Dynamics of Nano-Lattices",
+    "year": "2026",
+    "desc": "Investigating the thermal stability of carbon-nanotube reinforced polymers under extreme pressure.",
+    "citation": "Nature Materials, Vol 45, Issue 2",
+    "doi": "10.1038/s41563-025-0123"
+  },
+  {
+    "id": 2,
+    "type": "conferences",
+    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=500&q=80",
+    "title": "AI in Composite Manufacturing",
+    "year": "2025",
+    "desc": "Utilizing neural networks to predict delamination in aerospace-grade CFRP laminates.",
+    "citation": "IEEE Advanced Robotics & Materials",
+    "doi": "10.1109/ARM.2025.12"
+  }
+]

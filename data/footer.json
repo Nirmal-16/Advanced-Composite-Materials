@@ -1,0 +1,25 @@
+{
+  "logoTitle": "Advanced Composite Materials Lab",
+  "description": "Innovating next-generation material science through research and development.",
+  "quickLinks": [
+    { "label": "Home", "url": "./index.html" },
+    { "label": "About", "url": "./about.html" },
+    { "label": "Research", "url": "./pages/research.html" },
+    { "label": "Publications", "url": "./pages/publications.html" },
+    { "label": "Contact", "url": "./pages/contact.html" }
+  ],
+  "contact": {
+    "location": "Chennai, Tamil Nadu, India",
+    "email": "nagappa@smail.iitm.ac.in",
+    "phone": "+91 9663927539",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/nagappa-siddgonde-phd-442442a2/",
+      "github": "https://github.com"
+    }
+  },
+  "map": {
+    "link": "https://www.google.com/maps?q=Chennai,+Tamil+Nadu",
+    "image": "./assets/images/map-preview.png"
+  },
+  "copyright": "© 2025 Advanced Composite Materials Lab. All rights reserved."
+}

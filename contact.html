@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ACM | Contact Us</title>
   <!-- Bootstrap integration -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="./assets/css/contact.css"/>
   <link rel="stylesheet" href="./assets/css/style.css"/>
   <link rel="stylesheet" href="./assets/css/navbar.css"/>
@@ -28,7 +25,7 @@
         parentLi.classList.toggle("open");
       }
     </script>
-    <!-- loading header ends  -->
+  <!-- loading header ends  -->
   <section class="contact-section">
     <div class="contact-container">
       <!-- LEFT: GIF / Illustration -->
@@ -37,8 +34,8 @@
       </div>
       <!-- RIGHT: FORM -->
       <div class="contact-form-wrapper">
-        <h2>Get in touch</h2>
-        <p class="subtitle">Have any questions or feedback? We'd love to hear from you.</p>
+        <h2></h2>
+        <p class="subtitle"></p>
         <div class="info-box">
             <p>Email : <strong id="emailid"></strong></p>
         </div>
@@ -47,43 +44,46 @@
             <a id="github-link"><img src="./assets/images/github.svg" alt="GitHub" /></a>
             <a id="linkedin-link"><img src="./assets/images/linkedin.svg" alt="LinkedIn"/></a>
         </div>
-        <!-- <form id="contactForm" action="https://formspree.io/f/xbdlpeyw" method="POST">
-          <input type="text" placeholder="Name" name="Name" required />
-          <input type="email" placeholder="Email address" name="email" required />
-          <input type="text" placeholder="Subject" name="subject"required />
-          <textarea rows="4" placeholder="Message" required></textarea>
+        <form id="contactForm" action="https://formspree.io/f/xbdlpeyw" method="POST">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email address" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea rows="4" name="message" placeholder="Message" required></textarea>
           <button type="submit" class="submit-btn">Send message</button>
-        </form> -->
-<form
-  action="https://formspree.io/f/xbdlpeyw"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+        </form>
       </div>
     </div>
   </section>
   <footer id="footer-placeholder"></footer>
   <script>
       document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+        e.preventDefault();
+        const name = this.querySelector('input[name="name"]').value;
+        const email = this.querySelector('input[name="email"]').value;
+        const subject = this.querySelector('input[name="subject"]').value;
+        const message = this.querySelector('textarea[name="message"]').value;
 
-    // Simple frontend feedback
-    alert("Message sent successfully!");
-    
-    this.reset();
-  });
+        const finalMessage = 
+          "Subject: " + subject + "\n\n" +
+          "\n" + message;
+        this.querySelector('textarea[name="message"]').value = finalMessage;
+        this.submit();
+        // alert("Message sent successfully!");
+        this.reset();
+      });
+
+      fetch("./data/contact.json")
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector(".contact-form-wrapper h2").textContent = data.title;
+    document.querySelector(".subtitle").textContent = data.subtitle;
+    document.getElementById("emailid").textContent = data.email;
+
+    document.getElementById("github-link").href = data.socials.github;
+    document.getElementById("linkedin-link").href = data.socials.linkedin;
+  })
+  .catch(err => console.error("Failed to load contact.json", err));
 
   </script>
-  <script src="contact.js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "type": "journal",
+    "image": "https://images.unsplash.com/photo-1532187875605-2fe358511423?auto=format&fit=crop&w=300&q=80",
+    "title": "Graphene-Reinforced Polymer Composites",
+    "description": "An in-depth study on the mechanical properties of graphene-nanoplatelet-reinforced epoxy resin.",
+    "authors": "Dr. A. Smith, R. Taylor",
+    "citation": "Journal of Nano-Tech (2025), 12(4), pp. 450-462",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "type": "conferences",
+    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=300&q=80",
+    "title": "International Conference on Advanced Materials",
+    "description": "Keynote presentation on the automated layup of aerospace-grade carbon fiber.",
+    "authors": "M. Johnson, S. Lee",
+    "citation": "ICAM Tokyo 2024, Proceedings Vol. 2",
+    "link": "#"
+  }
+]

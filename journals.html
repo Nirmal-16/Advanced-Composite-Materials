@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | ACML Lab</title>
+    <style>
+:root {
+    --bg: #0b0e14;
+    --card-bg: #161b22;
+    --accent: #00d4ff; /* Electric Blue */
+    --text-white: #f0f6fc;
+    --text-gray: #8b949e;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+/* Ribbon Header */
+.ribbon {
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.ribbon h1 { font-size: 2.8rem; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+.divider { width: 60px; height: 4px; background: var(--accent); margin: 15px auto; }
+
+/* Dashboard Style Tabs */
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 14, 20, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.nav-tabs {
+    background: var(--card-bg);
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid var(--glass);
+    display: flex;
+}
+
+.tab-item {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tab-item.active {
+    background: var(--accent);
+    color: #000;
+}
+
+/* Publication Cards */
+.container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+
+.pub-card {
+    display: flex;
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.pub-card:hover { transform: translateY(-5px); }
+
+.pub-image {
+    width: 30%;
+    min-width: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.pub-details {
+    padding: 30px;
+    width: 70%;
+}
+
+.pub-tag {
+    background: #e1f5fe;
+    color: #01579b;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pub-details h3 { margin: 15px 0 10px 0; font-size: 1.4rem; color: var(--primary); }
+.pub-desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; }
+.pub-citation { font-size: 0.85rem; font-family: monospace; color: #d63031; background: #fff5f5; padding: 8px; border-radius: 4px; }
+
+.view-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pub-card { flex-direction: column; }
+    .pub-image { width: 100%; height: 200px; }
+    .pub-details { width: 100%; }
+}
+    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+   <div class="publications-hero text-center">
+  <h1 id="publicationsTitle"></h1>
+  <p id="publicationsSubtitle"></p>
+</div>
+
+   
+   <nav class="nav-wrapper">
+        <div class="nav-tabs">
+            <button class="tab-item active" data-filter="all">All</button>
+            <button class="tab-item" data-filter="journal">Journals</button>
+            <button class="tab-item" data-filter="conferences">Conferences</button>
+            <button class="tab-item" data-filter="books">Books</button>
+            <button class="tab-item" data-filter="blogs">Blogs</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="publication-list" class="pub-list">
+            </div>
+    </div>
+<script>
+    let allPublications = [];
+function renderCards(data) {
+    const container = document.getElementById('publication-list');
+    container.innerHTML = '';
+
+    data.forEach(item => {
+        const card = `
+            <div class="pub-card">
+                <div class="pub-image" style="background-image: url('${item.image}')"></div>
+                <div class="pub-details">
+                    <span class="pub-tag">${item.type}</span>
+                    <h3>${item.title}</h3>
+                    <p class="pub-desc">${item.description}</p>
+                    <p><strong>Authors:</strong> ${item.authors}</p>
+                    <div class="pub-citation">Citation: ${item.citation}</div>
+                    <a href="${item.link}" class="view-btn">VIEW DETAILS →</a>
+                </div>
+            </div>
+        `;
+        container.innerHTML += card;
+    });
+}
+
+async function loadPublications() {
+    try {
+        const response = await fetch('./data/publications.json');
+        allPublications = await response.json();
+        renderCards(allPublications);
+    } catch (error) {
+        console.error("Error fetching publications:", error);
+    }
+}
+
+// Tab Filtering
+document.querySelectorAll('.tab-item').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        document.querySelector('.tab-item.active').classList.remove('active');
+        e.target.classList.add('active');
+        
+        const filter = e.target.dataset.filter;
+        const filteredData = filter === 'all' 
+            ? allPublications
+            : allPublications.filter(p => p.type === filter);
+        renderCards(filteredData);
+    });
+});
+
+// Initialize
+window.onload = loadPublications;
+</script>
+</body>
+</html>

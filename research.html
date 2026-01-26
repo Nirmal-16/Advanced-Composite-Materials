@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | ACML</title>
+<STYLE>
+    :root {
+    --bg: #0b0e14;
+    --card-bg: #161b22;
+    --accent: #00d4ff; /* Electric Blue */
+    --text-white: #f0f6fc;
+    --text-gray: #8b949e;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-white);
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Glass Ribbon Header */
+.glass-header {
+    height: 400px;
+    background: linear-gradient(45deg, #0b0e14, #1a202c);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid var(--glass);
+}
+
+.header-content { z-index: 2; }
+.tagline { color: var(--accent); letter-spacing: 4px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+.header-content h1 { font-size: 3.5rem; margin: 10px 0; font-weight: 700; background: linear-gradient(to right, #fff, #8b949e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* Dashboard Style Tabs */
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 14, 20, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.nav-tabs {
+    background: var(--card-bg);
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid var(--glass);
+    display: flex;
+}
+
+.tab-item {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tab-item.active {
+    background: var(--accent);
+    color: #000;
+}
+
+/* Modern Lab Cards */
+.container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+.pub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--glass);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+}
+
+.card-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(40%);
+    transition: 0.4s;
+}
+
+.card:hover .card-img { filter: grayscale(0%); }
+
+.card-body { padding: 25px; }
+.card-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--accent); margin-bottom: 10px; font-weight: 700; }
+
+.card-title { font-size: 1.3rem; margin-bottom: 15px; line-height: 1.4; color: var(--text-white); }
+.card-desc { font-size: 0.9rem; color: var(--text-gray); line-height: 1.6; margin-bottom: 20px; }
+
+.card-footer {
+    padding-top: 15px;
+    border-top: 1px solid var(--glass);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-details {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-details:hover { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content h1 { font-size: 2rem; }
+    .nav-tabs { flex-wrap: wrap; justify-content: center; }
+}
+</STYLE>    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="glass-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <span class="tagline">Advanced Composite Materials Laboratory</span>
+            <h1>Knowledge Repository</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search publications, authors, or DOI...">
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-wrapper">
+        <div class="nav-tabs">
+            <button class="tab-item active" data-filter="all">All</button>
+            <button class="tab-item" data-filter="journal">Journals</button>
+            <button class="tab-item" data-filter="conferences">Conferences</button>
+            <button class="tab-item" data-filter="books">Books</button>
+            <button class="tab-item" data-filter="blogs">Blogs</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="pubGrid" class="pub-grid">
+            </div>
+    </main>
+
+    <script >
+        let publications = [];
+
+async function init() {
+    try {
+        const res = await fetch('./data/research.json');
+        publications = await res.json();
+        render(publications);
+    } catch (e) { console.error("Data error", e); }
+}
+
+function render(data) {
+    const grid = document.getElementById('pubGrid');
+    grid.innerHTML = data.map(item => `
+        <div class="card">
+            <img src="${item.image}" class="card-img" alt="research">
+            <div class="card-body">
+                <div class="card-meta">
+                    <span>${item.type.toUpperCase()}</span>
+                    <span>${item.year}</span>
+                </div>
+                <h3 class="card-title">${item.title}</h3>
+                <p class="card-desc">${item.desc}</p>
+                <div class="card-footer">
+                    <span style="font-size: 11px; color: #555;">DOI: ${item.doi}</span>
+                    <a href="${item.link}" class="btn-details">Full Research →</a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Tab Filtering
+document.querySelectorAll('.tab-item').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        document.querySelector('.tab-item.active').classList.remove('active');
+        e.target.classList.add('active');
+        
+        const filter = e.target.dataset.filter;
+        const filteredData = filter === 'all' 
+            ? publications 
+            : publications.filter(p => p.type === filter);
+        render(filteredData);
+    });
+});
+
+// Search Filtering
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase();
+    const filtered = publications.filter(p => 
+        p.title.toLowerCase().includes(term) || 
+        p.doi.toLowerCase().includes(term)
+    );
+    render(filtered);
+});
+
+window.onload = init;
+    </script>
+</body>
+</html>
