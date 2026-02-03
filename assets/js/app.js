@@ -1,64 +1,94 @@
-// Detect base path dynamically (local vs GitHub Pages)
+// ================================
+// CONFIG
+// ================================
 const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Advanced-Composite-Materials"
-  : "/project-root";
+  : "";
 
-// loading components specified in the path in the specified id
-async function loadHTML(id, path) {
+// ================================
+// UTILITIES
+// ================================
+async function loadHTML(targetId, filePath, onLoad) {
   try {
-    const res = await fetch(path);
-    if (!res.ok) throw new Error(`${path} not found`);
+    const res = await fetch(filePath);
+    if (!res.ok) throw new Error(`${filePath} not found`);
+
     const html = await res.text();
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = html;
-  } catch (e) {
-    console.error("HTML Load Error:", e);
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    target.innerHTML = html;
+    onLoad && onLoad();
+  } catch (err) {
+    console.error("HTML Load Error:", err);
   }
 }
 
-async function loadCarousel({ mountId, images }) {
-  const carouselItemsHTML = createCarouselItems(images);
-  document.getElementById(mountId).innerHTML = `
+// ================================
+// NAVIGATION
+// ================================
+function setActiveNav() {
+  const currentPage = window.location.pathname.split("/").pop();
+
+  const activateLinks = (selector) => {
+    document.querySelectorAll(selector).forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+
+        const dropdown = link.closest(".dropdown");
+        dropdown && dropdown.classList.add("open");
+      }
+    });
+  };
+
+  activateLinks("nav.desktop-nav a");
+  activateLinks(".sidebar a");
+}
+
+// Sidebar toggle (used by HTML onclick)
+window.toggleSidebar = () => {
+  document.getElementById("sidebar")?.classList.toggle("show");
+};
+
+window.toggleDropdown = (el) => {
+  el?.parentElement?.classList.toggle("open");
+};
+
+// ================================
+// CAROUSEL HELPER (optional reuse)
+// ================================
+function mountCarousel({ mountId, images }) {
+  const mount = document.getElementById(mountId);
+  if (!mount) return;
+
+  mount.innerHTML = `
     <div class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        ${carouselItemsHTML}
+        ${createCarouselItems(images)}
       </div>
     </div>
   `;
 }
 
-function setActiveNav() {
-  const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll("nav.desktop-nav a").forEach(link => {
-    const linkPage = link.getAttribute("href");
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    }
-  });
-  document.querySelectorAll(".sidebar a").forEach(link => {
-    const linkPage = link.getAttribute("href");
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-      const parentDropdown = link.closest(".dropdown");
-      if (parentDropdown) parentDropdown.classList.add("open");
-    }
-  });
-}
+// ================================
+// INIT
+// ================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Navbar
+  loadHTML(
+    "navbar-placeholder",
+    `${BASE_PATH}/components/navbar.html`,
+    setActiveNav
+  );
 
-function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
-// Load Navbar
-loadHTML("navbar-placeholder", `${BASE_PATH}/components/navbar.html`).then(() => setActiveNav());;
-
-// Load Footer
-loadHTML("footer-placeholder", `${BASE_PATH}/components/footer.html`).then(() => {
-  const script = document.createElement("script");
-  script.src = `${BASE_PATH}/assets/js/footer.js`;
-  document.body.appendChild(script);
+  // Footer
+  loadHTML(
+    "footer-placeholder",
+    `${BASE_PATH}/components/footer.html`,
+    () => {
+      const script = document.createElement("script");
+      script.src = `${BASE_PATH}/assets/js/footer.js`;
+      document.body.appendChild(script);
+    }
+  );
 });

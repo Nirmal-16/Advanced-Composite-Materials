@@ -1,4 +1,7 @@
-fetch(`http://127.0.0.1:5500/project-root/data/footer.json`)
+const BASE_PATH = window.location.hostname.includes("github.io")
+  ? "/Advanced-Composite-Materials"
+  : "";
+fetch(`${BASE_PATH}/data/footer.json`)
   .then(res => res.json())
   .then(data => {
     const footer = document.querySelector(".site-footer");

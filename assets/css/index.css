@@ -1,113 +1,106 @@
-/* Landing section starts */
+/* ===============================
+   LANDING / HERO SECTION
+================================= */
+
 header {
   background: transparent;
 }
+
 #landing {
-  background: linear-gradient(to bottom, #020f1f, #002132, #00394a);
-  width: 100%;
-  height: 100vh;
   position: relative;
-  /* border: 2px solid red; */
-}
-#particle-canvas {
   width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #020f1f, #002132, #00394a);
+}
+
+#particle-canvas {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
-  /* border: 2px solid red; */
 }
+
 .hero {
-  height: 80vh;
-  text-align: center;
+  min-height: 80vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   color: var(--light-text);
-  /* border:2px solid blue; */
 }
+
 .hero-content {
+  position: relative;
   z-index: 1;
-  /* border:2px solid blue; */
 }
-/* bg video started */
-/*.video-hero {
-          position: relative;
-          height: 100vh;
-          overflow: hidden;
-        }
 
-        .bg-video {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          min-width: 100%;
-          min-height: 100%;
-          transform: translate(-50%, -50%);
-          z-index: 1;
-          opacity: 1;
-        }
+/* ===============================
+   SERVICES SECTION
+================================= */
 
-        .video-overlay {
-          position: absolute;
-          inset: 0;
-          z-index: 2;
-        }
-
-        .hero-content {
-          position: relative;
-          z-index: 3;
-          color: white;
-          text-align: center;
-          top: 50%;
-          transform: translateY(-50%);
-        } */
-/* bg video ended */
-/* Landing section ends */
-/* Service cards section starts */
 .services-section {
   padding: 80px 40px;
   background-color: var(--grey-bg);
-  /* border:2px solid red; */
 }
+
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin-top: -220px;
-  /* border:2px solid red;  */
 }
-/* Service cards section ends */
-/* About section started */
+
+/* ===============================
+   ABOUT SECTION
+================================= */
+
 .about-section {
   padding: 80px 20px;
-  background: var(--grey-bg);
-  /* border: 2px solid red; */
+  background-color: var(--grey-bg);
 }
+
 .about-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 60px;
-  /* border: 2px solid red; */
 }
+
+/* ---------- Images ---------- */
+/* Carousel container */
+.carousel {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Carousel images */
+.carousel-inner img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.carousel-item,
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
 .about-images {
-  position: relative;
   flex: 1;
-  /* border: 2px solid blue; */
+  position: relative;
   height: 80vh;
 }
-.main-img {
-  width:500px;
-  height: 600px;
-  border-radius: 12px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-}
+
+/* ---------- Content ---------- */
+
 .about-content {
   flex: 1;
-  /* border: 2px solid blue; */
 }
+
 .section-tag {
   display: inline-block;
   font-size: 12px;
@@ -118,39 +111,80 @@ header {
   border-radius: 25px;
   color: var(--highlight);
   margin-bottom: 20px;
-  cursor: pointer;
 }
+
 .about-content h2 {
   font-size: 42px;
   margin-bottom: 20px;
   color: var(--secondary);
 }
+
 .about-content p {
   font-size: 16px;
-  color: var(--dark-text);
   line-height: 1.7;
+  color: var(--dark-text);
   margin-bottom: 30px;
 }
+
+/* ---------- Features ---------- */
+
 .feature-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .feature-item {
   display: flex;
   gap: 16px;
   align-items: flex-start;
 }
+
 .feature-icon {
   font-size: 26px;
-  background: var(--highlight);
   padding: 14px;
+  background: var(--highlight);
   border-radius: 50%;
+  color: #022;
+  flex-shrink: 0;
 }
+
 .feature-title {
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   margin-bottom: 4px;
   color: #022;
 }
-/* about section ended  */
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-images {
+    height: auto;
+  }
+
+  .feature-item {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-section {
+    padding: 60px 20px;
+  }
+
+  .services-container {
+    margin-top: -140px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+}

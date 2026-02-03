@@ -1,34 +1,91 @@
-* {
+/* ===============================
+   Global Reset & Base
+   =============================== */
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --primary: white;
-  --secondary:#001f30;
-  --grey-bg: #f9f9f9;
-  --dark-text:#002b2c;
-  --light-text: #FFFFFF;
-  --grey-text:#aeaeae;
-  --highlight:#58e3e1;
+
+/* Improve text rendering consistency */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
+
+body {
+  line-height: 1.5;
+  background-color: var(--primary);
+}
+
+/* ===============================
+   CSS Variables (Design Tokens)
+   =============================== */
+
+:root {
+  --primary: #ffffff;
+  --secondary: #001f30;
+  --grey-bg: #f9f9f9;
+  --dark-text: #002b2c;
+  --light-text: #ffffff;
+  --grey-text: #aeaeae;
+  --highlight: #58e3e1;
+}
+
+/* ===============================
+   Layout Utilities
+   =============================== */
+
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* Prevent images from breaking layouts */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+
 .btn-primary {
   background-color: var(--primary);
   color: var(--dark-text);
   font-weight: bold;
+  font-size: 16px;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-primary:hover {
   background-color: var(--highlight);
   transform: scale(1.05);
 }
+
+/* ===============================
+   Accessibility & Defaults
+   =============================== */
+
+/* Remove default button styles inconsistencies */
+button {
+  font-family: inherit;
+}
+
+/* Improve focus visibility without changing UI */
+:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+}
+

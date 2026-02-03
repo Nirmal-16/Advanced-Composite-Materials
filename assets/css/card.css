@@ -1,14 +1,22 @@
+/* ===============================
+   CARD COMPONENT STYLES
+================================= */
+
 .card {
   background: var(--primary);
   padding: 30px;
   border-radius: 6px;
   min-height: 280px;
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
+
 .card:hover {
   transform: translateY(-8px);
 }
-.icon {
+
+/* ---------- Card Icon ---------- */
+
+.card .icon {
   width: 60px;
   height: 60px;
   background: #2cd3d3;
@@ -19,13 +27,19 @@
   font-size: 26px;
   margin-bottom: 20px;
 }
-.title {
+
+/* ---------- Card Title ---------- */
+
+.card .title {
   font-size: 20px;
   font-weight: 700;
   color: #0b2b36;
   margin-bottom: 10px;
 }
-.desc {
+
+/* ---------- Card Description ---------- */
+
+.card .desc {
   font-size: 15px;
   line-height: 1.6;
   color: #6b7280;

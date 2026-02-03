@@ -1,79 +1,85 @@
-:root {
-  --accent: #4fe1dc;
-  --dark: #003b3b;
-  --muted: #777;
-}
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-}
+/* ===============================
+   STATS SECTION
+================================= */
 
 .stats-section {
   padding: 80px 20px;
-  background: #fff;
-  /* border:2px solid red; */
+  background: var(--primary);
 }
+
+/* ---------- Layout ---------- */
 
 .stats-grid {
   max-width: 1100px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 50px;
 }
+
+/* ---------- Card ---------- */
 
 .stat-card {
   display: flex;
   align-items: center;
   gap: 25px;
-  /* border:2px solid red; */
 }
 
+/* ---------- Circle (RESPONSIVE) ---------- */
+
 .circle {
-  width: 210px;
-  height: 150px;
+  width: clamp(120px, 18vw, 180px);
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--highlight);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  flex-shrink: 0;
 }
 
 .circle span {
-  font-size: 26px;
-  font-weight: bold;
-  color: var(--dark);
-  background: white;
-  width: 105px;
-  height: 105px;
+  width: 60%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700;
+  color: var(--dark-text);
 }
 
+/* ---------- Text ---------- */
+
 .stat-info small {
-  color: var(--accent);
-  letter-spacing: 1px;
+  color: var(--highlight);
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .stat-info h3 {
   margin: 8px 0;
-  color: var(--dark);
+  color: var(--secondary);
 }
 
 .stat-info p {
   font-size: 14px;
-  color: var(--muted);
+  color: var(--grey-text);
   max-width: 220px;
+  line-height: 1.5;
 }
 
-@media(max-width:600px) {
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
   .stat-card {
     flex-direction: column;
     text-align: center;
+  }
+
+  .stat-info p {
+    max-width: none;
   }
 }
