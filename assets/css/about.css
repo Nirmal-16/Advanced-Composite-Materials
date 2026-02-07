@@ -1,110 +1,143 @@
-body { font-family: 'Segoe UI', sans-serif; }
-
+/* =========================
+   About Hero Section
+========================= */
 .about-hero {
   padding: 100px 20px;
   background: var(--secondary);
 }
 
-.about-hero h1 { font-size: 3rem; font-weight: 700;color: var(--primary);}
-.about-hero p { max-width: 700px; margin: auto; color: var(--primary);}
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
 
-.text-card-div{
+.about-hero p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--primary);
+}
+
+/* =========================
+   Text Cards
+========================= */
+.text-card-div {
   display: flex;
   justify-content: space-around;
 }
-.text-card {
-  border:1px solid var(--grey-text);
-  padding:25px;
-  border-radius: 10px;
-  /* background-color: var(--grey-bg); */
-  color:var(--secondary);
-  transition: all 0.5s ease;
-    box-shadow: 1px 1px 10px 1px var(--grey-text);
 
- }
- .text-card:hover{
+.text-card {
+  padding: 25px;
+  border: 1px solid var(--grey-text);
+  border-radius: 10px;
+  color: var(--secondary);
+  box-shadow: 1px 1px 10px 1px var(--grey-text);
+  transition: transform 0.5s ease;
+}
+
+.text-card:hover {
   transform: scale(1.02);
- }
+}
+
+/* =========================
+   Services Section
+========================= */
 .services-section {
   padding: 80px 40px;
   background-color: var(--grey-bg);
-  /* border:2px solid red; */
 }
+
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  /* border:2px solid red;  */
 }
+
 .icon-box {
   width: 60px;
   height: 60px;
+  margin-bottom: 20px;
   border-radius: 16px;
   background: linear-gradient(to bottom, #020f1f, #002132);
   color: var(--secondary);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* =========================
+   Founder Section
+========================= */
+#founderGrid {
+  display: flex;
+  justify-content: center;
+}
+
+.founder-card {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
 }
 
 .founder-avatar {
   width: 110px;
   height: 110px;
+  margin: auto;
   border-radius: 50%;
   background-color: var(--highlight);
   color: var(--primary);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size: 40px;
-  margin: auto;
-}
-
-#founderGrid{
-  display:flex;
+  display: flex;
+  align-items: center;
   justify-content: center;
-}
-.founder-card{
-  border:1px solid var(--secondary);
-  border-radius: 10px;
-  padding:20px;
-  margin:10px;
-}
-.founder-btn{
-  padding:7px 12px;
-  background-color: var(--primary);
-  color:var(--secondary);
-  border:2px solid var(--secondary);
-  margin:15px auto;
-  width:90%;
-  border-radius:40px;
+  font-size: 40px;
 }
 
-.highlight{
-  background-color: var(--secondary);
-  color:var(--primary);
-}
-.founder-btn:hover{
-  background-color: var(--secondary);
-  color:var(--primary);
-  transition: 0.2s background-color ease-in;
-}
-.highlight:hover{
+.founder-btn {
+  width: 90%;
+  margin: 15px auto;
+  padding: 7px 12px;
+  border-radius: 40px;
+  border: 2px solid var(--secondary);
   background-color: var(--primary);
-  color:var(--secondary);
-  transition: 0.2s background-color ease-in;
+  color: var(--secondary);
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
 }
-.stats-bar {
-  background:var(--secondary);
+
+.founder-btn:hover {
+  background-color: var(--secondary);
   color: var(--primary);
-  padding:60px 0;
+}
+
+/* Highlight Button */
+.highlight {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.highlight:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+/* =========================
+   Stats Bar
+========================= */
+.stats-bar {
+  padding: 60px 0;
+  background: var(--secondary);
+  color: var(--primary);
 }
 
 .stats-item {
-  text-align:center;
-  font-weight:700;
-  font-size:36px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
 }
-.stats-item span { display:block; font-size:16px; color:var(--primary); }
+
+.stats-item span {
+  display: block;
+  font-size: 16px;
+  color: var(--primary);
+}
