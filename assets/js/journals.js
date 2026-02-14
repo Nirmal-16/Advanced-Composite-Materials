@@ -6,32 +6,34 @@ const BASE_PATH = window.location.hostname.includes("github.io")
   : "";
 
 fetch(`${BASE_PATH}/data/journals.json`)
-  .then(res => res.json())
-  .then(data => {
-
+  .then((res) => res.json())
+  .then((data) => {
     /* ================= RIBBON ================= */
-
     document.getElementById("ribbonTitle").innerText = data.ribbon.title;
     document.getElementById("ribbonDesc").innerText = data.ribbon.description;
 
-    /* ================= RECENT HIGHLIGHTS ================= */
+    /* ================= RECENT ================= */
 
     document.getElementById("recentTitle").innerText =
       data["recent-highlights"]["recent-section-title"];
     document.getElementById("recentSubtitle").innerText =
       data["recent-highlights"]["recent-section-subtitle"];
 
-    data["recent-highlights"].cards.forEach(card => {
-
+    data["recent-highlights"].cards.forEach((card) => {
       const div = document.createElement("div");
       div.classList.add("recent-card");
 
       div.innerHTML = `
         <span class="badge">${card["recent-badge"]}</span>
-        <h3>${card["recent-title"]}</h3>
+        <h3 class="card-title">${card["recent-title"]}</h3>
         <p class="meta">${card["recent-authors"]}</p>
-        <p class="description">${card["recent-description"]}</p>
-        <button class="read-more-btn">Read More</button>
+        <p class="description-clamp">${card["recent-description"]}</p>
+        <button class="read-more-btn"
+          data-title="${card["recent-title"]}"
+          data-full="${card["recent-description"].replace(/"/g, "&quot;")}">
+          Read More
+        </button>
+        
         <div class="buttons">
           <a href="${card["recent-link"]}" target="_blank">View</a>
         </div>
@@ -43,14 +45,11 @@ fetch(`${BASE_PATH}/data/journals.json`)
     /* ================= PUBLICATIONS ================= */
 
     data.publications.forEach((item, index) => {
-
       const card = item.card;
       const div = document.createElement("div");
       div.classList.add("journal-card");
 
-      if (index % 2 !== 0) {
-        div.classList.add("reverse");
-      }
+      if (index % 2 !== 0) div.classList.add("reverse");
 
       div.innerHTML = `
         <div class="journal-image">
@@ -70,10 +69,10 @@ fetch(`${BASE_PATH}/data/journals.json`)
 
           <p class="description">${card.description}</p>
 
-          <button class="read-more-btn">Read More</button>
+          <button class="read-more-btn expand-btn">Read More</button>
 
           <div class="tags">
-            ${card.tags.map(tag => `<span>${tag}</span>`).join("")}
+            ${card.tags.map((tag) => `<span>${tag}</span>`).join("")}
           </div>
 
           <div class="buttons">
@@ -86,22 +85,34 @@ fetch(`${BASE_PATH}/data/journals.json`)
       container.appendChild(div);
     });
 
-    /* ================= READ MORE FUNCTION ================= */
+    /* ================= EVENTS ================= */
 
     document.addEventListener("click", function (e) {
-      if (e.target.classList.contains("read-more-btn")) {
+      /* Modal for Recent */
+      if (e.target.dataset.full) {
+        document.getElementById("modalTitle").innerText =
+          e.target.dataset.title;
+        document.getElementById("modalContent").innerText =
+          e.target.dataset.full;
+        document.getElementById("modalOverlay").classList.add("active");
+      }
 
-        const card = e.target.closest(".journal-content, .recent-card");
-        const description = card.querySelector(".description");
+      /* Close Modal */
+      if (
+        e.target.classList.contains("close-modal") ||
+        e.target.id === "modalOverlay"
+      ) {
+        document.getElementById("modalOverlay").classList.remove("active");
+      }
 
-        description.classList.toggle("expanded");
-
-        e.target.textContent =
-          description.classList.contains("expanded")
-            ? "Read Less"
-            : "Read More";
+      /* Expand Journal Description */
+      if (e.target.classList.contains("expand-btn")) {
+        const desc = e.target.previousElementSibling;
+        desc.classList.toggle("expanded");
+        e.target.textContent = desc.classList.contains("expanded")
+          ? "Read Less"
+          : "Read More";
       }
     });
-
   })
-  .catch(error => console.error("Error loading JSON:", error));
+  .catch((error) => console.error("Error loading JSON:", error));

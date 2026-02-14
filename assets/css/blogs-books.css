@@ -4,6 +4,7 @@
   text-align: center;
   padding: 80px 20px;
   background: #f8fafc;
+  color: #002132;
 }
 
 .ribbon h1 {
@@ -14,7 +15,6 @@
 .ribbon p {
   max-width: 700px;
   margin: auto;
-  color: #64748b;
 }
 
 /* Section */

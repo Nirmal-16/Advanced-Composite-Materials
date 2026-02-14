@@ -3,7 +3,6 @@
 ========================= */
 .about-hero {
   padding: 100px 20px;
-  /* background: var(--secondary); */
   background: #f8fafc;
   color: #002132;
 }
@@ -12,13 +11,11 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
-  /* color: var(--primary); */
 }
 
 .about-hero p {
   max-width: 700px;
   margin: auto;
-  /* color: var(--primary); */
 }
 
 /* =========================
