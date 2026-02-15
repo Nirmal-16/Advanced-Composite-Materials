@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/stats.css" />
-    <link rel="stylesheet" href="./assets/css/testimonials.css">
+    <link rel="stylesheet" href="./assets/css/testimonials.css" />
     <!-- Current Page Styling -->
   </head>
   <body>
@@ -53,20 +53,34 @@
       <div id="statsContainer" class="stats-grid"></div>
     </section>
     <section class="testimonials-section">
-  <div class="container">
-    <h2 class="section-title">Testimonials</h2>
-    <p class="section-subtitle">
-      What collaborators and students say about our research
-    </p>
+      <div class="container">
+        <h2 class="section-title">Testimonials</h2>
+        <p class="section-subtitle">
+          What collaborators and students say about our research
+        </p>
 
-    <div class="testimonial-wrapper">
-  <div class="testimonial-track" id="testimonialTrack"></div>
-</div>
+        <div class="testimonial-wrapper">
+          <div class="testimonial-track" id="testimonialTrack"></div>
+        </div>
 
-<div class="testimonial-dots" id="testimonialDots"></div>
-
-  </div>
-</section>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+      </div>
+    </section>
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2>Interested in Collaborating?</h2>
+          <p>
+            We welcome motivated students, researchers, and industry partners to
+            collaborate on cutting-edge research and innovation.
+          </p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn-primary">Get in Touch</a>
+            <a href="#research" class="btn-outline">View Research</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer id="footer-placeholder"></footer>
     <!-- JS Loading -->
@@ -169,67 +183,69 @@
         });
       }
     </script> -->
-    
+
     <script type="module">
       import { createCard } from "./components/card.js";
       import { createCarousel } from "./components/carousel.js";
       const BASE_PATH = window.location.hostname.includes("github.io")
-    ? "/Advanced-Composite-Materials"
-    : "";
+        ? "/Advanced-Composite-Materials"
+        : "";
 
-  // ==========================
-  // DATA CACHE (MINIMAL)
-  // ==========================
-  const cache = {};
+      // ==========================
+      // DATA CACHE (MINIMAL)
+      // ==========================
+      const cache = {};
 
-  async function fetchJSON(file) {
-    if (cache[file]) return cache[file];
+      async function fetchJSON(file) {
+        if (cache[file]) return cache[file];
 
-    const res = await fetch(`${BASE_PATH}/data/${file}`);
-    const data = await res.json();
-    cache[file] = data;
-    return data;
-  }
+        const res = await fetch(`${BASE_PATH}/data/${file}`);
+        const data = await res.json();
+        cache[file] = data;
+        return data;
+      }
 
-  // ==========================
-  // SERVICES SECTION
-  // ==========================
-  async function loadServices() {
-    const data = await fetchJSON("index.json");
-    const container = document.getElementById("servicesContainer");
-    if (!container) return;
+      // ==========================
+      // SERVICES SECTION
+      // ==========================
+      async function loadServices() {
+        const data = await fetchJSON("index.json");
+        const container = document.getElementById("servicesContainer");
+        if (!container) return;
 
-    container.innerHTML = "";
-    data.services.forEach(service => {
-      container.innerHTML += createCard(service);
-    });
-  }
+        container.innerHTML = "";
+        data.services.forEach((service) => {
+          container.innerHTML += createCard(service);
+        });
+      }
 
-  // ==========================
-  // ABOUT SECTION
-  // ==========================
-  async function loadAbout() {
-    const data = await fetchJSON("index.json");
-    const about = data.aboutSection;
+      // ==========================
+      // ABOUT SECTION
+      // ==========================
+      async function loadAbout() {
+        const data = await fetchJSON("index.json");
+        const about = data.aboutSection;
 
-    document.getElementById("aboutTag").textContent = about.tag;
-    document.getElementById("aboutTitle").textContent = about.title;
-    document.getElementById("aboutDesc").textContent = about.description;
+        document.getElementById("aboutTag").textContent = about.tag;
+        document.getElementById("aboutTitle").textContent = about.title;
+        document.getElementById("aboutDesc").textContent = about.description;
 
-    document.getElementById("aboutCarousel").innerHTML =
-      createCarousel({ id: "aboutCarouselId", images: about.images });
+        document.getElementById("aboutCarousel").innerHTML = createCarousel({
+          id: "aboutCarouselId",
+          images: about.images,
+        });
 
-    new bootstrap.Carousel("#aboutCarouselId", {
-      interval: 4000,
-      ride: "carousel",
-      pause: false,
-      touch: true,
-    });
+        new bootstrap.Carousel("#aboutCarouselId", {
+          interval: 4000,
+          ride: "carousel",
+          pause: false,
+          touch: true,
+        });
 
-    const featureList = document.getElementById("featureList");
-    featureList.innerHTML = "";
-    about.features.forEach(item => {
-      featureList.innerHTML += `
+        const featureList = document.getElementById("featureList");
+        featureList.innerHTML = "";
+        about.features.forEach((item) => {
+          featureList.innerHTML += `
         <div class="feature-item">
           <div class="feature-icon">${item.icon}</div>
           <div>
@@ -237,41 +253,41 @@
             <div class="feature-text">${item.text}</div>
           </div>
         </div>`;
-    });
-  }
+        });
+      }
 
-  // ==========================
-  // STATS SECTION
-  // ==========================
-  // async function loadStats() {
-  //   const stats = await fetchJSON("stats.json");
-  //   const container = document.getElementById("statsContainer");
+      // ==========================
+      // STATS SECTION
+      // ==========================
+      // async function loadStats() {
+      //   const stats = await fetchJSON("stats.json");
+      //   const container = document.getElementById("statsContainer");
 
-  //   stats.forEach(item => {
-  //     const card = document.createElement("div");
-  //     card.className = "stat-card";
+      //   stats.forEach(item => {
+      //     const card = document.createElement("div");
+      //     card.className = "stat-card";
 
-  //     const circle = document.createElement("div");
-  //     circle.className = "circle";
-  //     const deg = item.value * 3.6;
-  //     circle.style.background =
-  //       `conic-gradient(var(--highlight) ${deg}deg, #eeeg ${deg}deg)`;
-  //     circle.innerHTML = `<span>${item.value}%</span>`;
+      //     const circle = document.createElement("div");
+      //     circle.className = "circle";
+      //     const deg = item.value * 3.6;
+      //     circle.style.background =
+      //       `conic-gradient(var(--highlight) ${deg}deg, #eeeg ${deg}deg)`;
+      //     circle.innerHTML = `<span>${item.value}%</span>`;
 
-  //     card.innerHTML += `
-  //       <div class="stat-info">
-  //         <small>${item.tag}</small>
-  //         <h3>${item.label}</h3>
-  //         <p>${item.desc}</p>
-  //       </div>`;
+      //     card.innerHTML += `
+      //       <div class="stat-info">
+      //         <small>${item.tag}</small>
+      //         <h3>${item.label}</h3>
+      //         <p>${item.desc}</p>
+      //       </div>`;
 
-  //     card.prepend(circle);
-  //     container.appendChild(card);
-  //   });
-  // }
+      //     card.prepend(circle);
+      //     container.appendChild(card);
+      //   });
+      // }
 
-  async function loadStats() {
-    const items = await fetchJSON("stats.json");
+      async function loadStats() {
+        const items = await fetchJSON("stats.json");
         const container = document.getElementById("statsContainer");
 
         items.forEach((item) => {
@@ -297,12 +313,12 @@
         });
       }
 
-  // ==========================
-  // INIT
-  // ==========================
-  loadServices();
-  loadAbout();
-  loadStats();
+      // ==========================
+      // INIT
+      // ==========================
+      loadServices();
+      loadAbout();
+      loadStats();
     </script>
 
     <script type="module" src="./assets/js/testimonials.js"></script>

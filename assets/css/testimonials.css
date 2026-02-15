@@ -1,6 +1,6 @@
 .testimonials-section {
-  padding: 80px 20px;
-  background: var(--grey-bg);
+  padding: 100px 20px;
+  background: transparent;
   overflow: hidden;
   color:var(--secondary);
 }
@@ -129,5 +129,100 @@
   .testimonial-card {
     min-width: 240px;
     height: 380px;
+  }
+}
+/* ===== CTA SECTION ===== */
+
+#praticle-canvas2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cta-section {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to bottom, #020f1f, #002132); /*#00394a*/
+  color: var(--light-text);
+  overflow: hidden;
+}
+
+.cta-container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.cta-content {
+  text-align: center;
+  color: var(--primary);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cta-content p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn-primary {
+  padding: 12px 28px;
+  background: #ffffff;
+  color: #0f2027;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #e6e6e6;
+}
+
+.btn-outline {
+  padding: 12px 28px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #0f2027;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
   }
 }
