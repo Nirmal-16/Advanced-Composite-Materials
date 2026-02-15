@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/stats.css" />
+    <link rel="stylesheet" href="./assets/css/testimonials.css">
     <!-- Current Page Styling -->
   </head>
   <body>
@@ -51,6 +52,22 @@
     <section class="stats-section">
       <div id="statsContainer" class="stats-grid"></div>
     </section>
+    <section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">Testimonials</h2>
+    <p class="section-subtitle">
+      What collaborators and students say about our research
+    </p>
+
+    <div class="testimonial-wrapper">
+  <div class="testimonial-track" id="testimonialTrack"></div>
+</div>
+
+<div class="testimonial-dots" id="testimonialDots"></div>
+
+  </div>
+</section>
+
     <footer id="footer-placeholder"></footer>
     <!-- JS Loading -->
     <!-- Bootstrap integration  -->
@@ -287,6 +304,8 @@
   loadAbout();
   loadStats();
     </script>
+
+    <script type="module" src="./assets/js/testimonials.js"></script>
 
     <!-- atom background -->
     <script>
