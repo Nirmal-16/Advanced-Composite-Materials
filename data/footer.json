@@ -4,9 +4,9 @@
   "quickLinks": [
     { "label": "Home", "url": "./index.html" },
     { "label": "About", "url": "./about.html" },
-    { "label": "Research", "url": "./pages/research.html" },
-    { "label": "Publications", "url": "./pages/publications.html" },
-    { "label": "Contact", "url": "./pages/contact.html" }
+    { "label": "Research", "url": "./research.html" },
+    { "label": "Blogs & Books", "url": "./blogs-books.html" },
+    { "label": "Contact", "url": "./contact.html" }
   ],
   "contact": {
     "location": "Chennai, Tamil Nadu, India",
