@@ -1,0 +1,138 @@
+{
+  "ribbon": {
+    "title": "Our Team",
+    "description": "Meet the people behind our success."
+  },
+  "Team":[{
+    "name": "Sarah Chen",
+    "role": "Chief Executive Officer",
+    "image": "https://randomuser.me/api/portraits/women/44.jpg",
+    "description": "Strategic leader with 10+ years of experience building high-performing teams. Strategic leader with 10+ years of experience building high-performing teams.",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "email": "mailto:sarah@example.com"
+    }
+  },
+  {
+    "name": "David Lee",
+    "role": "Product Manager",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "description": "Focused on delivering scalable and user-friendly products. Focused on delivering scalable and user-friendly products.",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "email": "mailto:david@example.com"
+    }
+  },
+  {
+    "name": "Laura Rodriguez",
+    "role": "Marketing Director",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg",
+    "description": "Driving growth through creative and data-driven marketing strategies. Driving growth through creative and data-driven marketing strategies.",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "email": "mailto:laura@example.com"
+    }
+  }
+  ],
+  "Stats":[
+  {
+    "value": "15K+",
+    "title": "Global Partners",
+    "description": "Collaborating with industry leaders worldwide to deliver exceptional results."
+  },
+  {
+    "value": "89%",
+    "title": "Success Rate",
+    "description": "Consistently achieving outstanding outcomes across all project categories."
+  },
+  {
+    "value": "3M",
+    "title": "Users Served",
+    "description": "Empowering millions of users with innovative solutions and seamless experiences."
+  },
+  {
+    "value": "24/7",
+    "title": "Support Available",
+    "description": "Round-the-clock assistance ensuring uninterrupted service and peace of mind."
+  }
+],
+"Logo":[
+  {
+    "name": "Alitalia",
+    "logo": "./assets/images/IIT_Madras_Logo.svg.png",
+    "url": "#"
+  },
+  {
+    "name": "HSBC",
+    "logo": "./assets/images/IIT_Madras_Logo.svg.png",
+    "url": "#"
+  },
+  {
+    "name": "Lexmark",
+    "logo": "./assets/images/IIT_Madras_Logo.svg.png",
+    "url": "#"
+  },
+  {
+    "name": "Walmart",
+    "logo": "./assets/images/IIT_Madras_Logo.svg.png",
+    "url": "#"
+  },
+  {
+    "name": "Signify Health",
+    "logo": "./assets/images/IIT_Madras_Logo.svg.png",
+    "url": "#"
+  },
+  {
+    "name": "TomTom",
+    "logo": "./assets/images/IIT_Madras_Logo.svg.png",
+    "url": "#"
+  }
+],
+"Expert":[
+  {
+    "title": "Creative Design",
+    "level": "PROFESSIONAL",
+    "percentage": 85,
+    "description": "Crafting visually compelling designs that communicate effectively and engage users across multiple touchpoints and platforms.",
+    "icon": "palette"
+  },
+  {
+    "title": "Frontend Development",
+    "level": "EXPERT",
+    "percentage": 92,
+    "description": "Building responsive, performant web applications using modern frameworks and following industry best practices for scalability.",
+    "icon": "code"
+  },
+  {
+    "title": "Strategy & Planning",
+    "level": "ADVANCED",
+    "percentage": 80,
+    "description": "Developing comprehensive digital strategies that align business objectives with user needs and market opportunities.",
+    "icon": "chart"
+  },
+  {
+    "title": "Team Leadership",
+    "level": "PROFESSIONAL",
+    "percentage": 85,
+    "description": "Guiding cross-functional teams through complex projects while fostering collaboration and maintaining high standards of quality.",
+    "icon": "team"
+  },
+  {
+    "title": "Innovation",
+    "level": "ADVANCED",
+    "percentage": 78,
+    "description": "Identifying emerging trends and technologies to create forward-thinking solutions that push boundaries and exceed expectations.",
+    "icon": "bulb"
+  },
+  {
+    "title": "Technical Architecture",
+    "level": "EXPERT",
+    "percentage": 90,
+    "description": "Designing robust technical foundations that support scalable growth while maintaining security and performance standards.",
+    "icon": "gear"
+  }
+]
+  }

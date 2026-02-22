@@ -1,0 +1,400 @@
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= RIBBON ================= */
+
+/* Ribbon */
+
+.ribbon {
+  text-align: center;
+  padding: 100px 20px;
+  background: #f8fafc;
+  color: var(--secondary);
+}
+
+.ribbon h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ribbon p {
+  max-width: 700px;
+  margin: auto;
+}
+
+
+.team-section {
+  padding: 70px 20px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+hr{
+  display: none;
+}
+
+.team-grid {
+  margin-top: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Section */
+.team-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content Section */
+.team-content {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.team-name {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.team-role {
+  font-size: 16px;
+  color: #009688;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.team-desc {
+  font-size: 15px;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/* Social Icons */
+.social-links {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.social-links a {
+  margin: 0 8px;
+  font-size: 16px;
+  color: #6c757d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-links a i {
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  color: #009688;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .team-img {
+    height: 260px;
+  }
+}
+
+/* stats section */
+
+.stats-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.stats-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Individual Box */
+.stat-item {
+  padding: 60px 30px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.stat-item:hover {
+  background: #f2fffe;
+}
+
+/* Remove right border for 2nd column */
+.stat-item:nth-child(2n) {
+  border-right: none;
+}
+
+/* Remove bottom border for last row */
+.stat-item:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.stat-value {
+  font-size: 52px;
+  font-weight: 300;
+  color: #009688;
+}
+
+.stat-divider {
+  width: 40px;
+  height: 2px;
+  background: #009688;
+  margin: 15px auto 20px;
+}
+
+.stat-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.stat-desc {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .stat-value {
+    font-size: 42px;
+  }
+}
+/* logo  */
+.trusted-section {
+  padding: 80px 20px;
+  background: #f7f7f7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo-section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.client-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.client-card:hover {
+  transform: translateY(-6px);
+  filter: grayscale(0%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.client-card img {
+  max-width: 120px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .clients-grid {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 22px;
+  }
+
+  .client-card {
+    padding: 20px;
+  }
+
+  .client-card img {
+    max-width: 90px;
+  }
+}
+
+/* expertise  */
+
+.expertise-section {
+  padding: 100px 20px;
+  background: #f7f8f9;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 70px 60px;
+}
+
+.expertise-card {
+  position: relative;
+  text-align: left;
+}
+
+.expertise-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+  color:var(--);
+}
+
+.expertise-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.level-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.level-text {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #0a7c66;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: #ddd;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: #0a7c66;
+  transition: width 1.2s ease;
+}
+
+.expertise-description {
+  color: #666;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.expertise-card::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #e3e3e3;
+  margin-top: 35px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .expertise-grid {
+    gap: 50px;
+  }
+}
