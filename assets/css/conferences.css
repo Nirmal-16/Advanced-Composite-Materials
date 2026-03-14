@@ -89,11 +89,15 @@
 }
 
 .badge.talk {
-  background: #e0f2fe;
-  color: #0369a1;
+  background: #ffecff;
+  color: #a10389;
 }
 
 .badge.proceeding {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+.badge.conference {
   background: #ede9fe;
   color: #5b21b6;
 }
