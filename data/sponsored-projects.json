@@ -1,0 +1,69 @@
+{
+  "ongoing": [
+    {
+      "title": "AI-Driven Structural Health Monitoring for Smart Infrastructure",
+      "duration": "Jan 2023 – Dec 2026",
+      "funding": "₹ 85,00,000",
+      "agency": "Department of Science & Technology (DST)",
+      "role": "PI"
+    },
+    {
+      "title": "Nanomaterial-Based Biosensors for Early Cancer Detection",
+      "duration": "Mar 2022 – Feb 2026",
+      "funding": "₹ 1,20,00,000",
+      "agency": "Indian Council of Medical Research (ICMR)",
+      "role": "Co-PI"
+    },
+    {
+      "title": "Sustainable Urban Mobility: IoT-Enabled Traffic Flow Optimization",
+      "duration": "Jul 2023 – Jun 2027",
+      "funding": "₹ 65,00,000",
+      "agency": "Ministry of Electronics & IT (MeitY)",
+      "role": "PI"
+    },
+    {
+      "title": "Deep Learning for Remote Sensing and Disaster Risk Assessment",
+      "duration": "Sep 2022 – Aug 2025",
+      "funding": "₹ 48,50,000",
+      "agency": "ISRO Space Applications Centre",
+      "role": "Co-PI"
+    },
+    {
+      "title": "Hybrid Renewable Energy Systems for Rural Electrification",
+      "duration": "Apr 2024 – Mar 2027",
+      "funding": "₹ 95,00,000",
+      "agency": "Ministry of New & Renewable Energy (MNRE)",
+      "role": "PI"
+    },
+    {
+      "title": "Federated Learning Framework for Privacy-Preserving Healthcare Analytics",
+      "duration": "Jun 2023 – May 2026",
+      "funding": "₹ 72,00,000",
+      "agency": "Bill & Melinda Gates Foundation",
+      "role": "Co-PI"
+    }
+  ],
+  "completed": [
+    {
+      "title": "AI-Driven Structural Health Monitoring for Smart Infrastructure",
+      "duration": "Jan 2023 – Dec 2026",
+      "funding": "₹ 85,00,000",
+      "agency": "Department of Science & Technology (DST)",
+      "role": "PI"
+    },
+    {
+      "title": "Nanomaterial-Based Biosensors for Early Cancer Detection",
+      "duration": "Mar 2022 – Feb 2026",
+      "funding": "₹ 1,20,00,000",
+      "agency": "Indian Council of Medical Research (ICMR)",
+      "role": "Co-PI"
+    },
+    {
+      "title": "Sustainable Urban Mobility: IoT-Enabled Traffic Flow Optimization",
+      "duration": "Jul 2023 – Jun 2027",
+      "funding": "₹ 65,00,000",
+      "agency": "Ministry of Electronics & IT (MeitY)",
+      "role": "PI"
+    }
+  ]
+}

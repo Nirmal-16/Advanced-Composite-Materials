@@ -1,22 +1,131 @@
-[
-  {
-    "id": 1,
-    "type": "journal",
-    "image": "https://images.unsplash.com/photo-1558444479-c8a51bc73a51?auto=format&fit=crop&w=500&q=80",
-    "title": "Molecular Dynamics of Nano-Lattices",
-    "year": "2026",
-    "desc": "Investigating the thermal stability of carbon-nanotube reinforced polymers under extreme pressure.",
-    "citation": "Nature Materials, Vol 45, Issue 2",
-    "doi": "10.1038/s41563-025-0123"
-  },
-  {
-    "id": 2,
-    "type": "conferences",
-    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=500&q=80",
-    "title": "AI in Composite Manufacturing",
-    "year": "2025",
-    "desc": "Utilizing neural networks to predict delamination in aerospace-grade CFRP laminates.",
-    "citation": "IEEE Advanced Robotics & Materials",
-    "doi": "10.1109/ARM.2025.12"
-  }
-]
+{ 
+  "ribbontitle":"Research",
+  "ribbondesc":"Advancing the frontiers of computational multiphysics through innovative research and cutting-edge numerical methods.",
+  "Ongoing Projects": [
+    {
+      "title": "High-Performance Computing & Solver Development",
+      "subtitle": "Adaptive, Scalable, and Multiphysics-Ready",
+      "icon": "⚡",
+      "overview": "Core lab effort: developing exascale-ready solvers built on Adaptive Mesh Refinement (AMR) and a Hybrid Sharp–Diffuse Interface Framework. These solver technologies underpin our shock hydrocodes, all-speed CFD, and multiscale frameworks.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "AMR-enabled hydrocodes",
+        "Density-based all-speed solver framework ",
+        "Hybrid Sharp–Diffuse Interface methods integrated with AMR"
+      ],
+      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX"],
+      "impact": [
+        "Exascale-ready implementations for large HPC centers",
+        "Unified solver frameworks that span Mach regimes and multiphase problems",
+        "Reusable libraries and software components for group projects"
+      ],
+      "image": "images/Research_Image_HPC.jpg"
+    },
+    {
+      "title": "In-House Multi-Material Eulerian Hydrocode",
+      "subtitle": "High-Strain-Rate Physics and Shock Physics Dynamics",
+      "icon": "🌊",
+      "overview": "Scalable multi-material Eulerian hydrocode for shock propagation, impact and fragmentation problems. Designed to resolve sharp features while remaining robust in mixed-material zones using the hybrid interface approach.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Modeling shock initiation in energetic materials",
+        "Impact response of layered protective structures",
+        "High-order methods and AMR for shock-focused multiphysics"
+      ],
+      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX"],
+      "impact": [
+        "Accurate prediction of shock–material interactions",
+        "Improved designs for protective systems and planetary entry models",
+        "Bridging experiments and simulations for validation"
+      ],
+      "image": "images/Research_Image_Hydrocode.jpg"
+    }
+  ],
+
+  "Energetic Materials & Reactive Systems": [
+    {
+      "title": "Energetic Materials & Reactive Systems",
+      "subtitle": "Initiation, Hot-Spot Physics, and Microstructure-aware burn models",
+      "icon": "🔥",
+      "overview": "Multiscale, multiphysics study of energetic materials from atomistic chemistry to continuum-scale initiation and run-to-detonation behavior. We combine DFT, MD, KMC and continuum reactive flow models for predictive capabilities.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Hot-spot formation and growth in heterogeneous energetic materials",
+        "Reactive burn models coupled to hydrocodes",
+        "Multiscale Framework: DFT → MD → continuum"
+      ],
+      "tools": ["LAMMPS", "DFT Codes", "Kinetic Monte Carlo", "Alamo", "AMReX", "SCIMITAR3DeX"],
+      "impact": [
+        "Mechanistic insight into initiation and sensitivity",
+        "Improved constitutive/reaction models for engineering simulations",
+        "Data-driven parameter calibration linking experiments and simulation"
+      ],
+      "image": "images/Research_Image_Energetic_Materials.jpg"
+    }
+  ],
+
+  "Impact-Resistant & Protective Materials": [
+    {
+      "title": "Impact-Resistant & Protective Materials",
+      "subtitle": "Multiscale Mechanics and Materials Design for Protection",
+      "icon": "🛡️",
+      "overview": "Design and simulation of materials and structures optimized for impact resistance — from microstructural tailoring to structural-scale response — using coupled multiscale mechanics and dynamic testing calibration.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Multiscale models for fiber-matrix composites under impact",
+        "Topology and microstructure optimization for energy absorption",
+        "Coupling experiments and simulations for validation"
+      ],
+      "tools": ["Alamo", "AMReX", "SCIMITAR3DeX"],
+      "impact": [
+        "Guides design of lighter, more effective protective systems",
+        "Translates microstructural design rules to engineering-scale performance",
+        "Supports defense and aerospace material qualification"
+      ],
+      "image": "images/Research_Image_Armour.jpg"
+    }
+  ],
+
+  "Biophysical & Biomedical Flow Modeling": [
+    {
+      "title": "Biophysical & Biomedical Flow Modeling",
+      "subtitle": "Cardiovascular, Microfluidic, and Cellular-Scale Flows",
+      "icon": "🫀",
+      "overview": "Applying our all-speed solver technology and multiscale coupling to biofluids: cardiovascular flows, microfluidics, and transport in porous biological media. Emphasis on physiological fidelity and clinically relevant predictions.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Patient-specific cardiovascular flow simulations",
+        "Microfluidic device modelling with interface-resolving methods",
+        "Transport and mixing of particulates/cells in complex geometries"
+      ],
+      "tools": ["AMReX", "Alamo", "SCIMITAR3DeX", "Image-based geometry workflows"],
+      "impact": [
+        "Supports translational bioengineering and device design",
+        "Bridges physiological measurements and predictive modelling"
+      ],
+      "image": "images/Research_Image_Cardiovascular.jpg"
+    }
+  ],
+
+  "Hypersonic & Reentry Physics": [
+    {
+      "title": "Hypersonic & Reentry Physics",
+      "subtitle": "Ablation, Aerothermochemistry, and Plasma–Material Interaction",
+      "icon": "🚀",
+      "overview": "Coupled study of high-enthalpy aerothermodynamics, surface ablation and chemistry, and plasma–material interactions encountered during hypersonic flight and planetary reentry.",
+      "publicationCount": 0,
+      "currentProjects": [
+        "Ablation and surface chemistry modelling for TPS materials",
+        "Aerothermochemical coupling in boundary layers at high enthalpy",
+        "Multiscale methods for gas-surface interaction kinetics"
+      ],
+      "tools": ["Alamo", "AMReX", "SCIMITAR3DeX", "WarpX"],
+      "impact": [
+        "Improves predictive models for thermal protection systems",
+        "Informs material selection and design for extreme environments",
+        "Enables joint experiments and simulation campaigns with hypersonics groups"
+      ],
+      "image": "images/Research_Image_Hypersonic_Reentry.jpg"
+    }
+  ]
+}

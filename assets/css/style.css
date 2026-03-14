@@ -33,6 +33,8 @@ body {
   --highlight: #58e3e1;
 }
 
+html { scroll-behavior: smooth; }
+
 /* ===============================
    Layout Utilities
    =============================== */
