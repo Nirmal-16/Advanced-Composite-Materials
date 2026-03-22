@@ -11,6 +11,7 @@ header {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(to bottom, #020f1f, #002132, #00394a);
+  overflow: hidden; /* prevent canvas overflow on small screens */
 }
 
 #particle-canvas {
@@ -28,11 +29,13 @@ header {
   justify-content: center;
   text-align: center;
   color: var(--light-text);
+  padding: 0 20px; /* prevent text touching screen edges on mobile */
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+  max-width: 100%; /* prevent overflow on small screens */
 }
 
 /* ===============================
@@ -66,20 +69,18 @@ header {
   display: flex;
   align-items: center;
   gap: 60px;
-  /* border:2px solid red; */
 }
 
 /* ---------- Images ---------- */
-/* Carousel container */
+
 .carousel {
   overflow: hidden;
   border-radius: 16px;
-  /* border:2px solid red; */
-  width:600px;
+  width: 100%;        /* ← was fixed 600px — broke on tablet/mobile */
+  max-width: 600px;   /* ← keeps desktop look exactly the same      */
   margin-top: 80px;
 }
 
-/* Carousel images */
 .carousel-inner img {
   width: 100%;
   height: 550px;
@@ -87,6 +88,7 @@ header {
   object-position: center;
   display: block;
 }
+
 .carousel-item,
 .swiper-slide {
   width: 100%;
@@ -96,13 +98,15 @@ header {
 .about-images {
   flex: 1;
   position: relative;
-  height: 80vh;
+  height: 80vh;       /* kept — only overridden on small screens below */
+  min-width: 0;       /* prevent flex blowout */
 }
 
 /* ---------- Content ---------- */
 
 .about-content {
   flex: 1;
+  min-width: 0;       /* prevent flex blowout */
 }
 
 .section-tag {
@@ -164,6 +168,7 @@ header {
    RESPONSIVE
 ================================= */
 
+/* ── Tablet (900px) — already existed, only additions ── */
 @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
@@ -171,24 +176,78 @@ header {
   }
 
   .about-images {
-    height: auto;
+    height: auto;       /* was already here */
+    width: 100%;        /* ← fill full width when stacked */
+  }
+
+  .carousel {
+    max-width: 100%;    /* ← allow carousel to fill column on tablet */
+    margin-top: 0;      /* ← remove top offset when stacked */
+  }
+
+  .carousel-inner img {
+    height: 420px;      /* ← slightly shorter on tablet — less dead space */
   }
 
   .feature-item {
-    align-items: center;
+    align-items: center;  /* already existed */
+    text-align: left;     /* ← keep feature text readable when section is centered */
   }
 }
 
+/* ── Mobile (600px) — already existed, only additions ── */
 @media (max-width: 600px) {
   .services-section {
-    padding: 60px 20px;
+    padding: 60px 20px;   /* already existed */
   }
 
   .services-container {
-    margin-top: -140px;
+    margin-top: -140px;   /* already existed */
+    grid-template-columns: 1fr 1fr; /* ← 2-col grid on large phones */
   }
 
   .about-content h2 {
-    font-size: 32px;
+    font-size: 32px;      /* already existed */
+  }
+
+  .carousel-inner img {
+    height: 300px;        /* ← more comfortable height on phones */
+  }
+}
+
+/* ── Small mobile (400px) ── */
+@media (max-width: 400px) {
+  .hero {
+    padding: 0 16px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr; /* ← single column on tiny phones */
+    margin-top: -100px;
+  }
+
+  .services-section {
+    padding: 50px 16px;
+  }
+
+  .about-section {
+    padding: 48px 16px;
+  }
+
+  .carousel-inner img {
+    height: 240px;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .feature-icon {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .feature-title {
+    font-size: 16px;
   }
 }
