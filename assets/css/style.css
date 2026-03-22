@@ -91,3 +91,98 @@ button {
   outline-offset: 2px;
 }
 
+/* SVG CENTER ALIGNMENT */
+
+/* 1. Every inline SVG: block display, no extra space below */
+svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* 2. Icon wrapper boxes (.meta-icon, .modal-meta-icon, .doi-icon)
+      Force true centering — GitHub Pages inherits line-height
+      differences that break the default flex alignment        */
+.meta-icon,
+.modal-meta-icon,
+.doi-icon,
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;          /* neutralise inherited line-height  */
+}
+
+/* 3. SVGs inside icon boxes — explicit block + centred size  */
+.meta-icon svg,
+.modal-meta-icon svg,
+.doi-icon svg,
+.card-icon svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* 4. Role pip dot — inline-flex rows with mixed content      */
+.meta-row,
+.modal-meta-row,
+.rcard-doi,
+.role-pill {
+  align-items: center;     /* override flex-start where set    */
+}
+
+/* 5. Breadcrumb sep and overlay-timeline SVG                 */
+.overlay-timeline svg,
+.breadcrumb svg {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;               /* sub-pixel nudge for text baseline */
+}
+
+/* 6. Tab dot (the teal bullet in active tabs)                */
+.tab-dot {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* 7. Toggle arrow in show-more button                        */
+.toggle-desc .arrow {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* 8. Modal nav + close SVGs                                  */
+.modal-close svg,
+.modal-nav svg {
+  display: block;
+  margin: auto;
+}
+
+/* 9. Gallery zoom badge SVG                                  */
+.gallery-item-zoom svg {
+  display: block;
+  margin: auto;
+}
+
+/* 10. Thumb fallback centred SVG                             */
+.thumb-fallback,
+.modal-img-fallback,
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-fallback svg,
+.modal-img-fallback svg,
+.img-placeholder svg {
+  display: block;
+}
