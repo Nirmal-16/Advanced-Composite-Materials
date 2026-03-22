@@ -118,7 +118,7 @@ svg {
 .modal-meta-icon svg,
 .doi-icon svg,
 .card-icon svg {
-  display: block;
+  display: block !important;
   width: 14px;
   height: 14px;
 }
@@ -133,7 +133,7 @@ svg {
 .modal-meta-row,
 .rcard-doi,
 .role-pill {
-  align-items: center;     /* override flex-start where set    */
+  align-items: center !important;     /* override flex-start where set    */
 }
 
 /* 5. Breadcrumb sep and overlay-timeline SVG                 */
@@ -162,14 +162,14 @@ svg {
 /* 8. Modal nav + close SVGs                                  */
 .modal-close svg,
 .modal-nav svg {
-  display: block;
-  margin: auto;
+  display: block !important;
+  margin: auto !important;
 }
 
 /* 9. Gallery zoom badge SVG                                  */
 .gallery-item-zoom svg {
-  display: block;
-  margin: auto;
+  display: block !important;
+  margin: auto !important;
 }
 
 /* 10. Thumb fallback centred SVG                             */
@@ -184,5 +184,5 @@ svg {
 .thumb-fallback svg,
 .modal-img-fallback svg,
 .img-placeholder svg {
-  display: block;
+  display: block !important;
 }
