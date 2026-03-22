@@ -1,0 +1,64 @@
+{
+  "Materials Science": [
+    {
+      "title": "Graphene-Reinforced Polymer Composites for Aerospace Structural Applications",
+      "description": "This study investigates the mechanical and thermal properties of graphene nanoplatelet-reinforced epoxy composites, focusing on improving tensile strength and fracture toughness for next-generation aerospace structural panels. This study investigates the mechanical and thermal properties of graphene nanoplatelet-reinforced epoxy composites, focusing on improving tensile strength and fracture toughness for next-generation aerospace structural panels. This study investigates the mechanical and thermal properties of graphene nanoplatelet-reinforced epoxy composites, focusing on improving tensile strength and fracture toughness for next-generation aerospace structural panels. This study investigates the mechanical and thermal properties of graphene nanoplatelet-reinforced epoxy composites, focusing on improving tensile strength and fracture toughness for next-generation aerospace structural panels.",
+      "keywords": ["Graphene", "Composites", "Aerospace", "Polymer Matrix"],
+      "doi": "https://doi.org/10.1016/j.compscitech.2024.110123",
+      "image": "IIT MADRAS.png"
+    },
+    {
+      "title": "Self-Healing Cementitious Materials Using Microencapsulated Healing Agents",
+      "description": "Development of autonomous self-healing cement-based materials embedded with microencapsulated calcium silicate hydrate precursors to arrest crack propagation and restore structural integrity without external intervention.",
+      "keywords": ["Self-Healing", "Cement", "Microencapsulation", "Durability"],
+      "doi": "https://doi.org/10.1016/j.cemconres.2024.107345",
+      "image": "IIT MADRAS.png"
+    },
+    {
+      "title": "Nanostructured Titanium Alloys for Biomedical Implant Applications",
+      "description": "Investigation of surface nanostructuring techniques on Ti-6Al-4V alloys to enhance osseointegration, corrosion resistance, and biocompatibility for load-bearing orthopaedic implants.",
+      "keywords": ["Titanium", "Biomedical", "Nanostructure", "Implants"],
+      "doi": "https://doi.org/10.1016/j.actbio.2024.05.021",
+      "image": "IIT MADRAS.png"
+    }
+  ],
+  "Computational Engineering": [
+    {
+      "title": "Physics-Informed Neural Networks for Turbulent Flow Prediction",
+      "description": "Leveraging physics-informed neural networks (PINNs) to model turbulent Navier-Stokes equations, reducing computational cost while maintaining accuracy comparable to direct numerical simulation in complex duct geometries.",
+      "keywords": ["PINN", "Turbulence", "CFD", "Deep Learning"],
+      "doi": "https://doi.org/10.1016/j.jcp.2024.112890",
+      "image": "IIT MADRAS.png"
+    },
+    {
+      "title": "Topology Optimisation of Lattice Structures for Additive Manufacturing",
+      "description": "Multi-objective topology optimisation framework for designing lightweight lattice infill structures in metal additive manufacturing, balancing stiffness, weight, and thermal dissipation requirements.",
+      "keywords": ["Topology Optimisation", "Additive Manufacturing", "Lattice", "FEA"],
+      "doi": "https://doi.org/10.1016/j.addma.2024.103876",
+      "image": "IIT MADRAS.png"
+    }
+  ],
+  "Smart Structures & IoT": [
+    {
+      "title": "Piezoelectric Energy Harvesting from Ambient Structural Vibrations",
+      "description": "Design and experimental validation of broadband piezoelectric transducers integrated into civil infrastructure for harvesting ambient vibration energy, powering wireless structural health monitoring sensor nodes.",
+      "keywords": ["Piezoelectric", "Energy Harvesting", "SHM", "Wireless Sensors"],
+      "doi": "https://doi.org/10.1088/1361-665X/acf123",
+      "image": "IIT MADRAS.png"
+    },
+    {
+      "title": "Digital Twin Framework for Real-Time Structural Health Monitoring",
+      "description": "A cloud-based digital twin architecture synchronising live sensor data from embedded MEMS accelerometers with finite element models to enable real-time damage detection and remaining useful life prediction for bridge structures.",
+      "keywords": ["Digital Twin", "SHM", "MEMS", "Bridge Monitoring"],
+      "doi": "https://doi.org/10.1016/j.engstruct.2024.118234",
+      "image": "IIT MADRAS.png"
+    },
+    {
+      "title": "Machine Learning-Based Anomaly Detection in Industrial IoT Pipelines",
+      "description": "An end-to-end anomaly detection pipeline using LSTM autoencoders deployed on edge devices to identify fault signatures in rotating machinery, achieving 96.4% detection accuracy with sub-second latency.",
+      "keywords": ["LSTM", "Anomaly Detection", "Edge AI", "Industrial IoT"],
+      "doi": "https://doi.org/10.1016/j.measurement.2024.114456",
+      "image": "IIT MADRAS.png"
+    }
+  ]
+}
