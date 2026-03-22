@@ -95,8 +95,8 @@ button {
 
 /* 1. Every inline SVG: block display, no extra space below */
 svg {
-  display: block;
-  flex-shrink: 0;
+  display: block !important;
+  flex-shrink: 0 !important;
 }
 
 /* 2. Icon wrapper boxes (.meta-icon, .modal-meta-icon, .doi-icon)
@@ -106,11 +106,11 @@ svg {
 .modal-meta-icon,
 .doi-icon,
 .card-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  line-height: 1;          /* neutralise inherited line-height  */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;          /* neutralise inherited line-height  */
 }
 
 /* 3. SVGs inside icon boxes — explicit block + centred size  */
@@ -118,14 +118,14 @@ svg {
 .modal-meta-icon svg,
 .doi-icon svg,
 .card-icon svg {
-  display: block !important;
-  width: 14px;
-  height: 14px;
+  display: block  !important;
+  width: 14px !important;
+  height: 14px !important;
 }
 
 .card-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 22px !important;
+  height: 22px !important;
 }
 
 /* 4. Role pip dot — inline-flex rows with mixed content      */
@@ -133,56 +133,56 @@ svg {
 .modal-meta-row,
 .rcard-doi,
 .role-pill {
-  align-items: center !important;     /* override flex-start where set    */
+  align-items: center  !important;     /* override flex-start where set    */
 }
 
 /* 5. Breadcrumb sep and overlay-timeline SVG                 */
 .overlay-timeline svg,
 .breadcrumb svg {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;               /* sub-pixel nudge for text baseline */
+  display: inline-block !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  top: -1px !important;               /* sub-pixel nudge for text baseline */
 }
 
 /* 6. Tab dot (the teal bullet in active tabs)                */
 .tab-dot {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
+  display: inline-flex !important;
+  align-items: center !important;
+  vertical-align: middle !important;
 }
 
 /* 7. Toggle arrow in show-more button                        */
 .toggle-desc .arrow {
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
 }
 
 /* 8. Modal nav + close SVGs                                  */
 .modal-close svg,
 .modal-nav svg {
-  display: block !important;
-  margin: auto !important;
+  display: block  !important;
+  margin: auto  !important;
 }
 
 /* 9. Gallery zoom badge SVG                                  */
 .gallery-item-zoom svg {
-  display: block !important;
-  margin: auto !important;
+  display: block  !important;
+  margin: auto  !important;
 }
 
 /* 10. Thumb fallback centred SVG                             */
 .thumb-fallback,
 .modal-img-fallback,
 .img-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .thumb-fallback svg,
 .modal-img-fallback svg,
 .img-placeholder svg {
-  display: block !important;
+  display: block  !important;
 }
