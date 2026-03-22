@@ -1,0 +1,98 @@
+[
+  {
+    "title": "International Conference on Advanced Composite Materials",
+    "description": "Presented a keynote on graphene-reinforced polymer composites at the ICACM 2024 held in Singapore. The conference brought together over 800 researchers from 42 countries to discuss breakthroughs in material science, nano-engineering, and sustainable manufacturing. Our research on interfacial bonding mechanisms received the Best Paper Award in the Structural Materials track.",
+    "category": "Conference",
+    "venue": "Suntec Convention Centre, Singapore",
+    "timeline": "March 14–16, 2024",
+    "image": "assets/images/gallery/conference-1.jpg"
+  },
+  {
+    "title": "National Workshop on Smart Structures & IoT Integration",
+    "description": "Organised and led a two-day hands-on workshop at IIT Madras focused on deploying IoT sensor networks for structural health monitoring. Participants included postgraduate students and industry engineers from the civil and aerospace sectors. The workshop covered sensor calibration, edge computing, and real-time data visualisation pipelines.",
+    "category": "Workshop",
+    "venue": "IIT Madras, Chennai, India",
+    "timeline": "August 5–6, 2023",
+    "image": "assets/images/gallery/workshop-1.jpg"
+  },
+  {
+    "title": "Field Study — Bridge Structural Assessment, Pamban",
+    "description": "Conducted an extensive field inspection of the Pamban Railway Bridge using embedded piezoelectric sensors and drone-mounted LiDAR imaging. The study aimed at establishing a baseline for the digital twin model currently under development. Data collected over a three-day period is being used to train the anomaly detection model.",
+    "category": "Field Study",
+    "venue": "Pamban Bridge, Rameswaram, Tamil Nadu",
+    "timeline": "November 9–11, 2023",
+    "image": "assets/images/gallery/field-1.jpg"
+  },
+  {
+    "title": "DST Project Inauguration Ceremony",
+    "description": "Official inauguration of the DST-funded project on AI-Driven Structural Health Monitoring attended by the Director of SERB, institutional heads, and co-investigators. The ceremony marked the beginning of a three-year collaborative research initiative with a sanctioned budget of ₹85 lakhs.",
+    "category": "Event",
+    "venue": "Senate Hall, Anna University, Chennai",
+    "timeline": "January 20, 2023",
+    "image": "assets/images/gallery/event-1.jpg"
+  },
+  {
+    "title": "Indo-German Research Symposium on Sustainable Engineering",
+    "description": "Participated in the bilateral research symposium co-organised by DAAD and DST exploring sustainable engineering practices. Presented findings from the hybrid renewable energy systems project and initiated a memorandum of understanding with Technical University of Munich for future collaborative research.",
+    "category": "Conference",
+    "venue": "India Habitat Centre, New Delhi",
+    "timeline": "February 22–23, 2024",
+    "image": "assets/images/gallery/conference-2.jpg"
+  },
+  {
+    "title": "Lab Equipment Inauguration — Nano-Characterisation Suite",
+    "description": "Inauguration of the newly established Nano-Characterisation Laboratory equipped with a field-emission scanning electron microscope, atomic force microscope, and X-ray diffractometer. The facility supports ongoing research in nanomaterial biosensors and composite material microstructure analysis.",
+    "category": "Event",
+    "venue": "Research Block C, Department of Mechanical Engineering",
+    "timeline": "June 3, 2023",
+    "image": "assets/images/gallery/event-2.jpg"
+  },
+  {
+    "title": "PhD Research Progress Review — Annual Colloquium",
+    "description": "Annual doctoral research colloquium where all PhD scholars presented their six-monthly progress to a panel of internal and external examiners. Five doctoral candidates from our research group presented work spanning computational mechanics, smart materials, and machine learning applications in structural engineering.",
+    "category": "Academic",
+    "venue": "Seminar Hall A, Department of Civil Engineering",
+    "timeline": "October 12, 2023",
+    "image": "assets/images/gallery/academic-1.jpg"
+  },
+  {
+    "title": "ISRO Collaborative Meeting — Remote Sensing Data Review",
+    "description": "Technical review meeting with ISRO scientists at the Space Applications Centre to discuss satellite imagery datasets and DEM models required for the disaster risk assessment project. The meeting established a formal data-sharing protocol and defined key deliverables for the remaining project phases.",
+    "category": "Collaboration",
+    "venue": "Space Applications Centre, Ahmedabad, Gujarat",
+    "timeline": "September 5, 2023",
+    "image": "assets/images/gallery/collab-1.jpg"
+  },
+  {
+    "title": "Workshop on Machine Learning in Civil Engineering",
+    "description": "Delivered a full-day invited workshop on practical applications of deep learning and transfer learning for structural damage classification. The session included a live demonstration of a convolutional neural network trained to detect crack patterns from inspection photographs of concrete structures.",
+    "category": "Workshop",
+    "venue": "NIT Trichy, Tiruchirappalli, Tamil Nadu",
+    "timeline": "July 18, 2023",
+    "image": "assets/images/gallery/workshop-2.jpg"
+  },
+  {
+    "title": "MNRE Site Visit — Solar-Wind Hybrid Pilot Installation",
+    "description": "Monitored and evaluated the pilot solar-wind hybrid energy system installed at a remote village in Rajasthan as part of the MNRE-funded electrification project. The 15 kW hybrid system has been operational for six months, providing 24/7 power to 48 households with a system efficiency of 87.3%.",
+    "category": "Field Study",
+    "venue": "Jodhpur District, Rajasthan",
+    "timeline": "December 4–6, 2023",
+    "image": "assets/images/gallery/field-2.jpg"
+  },
+  {
+    "title": "Best Research Paper Award — ICTACEM 2023",
+    "description": "Received the Best Research Paper Award at the International Conference on Theoretical, Applied, Computational and Experimental Mechanics. The awarded paper titled 'Topology-Optimised Lattice Infill Structures for Metal Additive Manufacturing' was recognised for its novelty and industrial applicability.",
+    "category": "Achievement",
+    "venue": "IIT Kharagpur, West Bengal",
+    "timeline": "December 28–30, 2023",
+    "image": "assets/images/gallery/achievement-1.jpg"
+  },
+  {
+    "title": "Research Collaboration MoU Signing — TU Munich",
+    "description": "Formal signing of the Memorandum of Understanding between our institution and the Chair of Computational Mechanics at Technical University of Munich. The MoU facilitates faculty and student exchange, joint publications, and shared access to high-performance computing infrastructure for simulation-heavy research.",
+    "category": "Collaboration",
+    "venue": "Director's Conference Room, Anna University",
+    "timeline": "April 10, 2024",
+    "image": "assets/images/gallery/collab-2.jpg"
+  }
+]
