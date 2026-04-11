@@ -1,5 +1,4 @@
-/* Ribbon */
-
+/* ================= RIBBON ================= */
 .ribbon {
   text-align: center;
   padding: 100px 20px;
@@ -18,8 +17,7 @@
   margin: auto;
 }
 
-/* Timeline */
-
+/* ================= SECTION ================= */
 .conference-section {
   width: 90%;
   max-width: 1200px;
@@ -27,114 +25,26 @@
   padding: 80px 0;
 }
 
-.timeline {
-  position: relative;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 120px;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: #e2e8f0;
-}
-
-.timeline-item {
-  display: flex;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.year {
-  width: 100px;
-  text-align: right;
-  padding-right: 20px;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.dot {
-  width: 14px;
-  height: 14px;
-  background: #2563eb;
-  border-radius: 50%;
-  position: absolute;
-  left: 113px;
-  top: 8px;
-}
-
-.conf-card {
-  margin-left: 50px;
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 25px;
-  flex: 1;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
-}
-
-.conf-card:hover {
-  transform: translateY(-6px);
-}
-
-.badge {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.badge.talk {
-  background: #ffecff;
-  color: #a10389;
-}
-
-.badge.proceeding {
-  background: #e0f2fe;
-  color: #0369a1;
-}
-.badge.conference {
-  background: #ede9fe;
-  color: #5b21b6;
-}
-
-.conf-card h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
-}
-
-.authors {
-  font-size: 14px;
-  color: #64748b;
-  margin-bottom: 10px;
-}
-
-.journal {
-  font-weight: 500;
-  color: #334155;
-}
-
-
-/* Filter Tabs */
-
+/* ================= FILTER TABS ================= */
 .filter-tabs {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
 }
 
 .tab {
-  padding: 10px 22px;
-  margin: 0 10px;
+  padding: 9px 22px;
   border-radius: 30px;
-  border: 1px solid #cbd5e1;
+  border: 1.5px solid #cbd5e1;
   background: white;
   cursor: pointer;
   font-weight: 500;
-  transition: 0.3s ease;
+  font-size: 14px;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .tab:hover {
@@ -147,51 +57,165 @@
   border-color: #2563eb;
 }
 
+/* ================= TIMELINE ================= */
+.timeline {
+  position: relative;
+}
+
+/* Vertical line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 120px;
+  left: 100px;
   top: 0;
   width: 2px;
   height: 100%;
   background: #e2e8f0;
-  z-index: 0;           /* ADD THIS */
+  z-index: 0;
 }
 
+/* ================= TIMELINE ITEM ================= */
 .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
   position: relative;
-  z-index: 1;           /* ADD THIS */
+  z-index: 1;
 }
 
-.filter-tabs {
-  position: relative;
-  z-index: 2;           /* ADD THIS */
+/* Year label */
+.year {
+  min-width: 80px;
+  width: 80px;
+  text-align: right;
+  padding-right: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #334155;
+  padding-top: 6px;
+  flex-shrink: 0;
 }
 
+/* Dot on the line */
+.dot {
+  width: 13px;
+  height: 13px;
+  background: #2563eb;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #2563eb;
+  border-radius: 50%;
+  position: absolute;
+  left: 94px;
+  top: 9px;
+  flex-shrink: 0;
+  z-index: 2;
+}
 
-/* Responsive */
+/* ================= CARD ================= */
+.conf-card {
+  margin-left: 45px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 25px;
+  flex: 1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-@media(max-width: 768px) {
+.conf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+/* ================= BADGE ================= */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+.badge.talk       { background: #ffecff; color: #a10389; }
+.badge.proceeding { background: #e0f2fe; color: #0369a1; }
+.badge.conference { background: #ede9fe; color: #5b21b6; }
+
+/* ================= CARD TEXT ================= */
+.conf-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.authors {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.journal {
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .ribbon h1 {
+    font-size: 2rem;
+  }
 
   .timeline::before {
-    left: 20px;
+    left: 6px;
   }
 
   .timeline-item {
     flex-direction: column;
-    margin-left: 30px;
+    padding-left: 28px;
+    margin-bottom: 35px;
   }
 
   .year {
+    width: auto;
     text-align: left;
-    padding-left: 40px;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #64748b;
   }
 
   .dot {
-    left: 13px;
+    left: 0;
+    top: 4px;
   }
 
   .conf-card {
-    margin-left: 20px;
+    margin-left: 0;
+    padding: 18px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .conference-section {
+    width: 95%;
+    padding: 50px 0;
+  }
+
+  .conf-card h3 {
+    font-size: 15px;
+  }
+
+  .tab {
+    padding: 7px 15px;
+    font-size: 13px;
   }
 }
