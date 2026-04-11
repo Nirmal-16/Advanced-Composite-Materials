@@ -11,12 +11,6 @@ const icons = {
     <path d="M2 12l10 5 10-5"/>
   </svg>`,
 
-  doi: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-    stroke="#58e3e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-  </svg>`,
-
   empty: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/>
@@ -35,13 +29,6 @@ function buildCard(item, index) {
   const keywordsHTML = (item.keywords ?? [])
     .map(k => `<span class="keyword-tag">${k}</span>`)
     .join('');
-
-  /* DOI */
-  const doiDisplay = item.doi
-    ? item.doi.startsWith('http')
-      ? `<a class="doi-value" href="${item.doi}" target="_blank" rel="noopener">${item.doi}</a>`
-      : `<span class="doi-value">${item.doi}</span>`
-    : `<span class="doi-value" style="opacity:.4">Not assigned</span>`;
 
   /* thumbnail */
   const imgHTML = item.image
@@ -74,14 +61,6 @@ function buildCard(item, index) {
         </div>
 
         ${keywordsHTML ? `<div class="rcard-keywords">${keywordsHTML}</div>` : ''}
-
-        <div class="rcard-doi">
-          <div class="doi-icon">${icons.doi}</div>
-          <div>
-            <span class="doi-label">DOI</span>
-            ${doiDisplay}
-          </div>
-        </div>
 
       </div>
     </article>`;
