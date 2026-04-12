@@ -1,0 +1,368 @@
+/* ================= RIBBON ================= */
+.ribbon {
+  text-align: center;
+  padding: 100px 20px;
+  background: #f8fafc;
+  color: var(--secondary);
+}
+
+.ribbon h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ribbon p {
+  max-width: 700px;
+  margin: auto;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ================= STATS BAR ================= */
+.fac-stats {
+  background: var(--secondary);
+  padding: 40px 20px;
+}
+
+.fac-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.fac-stat-item {
+  padding: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fac-stat-item:last-child {
+  border-right: none;
+}
+
+.fac-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00e3cc;
+  margin-bottom: 4px;
+}
+
+.fac-stat-label {
+  font-size: 14px;
+  color: #94a3b8;
+  letter-spacing: 0.3px;
+}
+
+/* ================= SECTION CONTAINER ================= */
+.fac-section {
+  padding: 70px 20px;
+}
+
+.fac-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= FILTER TABS ================= */
+.fac-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.fac-tab {
+  padding: 9px 22px;
+  border-radius: 30px;
+  border: 1.5px solid #009688;
+  background: transparent;
+  color: #009688;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.fac-tab:hover {
+  background: #e0f2f1;
+  transform: translateY(-2px);
+}
+
+.fac-tab.active {
+  background: #009688;
+  color: #fff;
+}
+
+/* ================= EQUIPMENT GRID ================= */
+.fac-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ================= EQUIPMENT CARD ================= */
+.fac-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.fac-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+}
+
+.fac-card.hidden {
+  display: none;
+}
+
+/* Card image */
+.fac-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: #f1f5f9;
+}
+
+/* Image placeholder (when no image) */
+.fac-card-placeholder {
+  width: 100%;
+  height: 200px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #94a3b8;
+}
+
+/* Card body */
+.fac-card-body {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fac-card-category {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Category badge colours */
+.cat-characterization { background: #e0f2fe; color: #0369a1; }
+.cat-fabrication      { background: #ede9fe; color: #5b21b6; }
+.cat-mechanical       { background: #fef3c7; color: #92400e; }
+.cat-thermal          { background: #fee2e2; color: #991b1b; }
+.cat-computational    { background: #d1fae5; color: #065f46; }
+.cat-imaging          { background: #fce7f3; color: #9d174d; }
+.cat-other            { background: #f1f5f9; color: #475569; }
+
+.fac-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.fac-card-model {
+  font-size: 12px;
+  color: #009688;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+.fac-card-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+/* Specs list */
+.fac-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+}
+
+.fac-specs li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.fac-specs li i {
+  color: #009688;
+  font-size: 13px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* Status badge */
+.fac-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.fac-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-available   .fac-status-dot { background: #22c55e; }
+.status-available                    { color: #15803d; }
+.status-maintenance .fac-status-dot { background: #f59e0b; }
+.status-maintenance                  { color: #92400e; }
+.status-limited     .fac-status-dot { background: #3b82f6; }
+.status-limited                      { color: #1d4ed8; }
+
+/* ================= EMPTY STATE ================= */
+.fac-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #94a3b8;
+}
+
+.fac-empty i {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.fac-empty p {
+  font-size: 15px;
+}
+
+.fac-empty.hidden {
+  display: none;
+}
+
+/* ================= INFO SECTION ================= */
+.fac-info-section {
+  padding: 70px 20px;
+  background: #f8fafc;
+}
+
+.fac-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.fac-info-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.fac-info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #e0f2f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #009688;
+}
+
+.fac-info-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.fac-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fac-info-list li {
+  font-size: 14px;
+  color: #64748b;
+  padding: 6px 0;
+  border-bottom: 1px solid #f1f5f9;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.fac-info-list li:last-child {
+  border-bottom: none;
+}
+
+.fac-info-list li i {
+  color: #009688;
+  font-size: 13px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .ribbon h1      { font-size: 2rem; }
+  .fac-stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .fac-stat-item:nth-child(2)  { border-right: none; }
+  .fac-stat-item:nth-child(odd){ border-right: 1px solid rgba(255,255,255,0.08); }
+  .fac-stat-item:nth-child(even){ border-right: none; }
+
+  .fac-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ribbon         { padding: 70px 20px; }
+  .ribbon h1      { font-size: 1.7rem; }
+  .fac-stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .fac-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fac-tab {
+    padding: 7px 15px;
+    font-size: 13px;
+  }
+}
