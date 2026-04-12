@@ -60,6 +60,11 @@ function setActiveNav() {
 
 }
 
+document.querySelectorAll(".contact-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    window.location.href = `${BASE_PATH}/contact.html`;
+  });
+});
 
 // Sidebar toggle (used by HTML onclick)
 window.toggleSidebar = () => {

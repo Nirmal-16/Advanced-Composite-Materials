@@ -8,6 +8,7 @@
   border-radius: 6px;
   min-height: 280px;
   transition: transform 0.3s ease-in-out;
+  text-align: left;
 }
 
 .card:hover {
