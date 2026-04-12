@@ -57,6 +57,7 @@ function setActiveNav() {
     window.location.href = `${BASE_PATH}/contact.html`;
   });
 });
+
 }
 
 
