@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
     ? "/Advanced-Composite-Materials"
     : "";
 
+  // ── Highlight target name ──
+  function highlightName(text, name) {
+    if (!text) return "";
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const regex = new RegExp(`(${escaped})`, "gi");
+    return text.replace(regex, `<span class="highlight-name">$1</span>`);
+  }
+
   fetch(`${BASE_PATH}/data/conferences.json`)
     .then((res) => res.json())
     .then((data) => {
@@ -48,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="conf-card">
             <span class="badge talk">Talk</span>
             <h3>${item.title}</h3>
-            <div class="authors">${item.event}</div>
+            <div class="authors">${highlightName(item.event, "Nagappa Siddgonde")}</div>
             <div class="journal">${item.venue}</div>
           </div>
         `;
@@ -63,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="conf-card">
             <span class="badge ${badgeClass}">${item.type}</span>
             <h3>${item.title}</h3>
-            <div class="authors">${item.authors}</div>
+            <div class="authors">${highlightName(item.authors, "Nagappa Siddgonde")}</div>
             <div class="journal">${item.journal}</div>
           </div>
         `;

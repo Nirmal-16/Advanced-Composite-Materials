@@ -4,23 +4,37 @@
 },
 "Conferences": [
     {
-      "title": "Physics-aware Recurrent Convolutional Neural Networks for Spatiotemporal Dynamics Modeling.",
-      "authors": "Nguyen, P.C., Cheng, X., Arfaza, S., Seshadri, P. K., Nguyen, Y.T., Kim, M., Choi, S., Udaykumar, H.S. and Baek, S.",
-      "journal": "ICML Conference,2026",
+      "title": "Investigation of Compressive and Interlaminar Fracture Properties of GF/Acrylic Thermoplastic Composites Under Sea Water Ageing Effect",
+      "authors": "Nagappa Siddgonde, J. Quinn, A. Alapati, M. Devine, C. M. Ó Brádaigh and D. Ray.",
+      "journal": "BSSM, 18th International Conference on Advances in Experimental Mechanics, September 2024 at University of Liverpool, UK.",
       "citescore": "",
       "ranking": ""
     },
     {
-      "title": "High-order methods for simulations of shocked reactive energetic materials at all scales.",
-      "authors": "Seshadri, P. K., Okafor, C. and Udaykumar, H. S.",
-      "journal": "2.Bulletin of the American Physical Society,2025",
+      "title": "Two-step homogenization of 8-harness satin weave woven composite considering void defects",
+      "authors": "Nagappa Siddgonde and Anup Ghosh.",
+      "journal": "14th International Conference on Textile Composites (TexComp14), 14th -16th September 2022, at Kyoto Institute of Technology, Kyoto, Japan.",
       "citescore": "",
       "ranking": ""
     },
     {
-      "title": "High fidelity mesoscale simulations of shock initiation through flyer impact on HMX crystal–binder aggregates.",
-      "authors": "Roy, S., Seshadri, P. K., Okafor, C. and Udaykumar, H. S.",
-      "journal": "American Physical Society,2024",
+      "title": "Thermo-mechanical modeling of 3D woven fabric composites using two-step homogenization approach",
+      "authors": "Nagappa Siddgonde and Anup Ghosh.",
+      "journal": "In ASME International Mechanical Engineering Congress and Exposition (IMECE2019), American Society of Mechanical Engineers, 11th to 14th November 2019 at Salt Lake City, Utah, USA.",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Thermo-mechanical modelling of 5-harness satin weave C/C composites at high temperature",
+      "authors": "Nagappa Siddgonde and Anup Ghosh.",
+      "journal": "9th ICMPC-2019, 8th -10th March 2019 at Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad, 2019.",
+      "citescore": "",
+      "ranking": ""
+    },
+    {
+      "title": "Numerical analysis of low velocity impact on woven fabric laminated composite plates.",
+      "authors": "Shravan B. Kerur, Nagappa Siddgonde, and Ravikant B. M.",
+      "journal": "International Conference on Emerging Trend in Research and Technology, 7th June at Bangalore, 2015.",
       "citescore": "",
       "ranking": ""
     }
@@ -49,18 +63,18 @@
   ],
   "Conference Proceedings": [
     {
-      "title": "Analysis of Unsteady Aerodynamics on Dragonfly Using Computational Fluid Dynamics and the Effect of Flapping Trajectories on it.",
-      "authors": "Arun Ramanathan.S, Prabhu.S, Seshadri, P. K., Tamizhvendhan.B, Asad Ahmed",
-      "journal": "13.Proceedings of 11th Asian International Conference on Fluid Machinery, IIT Madras, Chennai, Nov 2011.",
-      "citescore": "",
-      "ranking": ""
+      "title": "Numerical analysis of low velocity impact on woven fabric laminated composite plates.",
+      "authors": "Shravan B. Kerur, Nagappa Siddgonde, and Ravikant B. M.",
+      "journal": "International Journal of Innovative Research in Science, Engineering and Technology, 2015.",
+      "citescore": "2",
+      "ranking": "https://www.ijirset.com/upload/2015/august/192_nagapa_IFERP_new.pdf"
     },
     {
-      "title": " Analysis of Unsteady Aerodynamics on Dragonfly Using CFD.",
-      "authors": "Arun Ramanathan.S, Prabhu.S, Seshadri, P. K., Tamizhvendhan.B, Asad Ahmed.",
-      "journal": "14.the 11th Asian Symposium on Visualization, JUN 2011.",
-      "citescore": "",
-      "ranking": ""
+      "title": "Thermo-mechanical modeling of 3D woven fabric composites using two-step homogenization approach.",
+      "authors": "Nagappa Siddgonde and Anup Ghosh.",
+      "journal": "13.Proceedings of 11th Asian International Conference on Fluid Machinery, IIT Madras, Chennai, Nov 2011.",
+      "citescore": "2",
+      "ranking": "https://doi.org/10.1115/IMECE2019-10913"
     }
   ]
 }

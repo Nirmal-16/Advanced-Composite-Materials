@@ -3,11 +3,11 @@
     "id": 1,
     "type": "journal",
     "image": "https://images.unsplash.com/photo-1532187875605-2fe358511423?auto=format&fit=crop&w=300&q=80",
-    "title": "Graphene-Reinforced Polymer Composites",
-    "description": "An in-depth study on the mechanical properties of graphene-nanoplatelet-reinforced epoxy resin.",
-    "authors": "Dr. A. Smith, R. Taylor",
-    "citation": "Journal of Nano-Tech (2025), 12(4), pp. 450-462",
-    "link": "#"
+    "title": "Mode I fracture toughness and mechanical properties of glass fibre reinforced acrylic thermoplastic composites before and after seawater ageing",
+    "description": "Acrylic thermoplastic composites are emerging as a promising alternative for tidal and offshore wind turbine blades and marine applications, offering comparable structural performance and manufacturing process with improved end-of-life recyclability compared to traditional epoxy-based thermoset composites. The effect of seawater ageing (SWA) on various mechanical properties of glass fibre/acrylic matrix composites has been reported by some researchers; however, changes in Mode I fracture toughness and compressive performance of these composites under SWA conditions have not been reported. This paper reports the effect of SWA on the Mode I fracture toughness and compressive properties of glass fibre-reinforced acrylic matrix composites. Digital image correlation (DIC) was used to measure the surface strain field and monitor crack propagation during Mode I fracture toughness testing. The fracture toughness and compressive properties of the composites, in both dry and SWA conditions, revealed interesting observations that differ from more conventionally used thermoset matrices such as epoxy. The results indicated that SWA reduces the interlaminar fracture toughness, causing decreases of 25% in crack initiation and 14% in crack propagation energy compared to the dry samples. The glass transition temperatures were determined before and after SWA. The compressive modulus and strength were also measured before and after SWA, and the degradation mechanisms discussed, highlighting the impact of water ingress and plasticisation of acrylic matrix on mechanical performance. The fractographic analysis of the failed samples revealed further insights into the effects of water ingress and plasticisation on crack propagation behaviour.",
+    "authors": "Nagappa Siddgonde, James. A Quinn, Conchur M.Ó Brádaigh and Dipa Ray",
+    "citation": "1.Polymer Composites, Page 1-12, John Wiley & Sons, Inc, 2026.",
+    "link": "http://doi.org/10.1002/pc.71033"
   },
   {
     "id": 2,
