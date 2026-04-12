@@ -52,6 +52,11 @@ function setActiveNav() {
 
   activateLinks("nav.desktop-nav a");
   activateLinks(".sidebar a");
+  document.querySelectorAll(".contact-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    window.location.href = `${BASE_PATH}contact.html`;
+  });
+});
 }
 
 

@@ -28,7 +28,7 @@
           <div>
             <h1>Advanced Composite Materials Lab</h1>
             <p>Innovating next-generation material science</p>
-            <button class="btn-primary">Explore Now</button>
+            <button class="btn-primary explore-btn">Explore Our Research</button>
           </div>
         </div>
       </section>
@@ -76,8 +76,8 @@
             collaborate on cutting-edge research and innovation.
           </p>
           <div class="cta-buttons">
-            <a href="#contact" class="btn-primary">Get in Touch</a>
-            <a href="#research" class="btn-outline">View Research</a>
+            <a href="#contact" class="btn-primary contact-btn">Get in Touch</a>
+            <a href="#research" class="btn-outline explore-btn">View Research</a>
           </div>
         </div>
       </div>
@@ -205,6 +205,12 @@
         cache[file] = data;
         return data;
       }
+
+      document.querySelectorAll(".explore-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          window.location.href = `${BASE_PATH}current-research.html`;
+        });
+      });
 
       // ==========================
       // SERVICES SECTION
