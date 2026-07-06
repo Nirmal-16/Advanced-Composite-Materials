@@ -1,6 +1,6 @@
-const BASE_PATH = window.location.hostname.includes("github.io")
+﻿const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Advanced-Composite-Materials"
-  : "";
+  : ".";
 
 fetch(`${BASE_PATH}/data/footer.json`)
   .then((res) => res.json())
@@ -8,11 +8,11 @@ fetch(`${BASE_PATH}/data/footer.json`)
     const footer = document.querySelector(".site-footer");
     if (!footer) return;
 
-    /* ── Brand ── */
+    /* â”€â”€ Brand â”€â”€ */
     footer.querySelector(".footer-logo").textContent = data.logoTitle;
     footer.querySelector(".footer-desc").textContent = data.description;
 
-    /* ── Social icons ── */
+    /* â”€â”€ Social icons â”€â”€ */
     footer.querySelector(".social-icons").innerHTML = `
       <a href="${data.contact.socials.linkedin}" target="_blank" rel="noopener">
         <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
@@ -28,12 +28,12 @@ fetch(`${BASE_PATH}/data/footer.json`)
       </a>
     `;
 
-    /* ── Quick links ── */
+    /* â”€â”€ Quick links â”€â”€ */
     footer.querySelector(".footer-links").innerHTML = data.quickLinks
       .map((link) => `<li><a href="${link.url}">${link.label}</a></li>`)
       .join("");
 
-    /* ── Contact ── */
+    /* â”€â”€ Contact â”€â”€ */
     footer.querySelector(".contact-location").innerHTML = `
       <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
@@ -55,12 +55,12 @@ fetch(`${BASE_PATH}/data/footer.json`)
       <span>${data.contact.phone}</span>
     `;
 
-    /* ── Map ── */
+    /* â”€â”€ Map â”€â”€ */
     const mapLink = footer.querySelector(".map-link");
     mapLink.href = data.map.link;
     mapLink.querySelector(".map-image").src = data.map.image;
 
-    /* ── Copyright ── */
+    /* â”€â”€ Copyright â”€â”€ */
     footer.querySelector(".footer-copyright").textContent = data.copyright;
   })
   .catch((err) => console.error("Footer load failed:", err));

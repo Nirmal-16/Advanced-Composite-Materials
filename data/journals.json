@@ -6,7 +6,7 @@
   "publications": [
     {
       "card": {
-        "thumbnail": "./assets/images/lab1.jpeg",
+        "thumbnail": "./assets/images/GA_paper1.jpg",
         "card-heading": "Mode I fracture toughness and mechanical properties of glass fibre reinforced acrylic thermoplastic composites before and after seawater ageing",
         "author-name": "Nagappa Siddgonde, James. A Quinn, Conchur M.Ó Brádaigh and Dipa Ray.",
         "year": "2026",
@@ -22,7 +22,7 @@
     },
     {
       "card": {
-        "thumbnail": "./assets/images/lab1.jpeg",
+        "thumbnail": "./assets/images/GA_paper2.jpg",
         "card-heading": "Experimental and numerical characterization of E-glass/epoxy plain woven fabric composites containing void defects",
         "author-name": "Nagappa Siddgonde, Vikas Kaushik and Anup Ghosh.",
         "year": "2024",
@@ -38,7 +38,7 @@
     },
     {
       "card": {
-        "thumbnail": "images/Pub_Journal_2_JAP_2024.jpg",
+        "thumbnail": "./assets/images/GA_paper3.jpg",
         "card-heading": "Mode-I fracture control of unidirectional laminated composites using MFC actuators",
         "author-name": "Vikas Kaushik, Nagappa Siddgonde, Fumio Narita, and Anup Ghosh.",
         "year": "2022",
@@ -46,7 +46,7 @@
         "tags": ["Macro fiber composite (MFC) actuator", "Pin force model", "Cohesive zone modeling", "Extended Isogeometric analysis (XIGA)", "Crack suppression"],
         "category": "Journal",
         "publication-title": "Journal of Intelligent Mat. Systems and Structures",
-        "description": "",
+        "description": "This article presents an experimental and numerical investigation of Mode-I fracture control in aerospace grade unidirectional laminated composites (AS4/914) using the smart material approach. The P1 type macro fiber composites (MFC) actuators are selected for current research because of their higher free strain, high mechanical flexibility, and good blocking force. The opening mode (Mode-I) interlaminar fracture tests have been carried out on DCB specimens having surface bonded MFC actuator patches under the application of electric voltage within a range of 0–1500 V. These fracture control tests have been performed on pre-cracked (PC) and non pre-cracked (NPC) double cantilever beam specimens. The modified pin force model has been adopted for the evaluation of actuation forces in surface bonded MFC actuators. The XIGA-CZM based numerical formulation is utilized for numerical fracture modeling under electromechanical loading conditions. The MFC actuators have significant control over Mode-I fracture energy under the application of peak operating voltage. The numerical model using a modified pin force model in combination with XIGA-CZM based fracture model shows a good agreement with experimental observations.",
         "doi": "https://doi.org/10.1177/1045389X221088032",
         "view-link": "https://doi.org/10.1177/1045389X221088032",
         "pdf-link": "#"
@@ -54,7 +54,7 @@
     },
     {
       "card": {
-        "thumbnail": "images/Pub_Journal_3_JAP_2023.jpg",
+        "thumbnail": "./assets/images/GA_paper4.jpg",
         "card-heading": "Thermo-mechanical modeling of C/C 3D orthogonal and angle interlock woven fabric composites in high temperature environment",
         "author-name": "Nagappa Siddgonde and Anup Ghosh.",
         "year": "2020",
@@ -70,7 +70,7 @@
     },
     {
       "card": {
-        "thumbnail": "images/Pub_Journal_4_SciAdv_2023.jpg",
+        "thumbnail": "./assets/images/GA_paper5.jpg",
         "card-heading": "Thermo-mechanical modelling of 5-harness satin weave c/c composites at high temperature",
         "author-name": "Nagappa Siddgonde and Anup Ghosh.",
         "year": "2019",
@@ -91,12 +91,12 @@
     "cards": [
       {
         "recent-badge": "Pre-Print 2025",
-        "recent-title": "Latent Representation Learning of Multi-scale Thermophysics: Application to Dynamics in Shocked Porous Energetic Material",
-        "recent-authors": "Azarfar, S., Choi, J. B., Nguyen, P. C. H., Nguyen, Y. T., Seshadri, P. K., Udaykumar, H.S., and Baek, S.",
-        "recent-journal": "International Journal of Multiphase Flow",
-        "recent-description": "Multiphase compressible flow systems can exhibit unsteady and fast-transient dynamics, marked by sharp gradients and discontinuities, and material boundaries that interact with the evolving flow. The transient nature of the dynamics presents challenges to employing artificial intelligence (AI) and data-driven models for predicting flow behaviors. In this study, we explore the potential of physics-aware recurrent convolutional neural networks (PARC) to model the spatiotemporal dynamics of multiphase flows in the presence of shocks and reaction fronts. PARC is a neural network model that incorporates the generic form of the diffusion–advection–reaction equation in its network architecture, which mimics the process of solving the governing equations of fluid flows. In contrast to physics-informed machine learning approaches such as physics-informed neural networks (PINNs) where models are trained to directly minimize the residual of governing equations, PARC takes a dynamical systems viewpoint and does not seek to minimize potentially nonconvex and nonlinear loss terms. To assess the ability of PARC to accurately learn and simulate the physics of multiphase flows, we train and test PARC on various flow simulation problems, including the Burgers’ equation, fluid flow behind a cylindrical cross-section, and unsteady shock interactions with a particle at varying Mach numbers. We analyze PARC’s performance and examine sources of error in its prediction, in terms of differentiation and integration schemes and different weighting strategies for the model update. Based on our observations, we discuss PARC’s capabilities and limitations in multiphase flow applications and propose future research directions.",
+        "recent-title": "Mode I fracture toughness and mechanical properties of glass fibre reinforced acrylic thermoplastic composites before and after seawater ageing",
+        "recent-authors": "Nagappa Siddgonde, James. A Quinn, Conchur M.Ó Brádaigh and Dipa Ray.",
+        "recent-journal": "Polymer Composites",
+        "recent-description": "Acrylic thermoplastic composites are emerging as a promising alternative for tidal and offshore wind turbine blades and marine applications, offering comparable structural performance and manufacturing process with improved end-of-life recyclability compared to traditional epoxy-based thermoset composites. The effect of seawater ageing (SWA) on various mechanical properties of glass fibre/acrylic matrix composites has been reported by some researchers; however, changes in Mode I fracture toughness and compressive performance of these composites under SWA conditions have not been reported. This paper reports the effect of SWA on the Mode I fracture toughness and compressive properties of glass fibre-reinforced acrylic matrix composites. Digital image correlation (DIC) was used to measure the surface strain field and monitor crack propagation during Mode I fracture toughness testing. The fracture toughness and compressive properties of the composites, in both dry and SWA conditions, revealed interesting observations that differ from more conventionally used thermoset matrices such as epoxy. The results indicated that SWA reduces the interlaminar fracture toughness, causing decreases of 25% in crack initiation and 14% in crack propagation energy compared to the dry samples. The glass transition temperatures were determined before and after SWA. The compressive modulus and strength were also measured before and after SWA, and the degradation mechanisms discussed, highlighting the impact of water ingress and plasticisation of acrylic matrix on mechanical performance. The fractographic analysis of the failed samples revealed further insights into the effects of water ingress and plasticisation on crack propagation behaviour.",
         "recent-citations": "0 citations",
-        "recent-link": "https://arxiv.org/abs/2506.12996"
+        "recent-link": "http://doi.org/10.1002/pc.71033"
       },
       {
         "recent-badge": "ICML Conference 2024",

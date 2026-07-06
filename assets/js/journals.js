@@ -1,9 +1,9 @@
-const container = document.getElementById("journalsContainer");
+﻿const container = document.getElementById("journalsContainer");
 const recentContainer = document.getElementById("recentCards");
 
 const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Advanced-Composite-Materials"
-  : "";
+  : ".";
 
 fetch(`${BASE_PATH}/data/journals.json`)
   .then((res) => res.json())
@@ -60,7 +60,7 @@ fetch(`${BASE_PATH}/data/journals.json`)
           <h3>${card["card-heading"]}</h3>
 
           <div class="meta">
-            ${card["author-name"]} • ${card.year} • ${card.citation}
+            ${card["author-name"]} â€¢ ${card.year} â€¢ ${card.citation}
           </div>
 
           <div class="meta">
@@ -116,3 +116,4 @@ fetch(`${BASE_PATH}/data/journals.json`)
     });
   })
   .catch((error) => console.error("Error loading JSON:", error));
+

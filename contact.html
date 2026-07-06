@@ -61,10 +61,18 @@
           action="https://formspree.io/f/xbdlpeyw"
           method="POST"
         >
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email address" required />
-          <input type="text" name="subject" placeholder="Subject" required />
+          <label for="contact-name" class="sr-only">Your name</label>
+          <input id="contact-name" type="text" name="name" placeholder="Name" required autocomplete="name" />
+
+          <label for="contact-email" class="sr-only">Email address</label>
+          <input id="contact-email" type="email" name="email" placeholder="Email address" required autocomplete="email" />
+
+          <label for="contact-subject" class="sr-only">Subject</label>
+          <input id="contact-subject" type="text" name="subject" placeholder="Subject" required />
+
+          <label for="contact-message" class="sr-only">Message</label>
           <textarea
+            id="contact-message"
             rows="4"
             name="message"
             placeholder="Message"

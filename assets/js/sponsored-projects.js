@@ -1,6 +1,6 @@
- const BASE_PATH = window.location.hostname.includes("github.io")
+﻿ const BASE_PATH = window.location.hostname.includes("github.io")
     ? "/Advanced-Composite-Materials"
-    : "";
+    : ".";
 
 const icons = {
   calendar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -132,7 +132,7 @@ async function init() {
   /* Show a loading placeholder in each grid while fetching */
   grids.forEach(type => {
     const grid = document.getElementById(`grid-${type}`);
-    if (grid) grid.innerHTML = '<div class="loading-state">Loading projects…</div>';
+    if (grid) grid.innerHTML = '<div class="loading-state">Loading projectsâ€¦</div>';
   });
 
   try {
@@ -154,7 +154,7 @@ async function init() {
       if (grid) {
         grid.innerHTML = `
           <div class="error-state">
-            ⚠️ Could not load projects. Please try again later.<br>
+            âš ï¸ Could not load projects. Please try again later.<br>
             <small style="opacity:.6">${err.message}</small>
           </div>`;
       }

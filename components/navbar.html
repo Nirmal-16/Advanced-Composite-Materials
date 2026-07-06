@@ -9,13 +9,13 @@
     <h1>ACM</h1>
     <!-- <img src="assets/images/IIT_Madras_Logo.svg.png" class="iit" alt="iit mardras" /> -->
   </div>
-  <nav class="desktop-nav">
+  <nav class="desktop-nav" aria-label="Main navigation">
     <ul>
       <li><a href="index.html">home</a></li>
       <li><a href="about.html">about</a></li>
       <li><a href="team.html">team</a></li>
       <li class="dropdown">
-        <a>research</a>
+        <a href="sponsored-projects.html">research</a>
         <div class="dropdown-content">
           <a href="sponsored-projects.html">sponsored projects</a>
           <a href="current-research.html">current research</a>
@@ -23,7 +23,7 @@
         </div>
       </li>
       <li class="dropdown">
-        <a>publications</a>
+        <a href="journals.html">publications</a>
         <div class="dropdown-content">
           <a href="journals.html">journals</a>
           <a href="conferences.html">conferences</a>
@@ -35,24 +35,30 @@
       <li><a href="contact.html">contact</a></li>
     </ul>
   </nav>
-  <div class="hamburger" onclick="toggleSidebar()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <button
+    class="hamburger"
+    onclick="toggleSidebar()"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="sidebar"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <div class="navbar-btn-container">
     <button class="navbar-btn contact-btn">Get In Touch</button>
   </div>
 </header>
 <!-- Sidebar -->
-<nav class="sidebar" id="sidebar">
-  <div class="close-icon" onclick="toggleSidebar()">×</div>
+<nav class="sidebar" id="sidebar" aria-label="Mobile navigation">
+  <button class="close-icon" onclick="toggleSidebar()" aria-label="Close navigation menu">×</button>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="team.html">Team</a></li>
     <li class="dropdown">
-      <div onclick="toggleDropdown(this)">Research ▾</div>
+      <button onclick="toggleDropdown(this)" aria-expanded="false" aria-haspopup="true">Research ▾</button>
       <ul class="submenu">
         <li><a href="sponsored-projects.html">Sponsored projects</a></li>
         <li><a href="current-research.html">Current research</a></li>
@@ -60,7 +66,7 @@
       </ul>
     </li>
     <li class="dropdown">
-      <div onclick="toggleDropdown(this)">Publications ▾</div>
+      <button onclick="toggleDropdown(this)" aria-expanded="false" aria-haspopup="true">Publications ▾</button>
       <ul class="submenu">
         <li><a href="journals.html">Journals</a></li>
         <li><a href="conferences.html">Conferences</a></li>

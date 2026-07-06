@@ -1,8 +1,8 @@
-let currentIndex = 0;
+﻿let currentIndex = 0;
 let autoSlide;
 const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Advanced-Composite-Materials"
-  : "";
+  : ".";
 
 async function loadTestimonials() {
   const response = await fetch(`${BASE_PATH}/data/testimonials.json`);
@@ -53,7 +53,8 @@ async function loadTestimonials() {
 function goToSlide(index, total) {
   const track = document.getElementById("testimonialTrack");
   const card = track.querySelector(".testimonial-card");
-  const cardWidth = card.offsetWidth + 30;
+  const gap = parseFloat(getComputedStyle(track).gap) || 30;
+  const cardWidth = card.offsetWidth + gap;
 
   currentIndex = index;
   track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
@@ -72,7 +73,8 @@ function startAutoSlide(total) {
   autoSlide = setInterval(() => {
     const track = document.getElementById("testimonialTrack");
     const card = track.querySelector(".testimonial-card");
-    const cardWidth = card.offsetWidth + 30;
+    const gap = parseFloat(getComputedStyle(track).gap) || 30;
+    const cardWidth = card.offsetWidth + gap;
 
     currentIndex++;
 

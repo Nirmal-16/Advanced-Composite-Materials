@@ -52,7 +52,7 @@ nav.desktop-nav li {
   padding-bottom: 8px;
 }
  nav.desktop-nav a {
-  color: var(--text-light);
+  color: var(--light-text);
   text-decoration: none;
   padding: 0.5rem;
   display: block;
@@ -134,13 +134,17 @@ nav.desktop-nav li:hover > .dropdown-content {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
 }
 
-.hamburger div {
+.hamburger span {
   width: 25px;
   height: 3px;
   background-color: var(--light-text);
   border-radius: 2px;
+  display: block;
 }
 
 /* ---------- Sidebar ---------- */
@@ -170,6 +174,11 @@ nav.desktop-nav li:hover > .dropdown-content {
   align-self: flex-end;
   cursor: pointer;
   margin-bottom: 20px;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  line-height: 1;
 }
 
 .sidebar ul {
@@ -183,7 +192,8 @@ nav.desktop-nav li:hover > .dropdown-content {
 }
 
 .sidebar ul li a,
-.sidebar ul li div {
+.sidebar ul li div,
+.sidebar ul li button {
   color: var(--light-text);
   text-decoration: none;
   font-size: 16px;
@@ -191,11 +201,16 @@ nav.desktop-nav li:hover > .dropdown-content {
   display: block;
   border-radius: 5px;
   cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
 }
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active,
-.sidebar ul li div:hover {
+.sidebar ul li div:hover,
+.sidebar ul li button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   color: var(--highlight);
   font-weight: bold;

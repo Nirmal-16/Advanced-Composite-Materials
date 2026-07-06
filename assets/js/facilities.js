@@ -1,6 +1,6 @@
-const BASE_PATH = window.location.hostname.includes("github.io")
+﻿const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Advanced-Composite-Materials"
-  : "";
+  : ".";
 
 const CATEGORY_CLASS_MAP = {
   "Characterization": "cat-characterization",
@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((err) => console.error("Facilities load error:", err));
 });
 
-/* ── Ribbon ── */
+/* â”€â”€ Ribbon â”€â”€ */
 function renderRibbon({ title, description }) {
   document.getElementById("ribbonTitle").innerText = title;
   document.getElementById("ribbonDesc").innerText  = description;
 }
 
-/* ── Stats bar ── */
+/* â”€â”€ Stats bar â”€â”€ */
 function renderStats(stats) {
   const grid = document.getElementById("facStatsGrid");
   grid.innerHTML = stats.map(s => `
@@ -42,13 +42,13 @@ function renderStats(stats) {
   `).join("");
 }
 
-/* ── Filter tabs (built from categories in data) ── */
+/* â”€â”€ Filter tabs (built from categories in data) â”€â”€ */
 function renderFilters(equipment) {
   const categories = ["All", ...new Set(equipment.map(e => e.category))];
   const filterBar  = document.getElementById("facFilter");
 
   filterBar.innerHTML = categories.map((cat, i) => `
-    <button class="fac-tab ${i === 0 ? "active" : ""}" data-filter="${cat}">
+    <button class="fac-tab ${i === 0 ? "active" : "."}" data-filter="${cat}">
       ${cat}
     </button>
   `).join("");
@@ -64,7 +64,7 @@ function renderFilters(equipment) {
   });
 }
 
-/* ── Filter logic ── */
+/* â”€â”€ Filter logic â”€â”€ */
 function applyFilter(selected) {
   const cards  = document.querySelectorAll(".fac-card");
   const empty  = document.getElementById("facEmpty");
@@ -79,7 +79,7 @@ function applyFilter(selected) {
   empty.classList.toggle("hidden", visible > 0);
 }
 
-/* ── Equipment cards ── */
+/* â”€â”€ Equipment cards â”€â”€ */
 function renderEquipment(equipment) {
   const grid = document.getElementById("facGrid");
 
@@ -100,7 +100,7 @@ function renderEquipment(equipment) {
         <div class="fac-card-body">
           <span class="fac-card-category ${catClass}">${item.category}</span>
           <div class="fac-card-title">${item.name}</div>
-          ${item.model ? `<div class="fac-card-model">${item.model}</div>` : ""}
+          ${item.model ? `<div class="fac-card-model">${item.model}</div>` : "."}
           <p class="fac-card-desc">${item.description}</p>
           <ul class="fac-specs">${specsHTML}</ul>
           <div class="fac-status ${statusClass}">
@@ -113,7 +113,7 @@ function renderEquipment(equipment) {
   }).join("");
 }
 
-/* ── Info cards (access, safety, contact) ── */
+/* â”€â”€ Info cards (access, safety, contact) â”€â”€ */
 function renderInfoCards(info) {
   const grid = document.getElementById("facInfoGrid");
 

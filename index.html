@@ -28,7 +28,7 @@
           <div>
             <h1>Advanced Composite Materials Lab</h1>
             <p>Innovating next-generation material science</p>
-            <button class="btn-primary explore-btn">Explore Our Research</button>
+            <a href="./current-research.html" class="btn-primary explore-btn">Explore Our Research</a>
           </div>
         </div>
       </section>
@@ -36,7 +36,7 @@
     <section class="services-section">
       <div class="container services-container" id="servicesContainer"></div>
     </section>
-    <section class="about-section" id="about-section">
+    <section class="about-section reveal" id="about-section">
       <div class="about-container">
         <div class="about-images">
           <!-- <img id="mainImage" class="main-img" src="" alt="Lab Image"/> -->
@@ -53,7 +53,7 @@
     <section class="stats-section">
       <div id="statsContainer" class="stats-grid"></div>
     </section>
-    <section class="testimonials-section">
+    <section class="testimonials-section reveal">
       <div class="container">
         <h2 class="section-title">Testimonials</h2>
         <p class="section-subtitle">
@@ -67,7 +67,7 @@
         <div class="testimonial-dots" id="testimonialDots"></div>
       </div>
     </section>
-    <section class="cta-section">
+    <section class="cta-section reveal">
       <div class="cta-container">
         <div class="cta-content">
           <h2>Interested in Collaborating?</h2>
@@ -76,141 +76,36 @@
             collaborate on cutting-edge research and innovation.
           </p>
           <div class="cta-buttons">
-            <a href="#contact" class="btn-primary contact-btn">Get in Touch</a>
-            <a href="#research" class="btn-outline explore-btn">View Research</a>
+            <a href="./contact.html" class="btn-primary contact-btn">Get in Touch</a>
+            <a href="./current-research.html" class="btn-outline explore-btn">View Research</a>
           </div>
         </div>
       </div>
     </section>
 
     <footer id="footer-placeholder"></footer>
-    <!-- JS Loading -->
-    <!-- Bootstrap integration  -->
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Components integration  -->
+    <!-- App components (navbar, footer, scroll-reveal) -->
     <script type="module" src="./assets/js/app.js"></script>
-    <!-- loading header starts  -->
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("show");
-      }
-      function toggleDropdown(element) {
-        const parentLi = element.parentElement;
-        parentLi.classList.toggle("open");
-      }
-    </script>
-    <!-- loading header ends  -->
-    <!-- <script type="module"> 
-      import { createCard } from "./components/card.js";
-      import { createCarousel } from "./components/carousel.js";
-      // Detect base path dynamically (local vs GitHub Pages)
-      const BASE_PATH = window.location.hostname.includes("github.io")
-        ? "/Advanced-Composite-Materials"
-        : "";
 
-      // Load JSON and render home sections
-      fetch(`${BASE_PATH}/data/index.json`)
-        .then((res) => res.json())
-        .then((data) => {
-          //Load service section
-          const container = document.getElementById("servicesContainer");
-          if (!container) return;
-          data.services.forEach((service) => {
-            container.innerHTML += createCard(service);
-          });
-          //Load about section
-          const about = data.aboutSection;
-          // Loading carousel
-          document.getElementById("aboutCarousel").innerHTML = createCarousel({
-            id: "aboutCarouselId",
-            images: about.images,
-          });
-          // moving carousel
-          const carouselElement = document.getElementById("aboutCarouselId");
-          new bootstrap.Carousel(carouselElement, {
-            interval: 4000,
-            ride: "carousel",
-            pause: false,
-            touch: true,
-          });
-          document.getElementById("aboutTag").textContent = about.tag;
-          document.getElementById("aboutTitle").textContent = about.title;
-          document.getElementById("aboutDesc").textContent = about.description;
-          const featureList = document.getElementById("featureList");
-          featureList.innerHTML = "";
-          about.features.forEach((item) => {
-            featureList.innerHTML += `
-              <div class="feature-item">
-                <div class="feature-icon">${item.icon}</div>
-                <div>
-                  <div class="feature-title">${item.title}</div>
-                  <div class="feature-text">${item.text}</div>
-                </div>
-              </div>
-            `;
-          });
-        })
-        .catch((err) => console.error("JSON Load Error:", err));
-
-      fetch(`${BASE_PATH}/data/stats.json`)
-        .then((res) => res.json())
-        .then((data) => renderStats(data));
-
-      function renderStats(items) {
-        const container = document.getElementById("statsContainer");
-
-        items.forEach((item) => {
-          const card = document.createElement("div");
-          card.className = "stat-card";
-
-          const circle = document.createElement("div");
-          circle.className = "circle";
-          circle.innerHTML = `<span>${item.value}%</span>`;
-
-          const deg = item.value * 3.6;
-          circle.style.background = `conic-gradient(var(--highlight) ${deg}deg, #eee ${deg}deg)`;
-
-          const info = document.createElement("div");
-          info.className = "stat-info";
-          info.innerHTML = `
-      <small>${item.tag}</small>
-      <h3>${item.label}</h3>
-      <p>${item.desc}</p>
-    `;
-
-          card.append(circle, info);
-          container.appendChild(card);
-        });
-      }
-    </script> -->
-
+    <!-- Home page data rendering -->
     <script type="module">
       import { createCard } from "./components/card.js";
       import { createCarousel } from "./components/carousel.js";
       const BASE_PATH = window.location.hostname.includes("github.io")
         ? "/Advanced-Composite-Materials"
-        : "";
+        : ".";
 
-      // ==========================
-      // DATA CACHE (MINIMAL)
-      // ==========================
       const cache = {};
-
       async function fetchJSON(file) {
         if (cache[file]) return cache[file];
-
         const res = await fetch(`${BASE_PATH}/data/${file}`);
         const data = await res.json();
         cache[file] = data;
         return data;
       }
-
-      document.querySelectorAll(".explore-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-          window.location.href = `${BASE_PATH}/current-research.html`;
-        });
-      });
 
       // ==========================
       // SERVICES SECTION
@@ -221,8 +116,12 @@
         if (!container) return;
 
         container.innerHTML = "";
-        data.services.forEach((service) => {
-          container.innerHTML += createCard(service);
+        data.services.forEach((service, i) => {
+          const wrapper = document.createElement("div");
+          wrapper.className = "reveal";
+          wrapper.style.transitionDelay = `${i * 80}ms`;
+          wrapper.innerHTML = createCard(service);
+          container.appendChild(wrapper);
         });
       }
 
@@ -253,45 +152,33 @@
         featureList.innerHTML = "";
         about.features.forEach((item) => {
           featureList.innerHTML += `
-        <div class="feature-item">
-          <div class="feature-icon">${item.icon}</div>
-          <div>
-            <div class="feature-title">${item.title}</div>
-            <div class="feature-text">${item.text}</div>
-          </div>
-        </div>`;
+            <div class="feature-item">
+              <div class="feature-icon">${item.icon}</div>
+              <div>
+                <div class="feature-title">${item.title}</div>
+                <div class="feature-text">${item.text}</div>
+              </div>
+            </div>`;
         });
       }
 
       // ==========================
-      // STATS SECTION
+      // STATS SECTION — with counter animation
       // ==========================
-      // async function loadStats() {
-      //   const stats = await fetchJSON("stats.json");
-      //   const container = document.getElementById("statsContainer");
-
-      //   stats.forEach(item => {
-      //     const card = document.createElement("div");
-      //     card.className = "stat-card";
-
-      //     const circle = document.createElement("div");
-      //     circle.className = "circle";
-      //     const deg = item.value * 3.6;
-      //     circle.style.background =
-      //       `conic-gradient(var(--highlight) ${deg}deg, #eeeg ${deg}deg)`;
-      //     circle.innerHTML = `<span>${item.value}%</span>`;
-
-      //     card.innerHTML += `
-      //       <div class="stat-info">
-      //         <small>${item.tag}</small>
-      //         <h3>${item.label}</h3>
-      //         <p>${item.desc}</p>
-      //       </div>`;
-
-      //     card.prepend(circle);
-      //     container.appendChild(card);
-      //   });
-      // }
+      function animateCounter(spanEl, circleEl, target) {
+        const duration = 1800;
+        const startTime = performance.now();
+        function step(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.round(eased * target);
+          spanEl.textContent = current + "%";
+          circleEl.style.background =
+            `conic-gradient(var(--highlight) ${current * 3.6}deg, #eee ${current * 3.6}deg)`;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
 
       async function loadStats() {
         const items = await fetchJSON("stats.json");
@@ -299,24 +186,36 @@
 
         items.forEach((item) => {
           const card = document.createElement("div");
-          card.className = "stat-card";
+          card.className = "stat-card reveal";
 
           const circle = document.createElement("div");
           circle.className = "circle";
-          circle.innerHTML = `<span>${item.value}%</span>`;
+          circle.style.background = "conic-gradient(var(--highlight) 0deg, #eee 0deg)";
 
-          const deg = item.value * 3.6;
-          circle.style.background = `conic-gradient(var(--highlight) ${deg}deg, #eee ${deg}deg)`;
+          const valueSpan = document.createElement("span");
+          valueSpan.textContent = "0%";
+          circle.appendChild(valueSpan);
 
           const info = document.createElement("div");
           info.className = "stat-info";
           info.innerHTML = `
-      <small>${item.tag}</small>
-      <h3>${item.label}</h3>
-      <p>${item.desc}</p>
-    `;
+            <small>${item.tag}</small>
+            <h3>${item.label}</h3>
+            <p>${item.desc}</p>
+          `;
+
           card.append(circle, info);
           container.appendChild(card);
+
+          // Trigger counter when the card scrolls into view
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting) return;
+              io.unobserve(entry.target);
+              animateCounter(valueSpan, circle, item.value);
+            });
+          }, { threshold: 0.5 });
+          io.observe(card);
         });
       }
 
@@ -330,193 +229,93 @@
 
     <script type="module" src="./assets/js/testimonials.js"></script>
 
-    <!-- atom background -->
+    <!-- Particle canvas animation -->
     <script>
-      const canvas = document.getElementById("particle-canvas");
-      const ctx = canvas.getContext("2d");
-      let particles = [];
-      const PARTICLE_COUNT = 80;
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resizeCanvas();
-      window.addEventListener("resize", resizeCanvas);
-      class Particle {
-        constructor() {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.radius = Math.random() * 2 + 1;
-          this.speedX = (Math.random() - 0.5) * 0.6;
-          this.speedY = (Math.random() - 0.5) * 0.6;
-        }
-        draw() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          ctx.fillStyle = "rgba(88, 227, 225, 0.8)";
-          ctx.fill();
-        }
-        update() {
-          this.x += this.speedX;
-          this.y += this.speedY;
-          if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-          if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-        }
-      }
-      function initParticles() {
-        particles = [];
-        for (let i = 0; i < PARTICLE_COUNT; i++) {
-          particles.push(new Particle());
-        }
-      }
-      initParticles();
-      function connectParticles() {
-        for (let i = 0; i < particles.length; i++) {
-          for (let j = i; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < 120) {
-              ctx.strokeStyle = `rgba(88,227,225,${1 - distance / 120})`;
-              ctx.lineWidth = 0.5;
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.stroke();
-            }
-          }
-        }
-      }
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach((p) => {
-          p.update();
-          p.draw();
-        });
-        connectParticles();
-        requestAnimationFrame(animate);
-      }
-      animate();
-    </script>
-
-    <!-- particle background -->
-    <!-- <script>
-      const canvas = document.getElementById("particle-canvas");
-      const ctx = canvas.getContext("2d");
-      let particles = [];
-      const PARTICLE_COUNT = 60;
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resizeCanvas();
-      window.addEventListener("resize", resizeCanvas);
-      class Particle {
-        constructor() {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.radius = Math.random() * 2 + 1.2;
-          // Smooth slow movement
-          this.vx = (Math.random() - 0.5) * 0.25;
-          this.vy = (Math.random() - 0.5) * 0.25;
-        }
-        draw() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          ctx.fillStyle = "rgba(88, 227, 225, 0.85)";
-          ctx.shadowBlur = 10;
-          ctx.shadowColor = "#58e3e1";
-          ctx.fill();
-          ctx.shadowBlur = 0;
-        }
-        update() {
-          this.x += this.vx;
-          this.y += this.vy;
-          // Soft bounce
-          if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
-          if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
-        }
-      }
-      function initParticles() {
-        particles = [];
-        for (let i = 0; i < PARTICLE_COUNT; i++) {
-          particles.push(new Particle());
-        }
-      }
-      initParticles();
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => {
-          p.update();
-          p.draw();
-        });
-        requestAnimationFrame(animate);
-      }
-      animate();
-    </script> -->
-
-    <!-- particle wave background -->
-    <!-- <script>
       (() => {
         const canvas = document.getElementById("particle-canvas");
         const ctx = canvas.getContext("2d");
-        function resize() {
+        let particles = [];
+        let animId = null;
+        let running = false;
+        const PARTICLE_COUNT = 80;
+
+        function resizeCanvas() {
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
         }
-        resize();
-        window.addEventListener("resize", resize);
-        const particles = [];
-        const COUNT = 220;        // visible but not crowded
-        const SPEED = 0.6;        // smooth & visible
-        const DRIFT = 0.003;      // flow field strength
-        function fieldAngle(x, y, t) {
-          return Math.sin(x * DRIFT + t) + Math.cos(y * DRIFT + t * 0.7);
-        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
         class Particle {
           constructor() {
-            this.reset();
-          }
-          reset() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.r = Math.random() * 2.2 + 1.2; // visible size
-          }
-          update(t) {
-            const angle = fieldAngle(this.x, this.y, t);
-            this.x += Math.cos(angle) * SPEED;
-            this.y += Math.sin(angle) * SPEED;
-            if (
-              this.x < -20 || this.x > canvas.width + 20 ||
-              this.y < -20 || this.y > canvas.height + 20
-            ) {
-              this.reset();
-            }
+            this.radius = Math.random() * 2 + 1;
+            this.speedX = (Math.random() - 0.5) * 0.6;
+            this.speedY = (Math.random() - 0.5) * 0.6;
           }
           draw() {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-            ctx.fillStyle = "rgba(88,227,225,0.85)";
-            ctx.shadowBlur = 8;
-            ctx.shadowColor = "#58e3e1";
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = "rgba(88, 227, 225, 0.8)";
             ctx.fill();
           }
+          update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+          }
         }
-        for (let i = 0; i < COUNT; i++) {
-          particles.push(new Particle());
+
+        function initParticles() {
+          particles = [];
+          for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
         }
-        let t = 0;
+
+        function connectParticles() {
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+              if (distance < 120) {
+                ctx.strokeStyle = `rgba(88,227,225,${1 - distance / 120})`;
+                ctx.lineWidth = 0.5;
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+        }
+
         function animate() {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
-          particles.forEach(p => {
-            p.update(t);
-            p.draw();
-          });
-          t += 0.01;
-          requestAnimationFrame(animate);
+          particles.forEach(p => { p.update(); p.draw(); });
+          connectParticles();
+          animId = requestAnimationFrame(animate);
         }
+
+        // Pause the loop when the hero is scrolled out of view
+        new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !running) {
+              running = true;
+              animate();
+            } else if (!entry.isIntersecting && running) {
+              running = false;
+              cancelAnimationFrame(animId);
+              animId = null;
+            }
+          });
+        }, { threshold: 0.01 }).observe(document.getElementById("landing"));
+
+        initParticles();
+        running = true;
         animate();
       })();
-      </script> -->
+    </script>
   </body>
 </html>

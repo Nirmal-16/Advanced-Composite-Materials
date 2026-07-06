@@ -1,6 +1,6 @@
 const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Advanced-Composite-Materials"
-  : "";
+  : ".";
 
 // Tab definitions: label → category key in JSON
 const TABS = [

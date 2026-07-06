@@ -1,9 +1,9 @@
-// ================================
+ // ================================
 // CONFIG
 // ================================
 const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Advanced-Composite-Materials"
-  : "";
+  : ".";
 
 // ================================
 // UTILITIES
@@ -60,35 +60,45 @@ function setActiveNav() {
 
 }
 
-document.querySelectorAll(".contact-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    window.location.href = `${BASE_PATH}/contact.html`;
-  });
-});
-
 // Sidebar toggle (used by HTML onclick)
 window.toggleSidebar = () => {
-  document.getElementById("sidebar")?.classList.toggle("show");
+  const isOpen = document.getElementById("sidebar")?.classList.toggle("show");
+  const btn = document.querySelector(".hamburger");
+  if (btn) btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
 };
 
 window.toggleDropdown = (el) => {
-  el?.parentElement?.classList.toggle("open");
+  const isOpen = el?.parentElement?.classList.toggle("open");
+  if (el) el.setAttribute("aria-expanded", isOpen ? "true" : "false");
 };
 
 // ================================
-// CAROUSEL HELPER (optional reuse)
+// SCROLL REVEAL
 // ================================
-function mountCarousel({ mountId, images }) {
-  const mount = document.getElementById(mountId);
-  if (!mount) return;
+function initScrollReveal() {
+  const io = new IntersectionObserver(
+    (entries) => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      io.unobserve(entry.target);
+    }),
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
 
-  mount.innerHTML = `
-    <div class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        ${createCarouselItems(images)}
-      </div>
-    </div>
-  `;
+  function observeNew() {
+    document.querySelectorAll(".reveal:not(.observed)").forEach(el => {
+      el.classList.add("observed");
+      io.observe(el);
+    });
+  }
+
+  observeNew();
+
+  // Auto-pick up .reveal elements added by dynamic renderers
+  new MutationObserver(observeNew).observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
 }
 
 // ================================
@@ -112,4 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.appendChild(script);
     }
   );
+
+  initScrollReveal();
 });

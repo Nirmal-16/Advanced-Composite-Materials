@@ -1,10 +1,10 @@
-const BASE_PATH = window.location.hostname.includes("github.io")
+﻿const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Advanced-Composite-Materials"
-  : "";
+  : ".";
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    SVG helpers
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const svgClock = `<svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.62)"
   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="12" cy="12" r="10"/>
@@ -26,16 +26,16 @@ const svgZoom = `<svg viewBox="0 0 24 24" fill="none" stroke="#fff"
   <line x1="8"  y1="11" x2="14" y2="11"/>
 </svg>`;
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    State
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 let allItems       = [];   // flat array of all gallery items
 let filteredItems  = [];   // currently visible items
 let currentIndex   = 0;    // open modal index in filteredItems
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    Build one gallery card
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function buildCard(item, globalIndex) {
   const div = document.createElement('div');
   div.className = 'gallery-item';
@@ -65,9 +65,9 @@ function buildCard(item, globalIndex) {
   return div;
 }
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    Render grid
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function renderGrid(items) {
   const grid  = document.getElementById('masonryGrid');
   const stats = document.getElementById('galleryStats');
@@ -89,9 +89,9 @@ function renderGrid(items) {
   });
 }
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    Build filter buttons
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function buildFilters(categories) {
   const bar = document.getElementById('filterBar');
   bar.innerHTML = '';
@@ -111,9 +111,9 @@ function buildFilters(categories) {
   });
 }
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    Apply filter
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function applyFilter(category, clickedBtn) {
   // toggle active class
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -126,9 +126,9 @@ function applyFilter(category, clickedBtn) {
   renderGrid(filteredItems);
 }
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    MODAL
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const overlay    = document.getElementById('modalOverlay');
 const modalImg   = document.getElementById('modalImg');
 const modalFallback = document.getElementById('modalFallback');
@@ -187,9 +187,9 @@ function navigateModal(direction) {
   populateModal(allItems[currentIndex]);
 }
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    Event listeners
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 document.getElementById('modalClose').addEventListener('click', closeModal);
 document.getElementById('modalPrev').addEventListener('click', () => navigateModal(-1));
 document.getElementById('modalNext').addEventListener('click', () => navigateModal(1));
@@ -205,12 +205,12 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') navigateModal(1);
 });
 
-/* ─────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    Fetch & initialise
-───────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 async function init() {
   const grid = document.getElementById('masonryGrid');
-  grid.innerHTML = '<div class="loading-state">Loading gallery…</div>';
+  grid.innerHTML = '<div class="loading-state">Loading galleryâ€¦</div>';
 
   try {
     const res = await fetch(`${BASE_PATH}/data/gallery.json`);
@@ -230,7 +230,7 @@ async function init() {
     console.error('Gallery load error:', err);
     grid.innerHTML = `
       <div class="error-state">
-        ⚠️ Could not load gallery. Please try again later.<br>
+        âš ï¸ Could not load gallery. Please try again later.<br>
         <small style="opacity:.6">${err.message}</small>
       </div>`;
   }

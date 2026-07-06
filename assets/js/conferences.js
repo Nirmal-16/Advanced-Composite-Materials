@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
   const timeline = document.getElementById("conferenceTimeline");
   const tabs = document.querySelectorAll(".tab");
   let allItems = [];
 
   const BASE_PATH = window.location.hostname.includes("github.io")
     ? "/Advanced-Composite-Materials"
-    : "";
+    : ".";
 
-  // ── Highlight target name ──
+  // â”€â”€ Highlight target name â”€â”€
   function highlightName(text, name) {
     if (!text) return "";
     const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (item.type === "Talk") {
         const yearMatch = item.event.match(/\d{4}/);
-        const year = yearMatch ? yearMatch[0] : "";
+        const year = yearMatch ? yearMatch[0] : ".";
 
         div.innerHTML = `
           <div class="year">${year}</div>
-          ${year ? '<div class="dot"></div>' : ""}
+          ${year ? '<div class="dot"></div>' : "."}
           <div class="conf-card">
             <span class="badge talk">Talk</span>
             <h3>${item.title}</h3>
@@ -62,12 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       } else {
         const yearMatch = item.journal.match(/\d{4}/);
-        const year = yearMatch ? yearMatch[0] : "";
+        const year = yearMatch ? yearMatch[0] : ".";
         const badgeClass = item.type === "Conference" ? "conference" : "proceeding";
 
         div.innerHTML = `
           <div class="year">${year}</div>
-          ${year ? '<div class="dot"></div>' : ""}
+          ${year ? '<div class="dot"></div>' : "."}
           <div class="conf-card">
             <span class="badge ${badgeClass}">${item.type}</span>
             <h3>${item.title}</h3>
