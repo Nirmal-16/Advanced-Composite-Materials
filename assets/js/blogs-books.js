@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
 
   const grid = document.getElementById("cardGrid");
   const tabs = document.querySelectorAll(".tab");
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
  const BASE_PATH = window.location.hostname.includes("github.io")
     ? "/Advanced-Composite-Materials"
-    : "";
+    : ".";
 
   fetch(`${BASE_PATH}/data/blogs-books.json`)
     .then(res => res.json())
@@ -86,3 +86,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+

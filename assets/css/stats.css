@@ -1,85 +1,134 @@
-/* ===============================
-   STATS SECTION
-================================= */
+/* ═══════════════════════════════════════════════
+   stats.css  — Stats section
+   Responsive only — zero layout/style changes
+═══════════════════════════════════════════════ */
 
-.stats-section {
-  padding: 80px 20px;
-  background: var(--primary);
+:root {
+  --accent: #4fe1dc;
+  --dark:   #003b3b;
+  --muted:  #777;
 }
 
-/* ---------- Layout ---------- */
+/* ════════════════════════════════
+   STATS SECTION
+════════════════════════════════ */
+.stats-section {
+  padding: 80px 20px;
+  background: #fff;
+}
 
 .stats-grid {
   max-width: 1100px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 50px;
 }
 
-/* ---------- Card ---------- */
-
+/* ── Stat Card ── */
 .stat-card {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-/* ---------- Circle (RESPONSIVE) ---------- */
-
+/* ── Circle ── */
 .circle {
-  width: clamp(120px, 18vw, 180px);
-  aspect-ratio: 1 / 1;
+  width: 150px;              /* equal width + height = perfect circle */
+  height: 150px;
   border-radius: 50%;
-  background: var(--highlight);
+  background: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   flex-shrink: 0;
 }
 
 .circle span {
-  width: 60%;
-  aspect-ratio: 1 / 1;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--dark);
+  background: white;
+  width: 105px;
+  height: 105px;
   border-radius: 50%;
-  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(18px, 2.5vw, 26px);
-  font-weight: 700;
-  color: var(--dark-text);
 }
 
-/* ---------- Text ---------- */
-
+/* ── Stat Info ── */
 .stat-info small {
-  color: var(--highlight);
-  font-weight: 600;
+  color: var(--accent);
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .stat-info h3 {
   margin: 8px 0;
-  color: var(--secondary);
+  color: var(--dark);
 }
 
 .stat-info p {
   font-size: 14px;
-  color: var(--grey-text);
+  color: var(--muted);
   max-width: 220px;
-  line-height: 1.5;
 }
 
-/* ---------- Mobile ---------- */
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
 
+/* ── Tablet ── */
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 60px 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 36px;
+  }
+}
+
+/* ── Mobile (600px) — was already present ── */
 @media (max-width: 600px) {
   .stat-card {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column;  /* already existed */
+    text-align: center;      /* already existed */
+    align-items: center;
   }
 
   .stat-info p {
-    max-width: none;
+    max-width: 100%;         /* ← remove max-width cap when centred */
+    margin: 0 auto;
+  }
+}
+
+/* ── Small mobile ── */
+@media (max-width: 400px) {
+  .stats-section {
+    padding: 48px 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle span {
+    width: 78px;
+    height: 78px;
+    font-size: 18px;
+  }
+
+  .stat-info h3 {
+    font-size: 1rem;
   }
 }

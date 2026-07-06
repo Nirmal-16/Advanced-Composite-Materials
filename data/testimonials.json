@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Dr. Ananya Rao",
+    "designation": "Postdoctoral Researcher",
+    "image": "./assets/images/sample_image.jpg",
+    "rating": 5,
+    "text": "An inspiring research environment that promotes innovation and interdisciplinary collaboration."
+  },
+  {
+    "name": "Rahul Mehta",
+    "designation": "PhD Scholar",
+    "image": "./assets/images/sample_image.jpg",
+    "rating": 2,
+    "text": "Strong mentorship and structured research guidance helped me publish in leading journals."
+  },
+  {
+    "name": "Prof. David Lee",
+    "designation": "Collaborator",
+    "image": "./assets/images/sample_image.jpg",
+    "rating": 5,
+    "text": "A highly professional research group delivering impactful work in advanced composite materials."
+  }
+]

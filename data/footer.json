@@ -4,7 +4,7 @@
   "quickLinks": [
     { "label": "Home", "url": "./index.html" },
     { "label": "About", "url": "./about.html" },
-    { "label": "Research", "url": "./research.html" },
+    { "label": "Research", "url": "./sponsored-projects.html" },
     { "label": "Blogs & Books", "url": "./blogs-books.html" },
     { "label": "Contact", "url": "./contact.html" }
   ],

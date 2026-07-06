@@ -1,0 +1,333 @@
+/* ═══════════════════════════════════════════════
+   testimonials.css  — Testimonials + CTA sections
+   Responsive only — zero layout/style changes
+═══════════════════════════════════════════════ */
+
+/* ════════════════════════════════
+   TESTIMONIALS SECTION
+════════════════════════════════ */
+.testimonials-section {
+  padding: 100px 20px;
+  background: transparent;
+  overflow: hidden;
+  color: var(--secondary);
+}
+
+.container {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+/* ── Track ── */
+.testimonial-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.8s ease-in-out;
+}
+
+.testimonial-wrapper:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+/* ── Card ── */
+.testimonial-card {
+  min-width: 260px;          /* reduced from 280px */
+  max-width: 350px;
+  width: 100%;               /* allow card to shrink below min-width on tiny screens */
+  height: 420px;
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.1s ease;
+  border-top: 5px solid rgb(0, 247, 255);
+  box-sizing: border-box;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+}
+
+.testimonial-header {
+  text-align: center;
+  width: 100%;
+}
+
+.testimonial-header img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.testimonial-role {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.stars {
+  color: #ffc107;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* ── Dots ── */
+.testimonial-dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.testimonial-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testimonial-dot.active {
+  background: rgb(0, 247, 255);
+  transform: scale(1.3);
+}
+
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ════════════════════════════════
+   CTA SECTION
+════════════════════════════════ */
+.cta-section {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to bottom, #020f1f, #002132);
+  color: var(--light-text);
+  overflow: hidden;
+}
+
+.cta-container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.cta-content {
+  text-align: center;
+  color: var(--primary);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cta-content p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  padding: 12px 28px;
+  background: #ffffff;
+  color: #0f2027;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  white-space: nowrap;    /* prevent button text wrapping mid-word */
+}
+
+.btn-primary:hover {
+  background: #e6e6e6;
+}
+
+.btn-outline {
+  padding: 12px 28px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #0f2027;
+}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+
+/* ── Tablet (768px) — was already present ── */
+@media (max-width: 768px) {
+  /* Testimonials */
+  .testimonial-card {
+    min-width: 240px;
+    height: 380px;           /* was already here */
+  }
+
+  .section-title {
+    font-size: 1.8rem;       /* ← scale down on tablet */
+  }
+
+  .section-subtitle {
+    margin-bottom: 32px;
+  }
+
+  .testimonials-section {
+    padding: 72px 16px;      /* ← tighter padding on tablet */
+  }
+
+  /* CTA — was already here */
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-section {
+    padding: 72px 20px;
+  }
+}
+
+/* ── Mobile (480px) ── */
+@media (max-width: 480px) {
+  /* Testimonials */
+  .testimonials-section {
+    padding: 56px 20px;   /* consistent side padding so calc value is reliable */
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-card {
+    min-width: 0;
+    width: calc(100vw - 80px); /* extra breathing room so right edge never clips */
+    max-width: 100%;
+    height: auto;
+    min-height: 320px;
+    padding: 20px 16px;
+  }
+
+  .stars {
+    font-size: 28px;
+  }
+
+  .testimonial-header img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.88rem;
+  }
+
+  .testimonial-dots {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .testimonial-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Track gap tighter on mobile so cards don't peek too much */
+  .testimonial-track {
+    gap: 16px;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 56px 16px;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}

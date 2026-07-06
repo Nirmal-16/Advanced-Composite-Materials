@@ -38,9 +38,9 @@
       }
     ],
     "images": [
-  "assets/images/sample_image.jpg",
-  "assets/images/lab2.jpeg",
-  "assets/images/IIT_Madras_Logo.svg.png"
+  "./assets/images/GA_paper1.jpg",
+  "./assets/images/GA_paper2.jpg",
+  "./assets/images/GA_paper3.jpg"
 ]
   }
 }

@@ -1,20 +1,20 @@
 [
   {
-    "label": "Happy Clients",
+    "label": "Publications",
     "value": 50,
-    "tag": "HAPPY",
-    "desc": "Solution minimize the cost and increase the velocity"
+    "tag": "JOURNALS & CONFERENCES",
+    "desc": "Peer-reviewed research published in leading international journals and conferences"
   },
   {
-    "label": "Claims Completed",
+    "label": "Research Projects",
     "value": 70,
-    "tag": "CLAIMS",
-    "desc": "Solution minimize the cost and increase the velocity"
+    "tag": "ONGOING & COMPLETED",
+    "desc": "Sponsored and collaborative research projects across multiple high-impact domains"
   },
   {
-    "label": "Business Partners",
+    "label": "Industry Partners",
     "value": 35,
-    "tag": "BUSINESS",
-    "desc": "Solution minimize the cost and increase the velocity"
+    "tag": "COLLABORATIONS",
+    "desc": "Partnerships with academic institutions and industry organizations worldwide"
   }
 ]

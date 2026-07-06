@@ -1,85 +1,83 @@
-document.addEventListener("DOMContentLoaded", function () {
-
+﻿document.addEventListener("DOMContentLoaded", function () {
   const timeline = document.getElementById("conferenceTimeline");
   const tabs = document.querySelectorAll(".tab");
-
-  let allItems = [];   // must be global
+  let allItems = [];
 
   const BASE_PATH = window.location.hostname.includes("github.io")
     ? "/Advanced-Composite-Materials"
-    : "";
+    : ".";
+
+  // â”€â”€ Highlight target name â”€â”€
+  function highlightName(text, name) {
+    if (!text) return "";
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const regex = new RegExp(`(${escaped})`, "gi");
+    return text.replace(regex, `<span class="highlight-name">$1</span>`);
+  }
 
   fetch(`${BASE_PATH}/data/conferences.json`)
-    .then(res => res.json())
-    .then(data => {
-
-      // Ribbon
+    .then((res) => res.json())
+    .then((data) => {
       document.getElementById("ribbonTitle").innerText = data.ribbon.title;
       document.getElementById("ribbonDesc").innerText = data.ribbon.description;
 
-      // Merge talks + proceedings
-      const talks = data["Conference Talks"].map(item => ({
-        ...item,
-        type: "Talk"
-      }));
+      const conferences = data["Conferences"].map((item) => ({ ...item, type: "Conference" }));
+      const talks       = data["Invited Talks"].map((item) => ({ ...item, type: "Talk" }));
+      const proceedings = data["Conference Proceedings"].map((item) => ({ ...item, type: "Proceeding" }));
 
-      const proceedings = data["Conference Proceedings"].map(item => ({
-        ...item,
-        type: "Proceeding"
-      }));
-
-      allItems = [...talks, ...proceedings];
-
+      allItems = [...conferences, ...talks, ...proceedings];
       renderTimeline(allItems);
     });
 
-  // Filter Click
-  tabs.forEach(tab => {
+  tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-
-      tabs.forEach(t => t.classList.remove("active"));
+      tabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
 
       const filter = tab.dataset.filter;
-
-      if (filter === "all") {
-        renderTimeline(allItems);
-      } else {
-        const filtered = allItems.filter(item => item.type === filter);
-        renderTimeline(filtered);
-      }
+      renderTimeline(filter === "all" ? allItems : allItems.filter((i) => i.type === filter));
     });
   });
 
   function renderTimeline(items) {
-
     timeline.innerHTML = "";
 
-    items.forEach(item => {
-
-      const yearMatch = item.journal.match(/\d{4}/);
-      const year = yearMatch ? yearMatch[0] : "";
-
+    items.forEach((item) => {
       const div = document.createElement("div");
       div.classList.add("timeline-item");
 
-      div.innerHTML = `
-        <div class="year">${year}</div>
-        ${year ? '<div class="dot"></div>' : ''}
+      if (item.type === "Talk") {
+        const yearMatch = item.event.match(/\d{4}/);
+        const year = yearMatch ? yearMatch[0] : ".";
 
-        <div class="conf-card">
-          <span class="badge ${item.type === "Talk" ? "talk" : "proceeding"}">
-            ${item.type}
-          </span>
+        div.innerHTML = `
+          <div class="year">${year}</div>
+          ${year ? '<div class="dot"></div>' : "."}
+          <div class="conf-card">
+            <span class="badge talk">Talk</span>
+            <h3>${item.title}</h3>
+            <div class="authors">${highlightName(item.event, "Nagappa Siddgonde")}</div>
+            <div class="journal">${item.venue}</div>
+          </div>
+        `;
+      } else {
+        const yearMatch = item.journal.match(/\d{4}/);
+        const year = yearMatch ? yearMatch[0] : ".";
+        const badgeClass = item.type === "Conference" ? "conference" : "proceeding";
 
-          <h3>${item.title}</h3>
-          <div class="authors">${item.authors}</div>
-          <div class="journal">${item.journal}</div>
-        </div>
-      `;
+        div.innerHTML = `
+          <div class="year">${year}</div>
+          ${year ? '<div class="dot"></div>' : "."}
+          <div class="conf-card">
+            <span class="badge ${badgeClass}">${item.type}</span>
+            <h3>${item.title}</h3>
+            <div class="authors">${highlightName(item.authors, "Nagappa Siddgonde")}</div>
+            <div class="journal">${item.journal}</div>
+          </div>
+        `;
+      }
 
       timeline.appendChild(div);
     });
   }
-
 });

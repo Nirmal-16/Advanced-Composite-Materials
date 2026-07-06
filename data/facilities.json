@@ -1,0 +1,198 @@
+{
+  "ribbon": {
+    "title": "Lab Facilities",
+    "description": "State-of-the-art equipment and infrastructure supporting cutting-edge research in advanced composite materials."
+  },
+
+  "stats": [
+    { "value": "25+",  "label": "Instruments" },
+    { "value": "800m²","label": "Lab Space" },
+    { "value": "12",   "label": "Research Areas" },
+    { "value": "24/7", "label": "Access for Researchers" }
+  ],
+
+  "equipment": [
+    {
+      "name": "Scanning Electron Microscope",
+      "model": "ZEISS GeminiSEM 560",
+      "category": "Characterization",
+      "icon": "cpu",
+      "image": "",
+      "description": "High-resolution imaging of composite microstructures and failure surfaces with EDS capability for elemental analysis.",
+      "specs": [
+        "Resolution: 0.6 nm at 15 kV",
+        "Magnification: 12× to 2,000,000×",
+        "EDS detector integrated",
+        "EBSD mapping capability"
+      ],
+      "status": "Available"
+    },
+    {
+      "name": "Universal Testing Machine",
+      "model": "Instron 8801",
+      "category": "Mechanical",
+      "icon": "graph-up",
+      "image": "",
+      "description": "Servo-hydraulic testing system for fatigue, tensile, compression and fracture testing of composite specimens.",
+      "specs": [
+        "Load capacity: ±100 kN",
+        "Frequency range: 0–50 Hz",
+        "Temperature: -40°C to 250°C",
+        "Digital image correlation ready"
+      ],
+      "status": "Available"
+    },
+    {
+      "name": "Autoclave",
+      "model": "Thermal Equipment Corp TA-36",
+      "category": "Fabrication",
+      "icon": "fire",
+      "image": "",
+      "description": "Precision autoclave for high-performance thermoset and thermoplastic composite laminate consolidation under controlled temperature and pressure.",
+      "specs": [
+        "Internal diameter: 900 mm",
+        "Max temperature: 400°C",
+        "Max pressure: 20 bar",
+        "Multi-zone heating"
+      ],
+      "status": "Available"
+    },
+    {
+      "name": "X-Ray CT Scanner",
+      "model": "Nikon XT H 225",
+      "category": "Imaging",
+      "icon": "layers",
+      "image": "",
+      "description": "Non-destructive 3D tomographic inspection of composite parts for internal defects, porosity and delamination.",
+      "specs": [
+        "Voxel resolution: 3 µm",
+        "Max voltage: 225 kV",
+        "Part size: up to 300 mm",
+        "Automated defect detection"
+      ],
+      "status": "Limited"
+    },
+    {
+      "name": "Differential Scanning Calorimeter",
+      "model": "TA Instruments DSC 250",
+      "category": "Thermal",
+      "icon": "thermometer-half",
+      "image": "",
+      "description": "Measures thermal transitions including cure kinetics, Tg, crystallinity and specific heat of polymer composites.",
+      "specs": [
+        "Range: -90°C to 550°C",
+        "Heating rate: 0.01–200°C/min",
+        "Sensitivity: 0.2 µW",
+        "Auto-sampler available"
+      ],
+      "status": "Available"
+    },
+    {
+      "name": "Filament Winding Machine",
+      "model": "McClean Anderson MW-Series",
+      "category": "Fabrication",
+      "icon": "arrow-repeat",
+      "image": "",
+      "description": "CNC-controlled 6-axis filament winding for manufacturing cylindrical and complex-geometry fibre-reinforced composite structures.",
+      "specs": [
+        "Mandrel length: up to 3000 mm",
+        "Winding speed: up to 60 rpm",
+        "6-axis CNC control",
+        "Compatible with glass, carbon, aramid"
+      ],
+      "status": "Available"
+    },
+    {
+      "name": "Raman Spectrometer",
+      "model": "Horiba LabRAM HR Evolution",
+      "category": "Characterization",
+      "icon": "broadcast",
+      "image": "",
+      "description": "Confocal Raman microscopy for molecular characterisation of fibres, matrices and fibre–matrix interfaces in composites.",
+      "specs": [
+        "Spectral range: 50–10,000 cm⁻¹",
+        "Spatial resolution: < 1 µm",
+        "Multiple laser lines (532/633/785 nm)",
+        "Mapping and imaging mode"
+      ],
+      "status": "Available"
+    },
+    {
+      "name": "High-Performance Computing Cluster",
+      "model": "In-house HPC — 48 cores",
+      "category": "Computational",
+      "icon": "hdd-stack",
+      "image": "",
+      "description": "Dedicated cluster for FEM simulations, molecular dynamics and machine-learning assisted material modelling.",
+      "specs": [
+        "48 CPU cores (AMD EPYC)",
+        "4× NVIDIA A100 GPUs",
+        "512 GB RAM",
+        "ABAQUS, ANSYS, LAMMPS licensed"
+      ],
+      "status": "Available"
+    },
+    {
+      "name": "Dynamic Mechanical Analyser",
+      "model": "TA Instruments DMA 850",
+      "category": "Thermal",
+      "icon": "activity",
+      "image": "",
+      "description": "Measures viscoelastic properties, storage modulus and damping of composite materials across temperature and frequency sweeps.",
+      "specs": [
+        "Force range: 0.0001–18 N",
+        "Temperature: -150°C to 600°C",
+        "Frequency: 0.01–200 Hz",
+        "Multiple clamp geometries"
+      ],
+      "status": "Maintenance"
+    }
+  ],
+
+  "info": [
+    {
+      "icon": "clock",
+      "title": "Access & Booking",
+      "items": [
+        "Open Monday to Saturday, 8 AM – 8 PM",
+        "24/7 access for registered PhD scholars",
+        "Equipment booking via lab portal (48 hr advance)",
+        "Weekend slots available on prior request",
+        "External collaborator access through MOU"
+      ]
+    },
+    {
+      "icon": "shield-check",
+      "title": "Safety Guidelines",
+      "items": [
+        "Mandatory lab induction before first use",
+        "PPE (gloves, goggles, lab coat) required at all times",
+        "Chemical handling as per SDS guidelines",
+        "Emergency contacts posted at each workstation",
+        "Incident reporting within 24 hours"
+      ]
+    },
+    {
+      "icon": "person-badge",
+      "title": "Training & Support",
+      "items": [
+        "Instrument-specific training by lab in-charge",
+        "Monthly hands-on workshop for new members",
+        "SOP documents available on lab portal",
+        "Technical support: labsupport@acm.iitm.ac.in",
+        "Student peer-mentoring program available"
+      ]
+    },
+    {
+      "icon": "envelope",
+      "title": "Contact & Charges",
+      "items": [
+        "Lab Manager: Dr. R. Venkatesh",
+        "Email: facilities@acm.iitm.ac.in",
+        "Internal users: subsidised rates apply",
+        "External/industry users: standard tariff",
+        "Quotations issued within 2 working days"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "ribbon": {
+    "title": "Our Team",
+    "description": "Meet the people behind our success."
+  },
+  "Team": [
+    {
+      "name": "Dharani B",
+      "role": "PhD Research Scholar (Structures)",
+      "category": "phd",
+      "image": "https://ui-avatars.com/api/?name=Dharani+B&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "description": "High Strain Rate studies of Polymer Composites using Split Hopkinson Pressure Bar Test (SHPB). Focuses on dynamic stress-strain behaviour of materials at strain rates from 10² to 10⁵ s⁻¹.",
+      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25d019@smail.iitm.ac.in" }
+    },
+    {
+      "name": "Vislavath Uday Kiran",
+      "role": "PhD Research Scholar (Structures)",
+      "category": "phd",
+      "image": "https://ui-avatars.com/api/?name=Uday+Kiran&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "description": "Research in advanced composite materials and finite element analysis. Department of Aerospace Engineering, IIT Madras.",
+      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25d023@smail.iitm.ac.in" }
+    },
+    {
+      "name": "Ashutosh Rai",
+      "role": "M.Tech Student, Aerospace Engineering",
+      "category": "mtech",
+      "image": "https://ui-avatars.com/api/?name=Ashutosh+Rai&background=1a5276&color=ffffff&size=200&bold=true",
+      "description": "Area of interest: Composite Structures and Secondary Bonded Joints. Department of Aerospace Engineering, IIT Madras.",
+      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25m001@smail.iitm.ac.in" }
+    },
+    {
+      "name": "Potula Vamshidhar Reddy",
+      "role": "M.Tech Student, Aerospace Engineering",
+      "category": "mtech",
+      "image": "https://ui-avatars.com/api/?name=Vamshidhar+Reddy&background=1a5276&color=ffffff&size=200&bold=true",
+      "description": "Area of interest: Structural Mechanics and Composite Structural Repairs. Department of Aerospace Engineering, IIT Madras.",
+      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25m004@smail.iitm.ac.in" }
+    },
+    {
+      "name": "Amit Shailesh Nayak",
+      "role": "M.Tech Student, Aerospace Engineering",
+      "category": "mtech",
+      "image": "https://ui-avatars.com/api/?name=Amit+Nayak&background=1a5276&color=ffffff&size=200&bold=true",
+      "description": "Area of interest: Finite Element Analysis, Structural Dynamics, Composite Structures, and Fracture Mechanics. Department of Aerospace Engineering, IIT Madras.",
+      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25m011@smail.iitm.ac.in" }
+    },
+    {
+      "name": "UG / Dual Degree Student",
+      "role": "Undergraduate Researcher",
+      "category": "ug",
+      "image": "https://ui-avatars.com/api/?name=UG+Student&background=145a32&color=ffffff&size=200&bold=true",
+      "description": "Placeholder — replace with actual UG/dual degree student details.",
+      "socials": { "linkedin": "#", "twitter": "#", "email": "#" }
+    },
+    {
+      "name": "Research Student",
+      "role": "Research Intern",
+      "category": "student",
+      "image": "https://ui-avatars.com/api/?name=Research+Intern&background=4a235a&color=ffffff&size=200&bold=true",
+      "description": "Placeholder — replace with actual research student/intern details.",
+      "socials": { "linkedin": "#", "twitter": "#", "email": "#" }
+    },
+    {
+      "name": "Project Staff",
+      "role": "Project Coordinator",
+      "category": "project_staff",
+      "image": "https://ui-avatars.com/api/?name=Project+Staff&background=6e2f1a&color=ffffff&size=200&bold=true",
+      "description": "Placeholder — replace with actual project staff details.",
+      "socials": { "linkedin": "#", "twitter": "#", "email": "#" }
+    }
+  ],
+  "Stats": [
+    { "value": "15K+", "title": "Global Partners", "description": "Collaborating with industry leaders worldwide to deliver exceptional results." },
+    { "value": "89%", "title": "Success Rate", "description": "Consistently achieving outstanding outcomes across all project categories." },
+    { "value": "3M", "title": "Users Served", "description": "Empowering millions of users with innovative solutions and seamless experiences." },
+    { "value": "24/7", "title": "Support Available", "description": "Round-the-clock assistance ensuring uninterrupted service and peace of mind." }
+  ],
+  "Logo": [
+    { "name": "IIT Madras", "logo": "./assets/images/IIT_Madras_Logo.svg.png", "url": "#" },
+    { "name": "HSBC", "logo": "./assets/images/IIT_Madras_Logo.svg.png", "url": "#" },
+    { "name": "Lexmark", "logo": "./assets/images/IIT_Madras_Logo.svg.png", "url": "#" },
+    { "name": "Walmart", "logo": "./assets/images/IIT_Madras_Logo.svg.png", "url": "#" },
+    { "name": "Signify Health", "logo": "./assets/images/IIT_Madras_Logo.svg.png", "url": "#" },
+    { "name": "TomTom", "logo": "./assets/images/IIT_Madras_Logo.svg.png", "url": "#" }
+  ],
+  "Expert": [
+    { "title": "Creative Design", "level": "PROFESSIONAL", "percentage": 85, "description": "Crafting visually compelling designs that communicate effectively.", "icon": "palette" },
+    { "title": "Frontend Development", "level": "EXPERT", "percentage": 92, "description": "Building responsive, performant web applications using modern frameworks.", "icon": "code" },
+    { "title": "Strategy & Planning", "level": "ADVANCED", "percentage": 80, "description": "Developing comprehensive digital strategies aligned with business goals.", "icon": "chart" },
+    { "title": "Team Leadership", "level": "PROFESSIONAL", "percentage": 85, "description": "Guiding cross-functional teams through complex projects with quality.", "icon": "team" },
+    { "title": "Innovation", "level": "ADVANCED", "percentage": 78, "description": "Identifying emerging trends and technologies to create forward-thinking solutions.", "icon": "bulb" },
+    { "title": "Technical Architecture", "level": "EXPERT", "percentage": 90, "description": "Designing robust foundations that support scalable growth and security.", "icon": "gear" }
+  ]
+}

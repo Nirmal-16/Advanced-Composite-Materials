@@ -103,6 +103,7 @@
   align-items: stretch;
   margin-bottom: 80px;
   padding: 10px;
+  text-align: justify;
 }
 
 .journal-card.reverse {
