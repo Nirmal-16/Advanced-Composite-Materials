@@ -7,12 +7,14 @@
   padding: 30px;
   border-radius: 6px;
   min-height: 280px;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: left;
 }
 
 .card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
 }
 
 /* ---------- Card Icon ---------- */

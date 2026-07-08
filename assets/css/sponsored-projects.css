@@ -49,7 +49,6 @@
   margin-bottom: 18px;
 }
 .hero h1 {
-  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   font-weight: 700;
   color: var(--light-text);
@@ -127,7 +126,6 @@ main {
 .tab-btn {
   position: relative;
   padding: 11px 34px;
-  font-family: 'DM Sans', sans-serif;
   font-size: .92rem;
   font-weight: 500;
   color: var(--text-soft);
@@ -173,7 +171,6 @@ main {
   gap: 12px;
 }
 .section-title {
-  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   color: var(--navy);
@@ -282,7 +279,6 @@ main {
 
 /*  Card title  */
 .card-title {
-  font-family: 'Cormorant Garamond', serif;
   font-size: 1.18rem;
   font-weight: 700;
   color: var(--navy);

@@ -167,6 +167,7 @@
   border-radius: 10px;
   background: #fff;
   height: 100%;
+  min-height: 96px;
   transition: box-shadow 0.25s ease;
 }
 
@@ -175,10 +176,63 @@
 }
 
 /* =========================
+   Institution Logos
+========================= */
+.institution-logo {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--highlight);
+  color: #022;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: .2px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.institution-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+  background: #fff;
+}
+
+/* =========================
    Experience Timeline
 ========================= */
 #experienceTimeline .border-start {
   border-left-width: 3px !important;
+}
+
+.experience-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.experience-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* =========================
+   Education Cards
+========================= */
+.feature-card.edu-card {
+  position: relative;
+  padding-right: 114px;
+}
+
+.edu-logo {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
 /* =========================
@@ -195,7 +249,7 @@
 ========================= */
 
 /* ── Tablet ── */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .about-hero {
     padding: 72px 20px;
   }
@@ -228,7 +282,7 @@
 }
 
 /* ── Mobile ── */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .about-hero {
     padding: 56px 16px;
   }
@@ -260,7 +314,74 @@
     padding: 18px;
   }
 
+  .feature-card.edu-card {
+    padding-right: 92px;
+  }
+
+  .edu-logo,
+  .experience-row .institution-logo {
+    width: 68px;
+    height: 68px;
+    font-size: 13px;
+  }
+
+  .edu-logo {
+    right: 14px;
+  }
+
   #experienceTimeline .ps-4 {
     padding-left: 1rem !important;
+  }
+}
+
+/* =========================
+   Print
+========================= */
+@media print {
+  #navbar-placeholder,
+  #footer-placeholder,
+  .founder-btn,
+  .hamburger,
+  .navbar-btn-container {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .about-hero,
+  .stats-bar,
+  .bg-light {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .stats-item,
+  .stats-item span {
+    color: #000 !important;
+  }
+
+  .text-card,
+  .feature-card,
+  .founder-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    break-inside: avoid;
+  }
+
+  #educationList > *,
+  #awardsGrid > *,
+  #experienceTimeline > * {
+    break-inside: avoid;
+  }
+
+  .table-responsive {
+    overflow: visible !important;
+  }
+
+  a[href]::after {
+    content: none !important;
   }
 }

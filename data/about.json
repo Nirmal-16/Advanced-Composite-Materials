@@ -54,7 +54,9 @@
     "role": "Assistant Professor",
     "org": "Indian Institute of Technology Madras, Chennai  India",
     "period": "July 2025 – present",
-    "desc": "Leading multiphysics research and PhD supervision"
+    "desc": "Leading multiphysics research and PhD supervision",
+    "logo": "./assets/images/IIT_Madras_Logo.svg.png",
+    "logoInitials": "IITM"
   },
   {
     "role": "Research Associate",
@@ -66,7 +68,9 @@
     "role": "Senior Research Fellow",
     "org": "SRIC Indian Institute of Technology Kharagpur,  WB  India",
     "period": "March 2022 – March 2023",
-    "desc": "Developed computational fluid labs"
+    "desc": "Developed computational fluid labs",
+    "logo": "",
+    "logoInitials": "IITKGP"
   },
   {
     "role": "Graduate Research Assistant",

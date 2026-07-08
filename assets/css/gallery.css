@@ -27,7 +27,6 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
   background: var(--cream);
   color: var(--text-dark);
   min-height: 100vh;
@@ -73,7 +72,6 @@ body {
   border-radius: 2px; margin-bottom: 18px;
 }
 .hero h1 {
-  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   font-weight: 700; color: #fff;
   line-height: 1.15; position: relative;
@@ -118,7 +116,6 @@ body {
 }
 .filter-btn {
   padding: 8px 20px;
-  font-family: 'DM Sans', sans-serif;
   font-size: .83rem; font-weight: 500;
   color: var(--text-soft);
   background: var(--white);
@@ -228,7 +225,6 @@ main {
   margin-bottom: 5px;
 }
 .overlay-title {
-  font-family: 'Cormorant Garamond', serif;
   font-size: 1rem; font-weight: 700;
   color: #fff; line-height: 1.35;
   display: -webkit-box;
@@ -374,7 +370,6 @@ main {
   width: fit-content;
 }
 .modal-title {
-  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.3rem, 2.5vw, 1.7rem);
   font-weight: 700;
   color: var(--navy);
