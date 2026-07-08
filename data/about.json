@@ -1,5 +1,5 @@
 {
-  "title": "About Our Group",
+  "title": "About",
   "subtitle": "Leading research in computational multiphysics with a commitment to innovation, collaboration, and open science.",
 
   "mission": "To advance the frontiers of computational science through groundbreaking research in multiphysics modeling, simulation, and computing.",
@@ -13,7 +13,7 @@
   ],
 
   "founder": [
-    { "initial": "D", "name": "Dr. Nagappa", "role": "Director & PI", "bio": "Ph.D in Advanced Composite, 15+ years research." }
+    { "initial": "D", "name": "Dr. Nagappa Siddgonde", "role": "Director & PI", "bio": "Ph.D in Advanced Composite, 15+ years research." }
   ],
 
   "stats": [
@@ -25,35 +25,27 @@
 "education": [
   {
     "degree": "PhD., Aerospace Engineering",
-    "institution": "Indian Institute of Technology, Kharagpur, West Bengal",
-    "year": "2012",
-    "details": "Multiphysics modeling and numerical simulation",
-    "logo": "",
-    "logoInitials": "IITKGP"
+    "institution": "Indian Institute of Technology Kharagpur, West Bengal",
+    "year": "2022",
+    "details": "Thesis: Experimental and Numerical Characterization of Woven Fabric Composites Considering Void Defects.      Advisor: Prof. Anup Ghosh"
   },
   {
     "degree": "M.Tech., Machine Design",
     "institution": "Visvesvaraya Technological University, Belgaum",
-    "year": "2008",
-    "details": "Thermal & Fluid Systems",
-    "logo": "",
-    "logoInitials": "VTU"
+    "year": "2015",
+    "details": "Thesis:Numerical Analysis of Low-Velocity Impact on Fibre Reinforced Laminated Composite Plates. Advisor: Prof. Shravankumar B Kerur"
   },
   {
     "degree": "B.E., Mechanical Engineering",
     "institution": "Visvesvaraya Technological University, Belgaum",
-    "year": "2008",
-    "details": "Thermal & Fluid Systems",
-    "logo": "",
-    "logoInitials": "VTU"
+    "year": "2013",
+    "details": "Thermal & Fluid Systems"
   },
   {
     "degree": "Diploma., Mechanical Engineering",
     "institution": "Department of Technical Education Board, Bangalore",
-    "year": "2008",
-    "details": "Thermal & Fluid Systems",
-    "logo": "",
-    "logoInitials": "DTE"
+    "year": "2010",
+    "details": "Thermal & Fluid Systems"
   }
 ],
 
@@ -70,9 +62,7 @@
     "role": "Research Associate",
     "org": "The University of Edinburgh, Edinburgh Scotland, UK",
     "period": "June 2023 – Nov 2024 ",
-    "desc": "Developed computational fluid labs",
-    "logo": "",
-    "logoInitials": "UoE"
+    "desc": "Project:Advanced Composites Manufacturing"
   },
   {
     "role": "Senior Research Fellow",
@@ -86,9 +76,7 @@
     "role": "Graduate Research Assistant",
     "org": "Indian Institute of Technology Kharagpur, WB  India",
     "period": "July 2016 – July 2022",
-    "desc": "Developed computational fluid labs",
-    "logo": "",
-    "logoInitials": "IITKGP"
+    "desc": "Experimental Mechanics, Micromechanics, Multiscale modeling, Textile composites"
   }
 ],
 
@@ -99,10 +87,9 @@
 ],
 
 "memberships": [
-  "Indian National Academy of Engineering (INAE)",
+  "Institute of Engineers India (IEI)",
   "ASME",
-  "ACM",
-  "IEEE"
+  "ACM"
 ],
 
 "awards": [
