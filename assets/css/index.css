@@ -76,16 +76,18 @@ header {
 .carousel {
   overflow: hidden;
   border-radius: 16px;
-  width: 100%;        /* ← was fixed 600px — broke on tablet/mobile */
-  max-width: 600px;   /* ← keeps desktop look exactly the same      */
+  width: 100%;
+  max-width: 100%;
   margin-top: 80px;
+  background: var(--grey-bg);
 }
 
 .carousel-inner img {
   width: 100%;
-  height: 550px;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   object-position: center;
+  background: var(--grey-bg);
   display: block;
 }
 
@@ -96,9 +98,8 @@ header {
 }
 
 .about-images {
-  flex: 1;
+  flex: 1.4;
   position: relative;
-  height: 80vh;       /* kept — only overridden on small screens below */
   min-width: 0;       /* prevent flex blowout */
 }
 
@@ -164,6 +165,23 @@ header {
   color: #022;
 }
 
+/* ---------- Skeleton (loading state) ---------- */
+
+.skeleton-carousel {
+  aspect-ratio: 16 / 9;
+}
+
+.skeleton-icon {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+}
+
+.skeleton-feature-text {
+  flex: 1;
+  min-width: 0;
+}
+
 /* ===============================
    RESPONSIVE
 ================================= */
@@ -183,10 +201,6 @@ header {
   .carousel {
     max-width: 100%;    /* ← allow carousel to fill column on tablet */
     margin-top: 0;      /* ← remove top offset when stacked */
-  }
-
-  .carousel-inner img {
-    height: 420px;      /* ← slightly shorter on tablet — less dead space */
   }
 
   .feature-item {
@@ -209,10 +223,6 @@ header {
   .about-content h2 {
     font-size: 32px;      /* already existed */
   }
-
-  .carousel-inner img {
-    height: 300px;        /* ← more comfortable height on phones */
-  }
 }
 
 /* ── Small mobile (400px) ── */
@@ -234,9 +244,7 @@ header {
     padding: 48px 16px;
   }
 
-  .carousel-inner img {
-    height: 240px;
-  }
+
 
   .about-content h2 {
     font-size: 28px;

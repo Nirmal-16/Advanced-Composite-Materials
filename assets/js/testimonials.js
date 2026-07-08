@@ -10,6 +10,8 @@ async function loadTestimonials() {
 
   const track = document.getElementById("testimonialTrack");
   const dotsContainer = document.getElementById("testimonialDots");
+  track.innerHTML = "";
+  dotsContainer.innerHTML = "";
 
   // Duplicate for infinite illusion
   const duplicated = [...testimonials, ...testimonials];

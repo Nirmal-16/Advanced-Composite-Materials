@@ -27,25 +27,33 @@
     "degree": "PhD., Aerospace Engineering",
     "institution": "Indian Institute of Technology, Kharagpur, West Bengal",
     "year": "2012",
-    "details": "Multiphysics modeling and numerical simulation"
+    "details": "Multiphysics modeling and numerical simulation",
+    "logo": "",
+    "logoInitials": "IITKGP"
   },
   {
     "degree": "M.Tech., Machine Design",
     "institution": "Visvesvaraya Technological University, Belgaum",
     "year": "2008",
-    "details": "Thermal & Fluid Systems"
+    "details": "Thermal & Fluid Systems",
+    "logo": "",
+    "logoInitials": "VTU"
   },
   {
     "degree": "B.E., Mechanical Engineering",
     "institution": "Visvesvaraya Technological University, Belgaum",
     "year": "2008",
-    "details": "Thermal & Fluid Systems"
+    "details": "Thermal & Fluid Systems",
+    "logo": "",
+    "logoInitials": "VTU"
   },
   {
     "degree": "Diploma., Mechanical Engineering",
     "institution": "Department of Technical Education Board, Bangalore",
     "year": "2008",
-    "details": "Thermal & Fluid Systems"
+    "details": "Thermal & Fluid Systems",
+    "logo": "",
+    "logoInitials": "DTE"
   }
 ],
 
@@ -54,25 +62,33 @@
     "role": "Assistant Professor",
     "org": "Indian Institute of Technology Madras, Chennai  India",
     "period": "July 2025 – present",
-    "desc": "Leading multiphysics research and PhD supervision"
+    "desc": "Leading multiphysics research and PhD supervision",
+    "logo": "./assets/images/IIT_Madras_Logo.svg.png",
+    "logoInitials": "IITM"
   },
   {
     "role": "Research Associate",
     "org": "The University of Edinburgh, Edinburgh Scotland, UK",
     "period": "June 2023 – Nov 2024 ",
-    "desc": "Developed computational fluid labs"
+    "desc": "Developed computational fluid labs",
+    "logo": "",
+    "logoInitials": "UoE"
   },
   {
     "role": "Senior Research Fellow",
     "org": "SRIC Indian Institute of Technology Kharagpur,  WB  India",
     "period": "March 2022 – March 2023",
-    "desc": "Developed computational fluid labs"
+    "desc": "Developed computational fluid labs",
+    "logo": "",
+    "logoInitials": "IITKGP"
   },
   {
     "role": "Graduate Research Assistant",
     "org": "Indian Institute of Technology Kharagpur, WB  India",
     "period": "July 2016 – July 2022",
-    "desc": "Developed computational fluid labs"
+    "desc": "Developed computational fluid labs",
+    "logo": "",
+    "logoInitials": "IITKGP"
   }
 ],
 

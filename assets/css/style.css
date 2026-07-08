@@ -17,6 +17,11 @@ html {
 body {
   line-height: 1.5;
   background-color: var(--primary);
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* ===============================
@@ -206,6 +211,45 @@ svg {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* ===============================
+   Loading Skeletons
+   =============================== */
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-block {
+  background: linear-gradient(100deg, #e4e4e4 30%, #f2f2f2 50%, #e4e4e4 70%) !important;
+  background-size: 250% 100% !important;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.skeleton-line {
+  display: block;
+  height: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  background: linear-gradient(100deg, #e4e4e4 30%, #f2f2f2 50%, #e4e4e4 70%);
+  background-size: 250% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+}
+
+.skeleton-line.w-40 { width: 40%; }
+.skeleton-line.w-60 { width: 60%; }
+.skeleton-line.w-70 { width: 70%; }
+.skeleton-line.w-90 { width: 90%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-block,
+  .skeleton-line {
+    animation: none;
   }
 }
 

@@ -21,7 +21,6 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
   background: var(--cream);
   color: var(--text-dark);
   min-height: 100vh;
@@ -50,7 +49,6 @@ body {
   margin-bottom: 18px;
 }
 .hero h1 {
-  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   font-weight: 700;
   color: #ffffff;
@@ -110,7 +108,6 @@ main {
 }
 .tab-btn {
   padding: 10px 26px;
-  font-family: 'DM Sans', sans-serif;
   font-size: .88rem; font-weight: 500;
   color: var(--text-soft);
   background: var(--white);
@@ -151,7 +148,6 @@ main {
   flex-wrap: wrap; gap: 12px;
 }
 .section-title {
-  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   color: var(--navy);
@@ -267,7 +263,6 @@ main {
 
 /* Index number */
 .rcard-index {
-  font-family: 'Cormorant Garamond', serif;
   font-size: .78rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--teal);
@@ -276,7 +271,6 @@ main {
 
 /* Title */
 .rcard-title {
-  font-family: 'Cormorant Garamond', serif;
   font-size: 1.22rem; font-weight: 700;
   color: var(--navy);
   line-height: 1.38;
@@ -312,7 +306,6 @@ main {
   background: none;
   border: none;
   padding: 0;
-  font-family: 'DM Sans', sans-serif;
   font-size: .78rem; font-weight: 600;
   color: #007b79;
   cursor: pointer;
