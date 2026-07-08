@@ -102,6 +102,20 @@ function initScrollReveal() {
 }
 
 // ================================
+// STICKY HEADER
+// ================================
+function initStickyHeader() {
+  const header = document.querySelector("header");
+  if (!header) return;
+
+  const onScroll = () => {
+    header.classList.toggle("scrolled", window.scrollY > 24);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+}
+
+// ================================
 // INIT
 // ================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -109,7 +123,10 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHTML(
     "navbar-placeholder",
     `${BASE_PATH}/components/navbar.html`,
-    setActiveNav
+    () => {
+      setActiveNav();
+      initStickyHeader();
+    }
   );
 
   // Footer

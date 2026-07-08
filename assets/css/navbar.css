@@ -20,7 +20,6 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  padding-left: 20px;
 }
 
 .brand {
@@ -28,9 +27,15 @@ header {
 }
 
 .iit {
-  border-radius: 50%;
-  width: 70px;
-  margin-left: 20px;
+  height: 72px;
+  width: auto;
+  max-width: 320px;
+  object-fit: contain;
+  transition: height 0.3s ease;
+}
+
+header.scrolled .iit {
+  height: 56px;
 }
 
 /* ---------- Desktop Nav ---------- */
@@ -267,5 +272,10 @@ nav.desktop-nav li:hover > .dropdown-content {
 @media (max-width: 768px) {
   .navbar-btn {
     display: none;
+  }
+
+  .iit {
+    height: 54px;
+    max-width: 230px;
   }
 }
