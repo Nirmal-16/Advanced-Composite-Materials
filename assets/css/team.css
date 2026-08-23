@@ -155,10 +155,16 @@ hr {
   margin-top: auto;
   padding-top: 15px;
   border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .social-links a {
-  margin: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 16px;
   color: #6c757d;
   text-decoration: none;
@@ -167,6 +173,25 @@ hr {
 
 .social-links a i {
   font-size: 18px;
+}
+
+.researchgate-icon {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: currentColor;
+  -webkit-mask-image: url("../images/researchgate-mark.png");
+  mask-image: url("../images/researchgate-mark.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.gscholar-icon {
+  display: inline-block !important;
 }
 
 .social-links a:hover {

@@ -248,7 +248,7 @@
             <div class="col-md-6">
               <div class="feature-card edu-card">
                 <div class="institution-logo edu-logo">${institutionLogo(e, e.institution)}</div>
-                <h5>${e.degree}</h5>
+                <h5 style="font-weight: 1000;">${e.degree}</h5>
                 <p class="text-muted">${e.institution} • ${e.year}</p>
                 <small>${e.details}</small>
               </div>
@@ -261,7 +261,7 @@
               <div class="experience-row">
                 <div class="institution-logo">${institutionLogo(x, x.org)}</div>
                 <div class="experience-content">
-                  <h5>${x.role} – ${x.org}</h5>
+                  <h5 style="font-weight: 1000;">${x.role} – ${x.org}</h5>
                   <small class="text-muted">${x.period}</small>
                   <p>${x.desc}</p>
                 </div>
@@ -285,7 +285,7 @@
           .map(a => `
             <div class="col-sm-6 col-md-4">
               <div class="feature-card text-center">
-                <h5>${a.title}</h5>
+                <h5 style="font-weight: 1000;">${a.title}</h5>
                 <p class="text-muted">${a.year}</p>
               </div>
             </div>`)

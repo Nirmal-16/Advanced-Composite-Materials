@@ -10,7 +10,7 @@
       "category": "phd",
       "image": "https://ui-avatars.com/api/?name=Dharani+B&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "High Strain Rate studies of Polymer Composites using Split Hopkinson Pressure Bar Test (SHPB). Focuses on dynamic stress-strain behaviour of materials at strain rates from 10² to 10⁵ s⁻¹.",
-      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25d019@smail.iitm.ac.in" }
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25d019@smail.iitm.ac.in" }
     },
     {
       "name": "Vislavath Uday Kiran",
@@ -18,7 +18,7 @@
       "category": "phd",
       "image": "https://ui-avatars.com/api/?name=Uday+Kiran&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "Research in advanced composite materials and finite element analysis. Department of Aerospace Engineering, IIT Madras.",
-      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25d023@smail.iitm.ac.in" }
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25d023@smail.iitm.ac.in" }
     },
     {
       "name": "Ashutosh Rai",
@@ -26,7 +26,7 @@
       "category": "mtech",
       "image": "https://ui-avatars.com/api/?name=Ashutosh+Rai&background=1a5276&color=ffffff&size=200&bold=true",
       "description": "Area of interest: Composite Structures and Secondary Bonded Joints. Department of Aerospace Engineering, IIT Madras.",
-      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25m001@smail.iitm.ac.in" }
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25m001@smail.iitm.ac.in" }
     },
     {
       "name": "Potula Vamshidhar Reddy",
@@ -34,7 +34,7 @@
       "category": "mtech",
       "image": "https://ui-avatars.com/api/?name=Vamshidhar+Reddy&background=1a5276&color=ffffff&size=200&bold=true",
       "description": "Area of interest: Structural Mechanics and Composite Structural Repairs. Department of Aerospace Engineering, IIT Madras.",
-      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25m004@smail.iitm.ac.in" }
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25m004@smail.iitm.ac.in" }
     },
     {
       "name": "Amit Shailesh Nayak",
@@ -42,7 +42,7 @@
       "category": "mtech",
       "image": "https://ui-avatars.com/api/?name=Amit+Nayak&background=1a5276&color=ffffff&size=200&bold=true",
       "description": "Area of interest: Finite Element Analysis, Structural Dynamics, Composite Structures, and Fracture Mechanics. Department of Aerospace Engineering, IIT Madras.",
-      "socials": { "linkedin": "#", "twitter": "#", "email": "mailto:ae25m011@smail.iitm.ac.in" }
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25m011@smail.iitm.ac.in" }
     },
     {
       "name": "UG / Dual Degree Student",
@@ -50,7 +50,7 @@
       "category": "ug",
       "image": "https://ui-avatars.com/api/?name=UG+Student&background=145a32&color=ffffff&size=200&bold=true",
       "description": "Placeholder — replace with actual UG/dual degree student details.",
-      "socials": { "linkedin": "#", "twitter": "#", "email": "#" }
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "#" }
     },
     {
       "name": "Research Student",
@@ -58,7 +58,7 @@
       "category": "student",
       "image": "https://ui-avatars.com/api/?name=Research+Intern&background=4a235a&color=ffffff&size=200&bold=true",
       "description": "Placeholder — replace with actual research student/intern details.",
-      "socials": { "linkedin": "#", "twitter": "#", "email": "#" }
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "#" }
     },
     {
       "name": "Project Staff",
@@ -66,7 +66,7 @@
       "category": "project_staff",
       "image": "https://ui-avatars.com/api/?name=Project+Staff&background=6e2f1a&color=ffffff&size=200&bold=true",
       "description": "Placeholder — replace with actual project staff details.",
-      "socials": { "linkedin": "#", "twitter": "#", "email": "#" }
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "#" }
     }
   ],
   "Stats": [
