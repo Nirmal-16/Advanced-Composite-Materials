@@ -73,6 +73,7 @@
             <h3>${item.title}</h3>
             <div class="authors">${highlightName(item.authors, "Nagappa Siddgonde")}</div>
             <div class="journal">${item.journal}</div>
+            ${item.doi ? `<a class="doi-link" href="${item.doi}" target="_blank" rel="noopener">DOI: ${item.doi.replace(/^https?:\/\//, "")}</a>` : ""}
           </div>
         `;
       }

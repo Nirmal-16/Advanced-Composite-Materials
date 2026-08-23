@@ -53,14 +53,14 @@ fetch(`${BASE_PATH}/data/journals.json`)
 
       div.innerHTML = `
         <div class="journal-image">
-          <img src="${card.thumbnail}" alt="">
+          <img src="${card.thumbnail}" alt="${card["card-heading"]}">
         </div>
 
         <div class="journal-content">
           <h3>${card["card-heading"]}</h3>
 
           <div class="meta">
-            ${card["author-name"]} â€¢ ${card.year} â€¢ ${card.citation}
+            ${card["author-name"]} ${card.year} ${card.citation}
           </div>
 
           <div class="meta">
@@ -87,6 +87,21 @@ fetch(`${BASE_PATH}/data/journals.json`)
 
     /* ================= EVENTS ================= */
 
+    const imageModalOverlay = document.getElementById("imageModalOverlay");
+    const imageModalImg = document.getElementById("imageModalImg");
+
+    function openImageModal(img) {
+      imageModalImg.src = img.src;
+      imageModalImg.alt = img.alt;
+      imageModalOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeImageModal() {
+      imageModalOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
     document.addEventListener("click", function (e) {
       /* Modal for Recent */
       if (e.target.dataset.full) {
@@ -112,6 +127,29 @@ fetch(`${BASE_PATH}/data/journals.json`)
         e.target.textContent = desc.classList.contains("expanded")
           ? "Read Less"
           : "Read More";
+      }
+
+      /* Open Image Modal */
+      const clickedThumb = e.target.closest(".journal-image img");
+      if (clickedThumb) {
+        openImageModal(clickedThumb);
+      }
+
+      /* Close Image Modal */
+      if (
+        e.target.id === "imageModalClose" ||
+        e.target.id === "imageModalOverlay"
+      ) {
+        closeImageModal();
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (
+        e.key === "Escape" &&
+        imageModalOverlay.classList.contains("active")
+      ) {
+        closeImageModal();
       }
     });
   })

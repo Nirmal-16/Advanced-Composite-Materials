@@ -10,6 +10,7 @@ const TABS = [
   { label: "UG / Dual",    key: "ug" },
   { label: "Student",      key: "student" },
   { label: "Project Staff",key: "project_staff" },
+  { label: "Alumni",       key: "alumni" },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -44,6 +45,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
       container.insertAdjacentElement("beforebegin", filterBar);
 
+      // Icon set: Email, Google Scholar, Profile (LinkedIn) — used for student cards & collaborators
+      function compactSocialLinks(member) {
+        return `
+          <a href="${member.socials.email}" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          <a href="${member.socials.g_scholar}" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <svg class="gscholar-icon" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+              <title>Google Scholar icon</title>
+              <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+            </svg>
+          </a>
+          <a href="${member.socials.linkedin}" target="_blank" rel="noopener" aria-label="Profile"><i class="bi bi-linkedin"></i></a>
+        `;
+      }
+
+      // Icon set: ResearchGate, Email, LinkedIn, GitHub — default for team cards
+      function fullSocialLinks(member) {
+        return `
+          <a href="${member.socials.researchGate}" target="_blank" rel="noopener" aria-label="ResearchGate">
+          <span class="researchgate-icon" aria-hidden="true"></span></a>
+          <a href="${member.socials.email}" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          <a href="${member.socials.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        `;
+      }
+
+      // Alumni card: name, project/thesis title, passed-out year — no role/description/socials
+      function alumniCardBody(member) {
+        return `
+          <h3 class="team-name">${member.name}</h3>
+          <p class="team-role">Alumnus · Class of ${member.passedOutYear}</p>
+          <p class="team-desc">${member.project}</p>
+        `;
+      }
+
+      function standardCardBody(member) {
+        return `
+          <h3 class="team-name">${member.name}</h3>
+          <p class="team-role">${member.role}</p>
+          <p class="team-desc">${member.description}</p>
+          <div class="social-links">
+            ${member.category === "student" ? compactSocialLinks(member) : fullSocialLinks(member)}
+          </div>
+        `;
+      }
+
       // Render all team cards
       data.Team.forEach(member => {
         const card = document.createElement("div");
@@ -53,15 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
           <img src="${member.image}" alt="${member.name}" class="team-img" loading="lazy">
           <div class="team-content">
-            <h3 class="team-name">${member.name}</h3>
-            <p class="team-role">${member.role}</p>
-            <p class="team-desc">${member.description}</p>
-            <div class="social-links">
-              <a href="${member.socials.twitter}" target="_blank" rel="noopener" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-              <a href="${member.socials.email}" aria-label="Email"><i class="bi bi-envelope"></i></a>
-              <a href="${member.socials.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-              <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            </div>
+            ${member.category === "alumni" ? alumniCardBody(member) : standardCardBody(member)}
           </div>
         `;
         container.appendChild(card);
@@ -106,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       /* ── Collaborators ── */
       const collabContainer = document.getElementById("teamContainer1");
-      data.Team.forEach(member => {
+      data.Collaborators.forEach(member => {
         const card = document.createElement("div");
         card.classList.add("team-card");
         card.innerHTML = `
@@ -116,10 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="team-role">${member.role}</p>
             <p class="team-desc">${member.description}</p>
             <div class="social-links">
-              <a href="${member.socials.twitter}" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
-              <a href="${member.socials.email}"><i class="bi bi-envelope"></i></a>
-              <a href="${member.socials.linkedin}" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-github"></i></a>
+              ${compactSocialLinks(member)}
             </div>
           </div>
         `;

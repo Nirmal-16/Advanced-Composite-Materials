@@ -13,21 +13,6 @@
 
   "equipment": [
     {
-      "name": "Scanning Electron Microscope",
-      "model": "ZEISS GeminiSEM 560",
-      "category": "Characterization",
-      "icon": "cpu",
-      "image": "",
-      "description": "High-resolution imaging of composite microstructures and failure surfaces with EDS capability for elemental analysis.",
-      "specs": [
-        "Resolution: 0.6 nm at 15 kV",
-        "Magnification: 12× to 2,000,000×",
-        "EDS detector integrated",
-        "EBSD mapping capability"
-      ],
-      "status": "Available"
-    },
-    {
       "name": "Universal Testing Machine",
       "model": "Instron 8801",
       "category": "Mechanical",
@@ -56,21 +41,6 @@
         "Multi-zone heating"
       ],
       "status": "Available"
-    },
-    {
-      "name": "X-Ray CT Scanner",
-      "model": "Nikon XT H 225",
-      "category": "Imaging",
-      "icon": "layers",
-      "image": "",
-      "description": "Non-destructive 3D tomographic inspection of composite parts for internal defects, porosity and delamination.",
-      "specs": [
-        "Voxel resolution: 3 µm",
-        "Max voltage: 225 kV",
-        "Part size: up to 300 mm",
-        "Automated defect detection"
-      ],
-      "status": "Limited"
     },
     {
       "name": "Differential Scanning Calorimeter",

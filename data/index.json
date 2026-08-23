@@ -1,22 +1,22 @@
 {
   "services": [
     {
-      "title": "Research Models & Services",
+      "title": "Experimental mechanics",
       "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
       "icon": "🧪"
     },
     {
-      "title": "Biologics Testing Solutions",
+      "title": "Multiscale modeling",
       "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
       "icon": "🔬"
     },
     {
-      "title": "Formulation & Product Chemistry",
+      "title": "Fracture mechanics",
       "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
       "icon": "⚗️"
     },
     {
-      "title": "Screening & Profiling Assays",
+      "title": "Textile composites",
       "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
       "icon": "📄"
     }

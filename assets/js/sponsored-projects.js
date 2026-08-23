@@ -82,10 +82,16 @@ function buildCard(project, type) {
 
       <div class="card-divider"></div>
 
+      ${project.pi ? `
       <div class="role-pill">
         <span class="role-pip"></span>
-        ${project.role}
-      </div>
+        ${project.pi}
+      </div>` : ''}
+      ${project.coPi ? `
+      <div class="role-pill">
+        <span class="role-pip"></span>
+        ${project.coPi}
+      </div>` : ''}
     </article>`;
 }
 
