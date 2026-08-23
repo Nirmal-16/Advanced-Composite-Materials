@@ -19,14 +19,15 @@
       "duration": "Jul 2023 – Jun 2027",
       "funding": "₹ 65,00,000",
       "agency": "Ministry of Electronics & IT (MeitY)",
-      "role": "PI"
+      "role": "Role : Principal Investigator",
+      "role2": "Co-PI's : Nagappa, Nirmal, someone"
     },
     {
       "title": "Deep Learning for Remote Sensing and Disaster Risk Assessment",
       "duration": "Sep 2022 – Aug 2025",
       "funding": "₹ 48,50,000",
       "agency": "ISRO Space Applications Centre",
-      "role": "Co-PI"
+      "role": "Co-PI's : Nagappa, Nirmal, someone"
     },
     {
       "title": "Hybrid Renewable Energy Systems for Rural Electrification",

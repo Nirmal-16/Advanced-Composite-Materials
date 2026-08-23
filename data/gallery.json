@@ -5,7 +5,7 @@
     "category": "Conference",
     "venue": "Suntec Convention Centre, Singapore",
     "timeline": "March 14–16, 2024",
-    "image": "assets/images/gallery/conference-1.jpg"
+    "image": "assets/images/gallery/gallery_1.jpg.jpeg"
   },
   {
     "title": "National Workshop on Smart Structures & IoT Integration",
@@ -13,7 +13,7 @@
     "category": "Workshop",
     "venue": "IIT Madras, Chennai, India",
     "timeline": "August 5–6, 2023",
-    "image": "assets/images/gallery/workshop-1.jpg"
+    "image": "./assets/images/GA_paper1.jpg"
   },
   {
     "title": "Field Study — Bridge Structural Assessment, Pamban",

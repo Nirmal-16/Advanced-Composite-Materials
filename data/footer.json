@@ -1,5 +1,5 @@
 {
-  "logoTitle": "Advanced Composite Materials Lab",
+  "logoTitle": "Advanced Composite Materials and Structures Lab",
   "description": "Innovating next-generation material science through research and development.",
   "quickLinks": [
     { "label": "Home", "url": "./index.html" },
@@ -9,17 +9,18 @@
     { "label": "Contact", "url": "./contact.html" }
   ],
   "contact": {
-    "location": "Chennai, Tamil Nadu, India",
-    "email": "nagappa@smail.iitm.ac.in",
-    "phone": "+91 9663927539",
+    "location": "Dept. of Aerospace Engineering, IIT Madras, Chennai - 600036, India",
+    "email": "nagappa@iitm.ac.in",
+    "phone": "+91-44-2257-4047",
     "socials": {
       "linkedin": "https://www.linkedin.com/in/nagappa-siddgonde-phd-442442a2/",
-      "github": "https://github.com"
+      "g_scholar": "https://github.com"
     }
   },
   "map": {
-    "link": "https://www.google.com/maps?q=Chennai,+Tamil+Nadu",
+    "link": "https://maps.app.goo.gl/Dg9zmeVz7efspd156",
     "image": "./assets/images/map-preview.png"
   },
-  "copyright": "© 2025 Advanced Composite Materials Lab. All rights reserved."
+  "copyright": "© 2026 Advanced Composite Materials and Structures Lab. All rights reserved."
 }
+ 

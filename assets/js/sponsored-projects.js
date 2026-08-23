@@ -86,6 +86,10 @@ function buildCard(project, type) {
         <span class="role-pip"></span>
         ${project.role}
       </div>
+      <div class="role-pill">
+        <span class="role-pip"></span>
+        ${project.role2}
+      </div>
     </article>`;
 }
 
