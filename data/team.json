@@ -13,6 +13,14 @@
       "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25d019@smail.iitm.ac.in" }
     },
     {
+      "name": "Parag Garg",
+      "role": "PhD Research Scholar (Structures)",
+      "category": "phd",
+      "image": "https://ui-avatars.com/api/?name=Parag+Garg&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "description": "Advanced composite materials, Sandwich Strcuture",
+      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae26d007@smail.iitm.ac.in" }
+    },
+    {
       "name": "Vislavath Uday Kiran",
       "role": "PhD Research Scholar (Structures)",
       "category": "phd",
@@ -63,6 +71,13 @@
     {
       "name": "Prof. Dipa Roy",
       "role": "The University of Edinburgh, Scotland UK",
+      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "description": "Short description of the collaboration.",
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
+    }
+    {
+      "name": "Prof. Conchúr Ó Brádaigh",
+      "role": "The University of Sheffield, England UK",
       "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "Short description of the collaboration.",
       "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
