@@ -1,6 +1,6 @@
 {
   "logoTitle": "Advanced Composite Materials and Structures Lab",
-  "description": "Innovating next-generation material science through research and development.",
+  "description": "Innovating next-generation composite materials through research and innovation.",
   "quickLinks": [
     { "label": "Home", "url": "./index.html" },
     { "label": "About", "url": "./about.html" },
@@ -18,11 +18,11 @@
     }
   },
   "map": {
-    "link": "https://maps.app.goo.gl/Dg9zmeVz7efspd156",
+    "link": "https://maps.app.goo.gl/qL6bqHgAin2XqP4N6",
     "image": "./assets/images/map-preview.png"
   },
   "instituteLogo": "./assets/images/IIT_Madras_Logo.svg.png",
   "labLogo": "./assets/images/brand_logo.png",
-  "copyright": "© 2026 Advanced Composite Materials and Structures Lab. All rights reserved."
+  "copyright": "© 2026 Advanced Composite Materials and Structures Lab(ACMS Lab). All rights reserved."
 }
  

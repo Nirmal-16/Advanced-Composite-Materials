@@ -47,22 +47,22 @@
   ],
   "Collaborators": [
     {
-      "name": "Collaborator Name",
-      "role": "Role / Institution",
+      "name": "Prof. Anup Ghosh",
+      "role": "Indian Institute of Technology Kharagpur",
+      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "description": "",
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
+    },
+    {
+      "name": "Prof. M R Sunny",
+      "role": "Indian Institute of Technology Kharagpur",
       "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "Short description of the collaboration.",
       "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
     },
     {
-      "name": "Collaborator Name",
-      "role": "Role / Institution",
-      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
-      "description": "Short description of the collaboration.",
-      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
-    },
-    {
-      "name": "Collaborator Name",
-      "role": "Role / Institution",
+      "name": "Prof. Dipa Roy",
+      "role": "The University of Edinburgh, Scotland UK",
       "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "Short description of the collaboration.",
       "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
