@@ -60,7 +60,7 @@ fetch(`${BASE_PATH}/data/journals.json`)
           <h3>${card["card-heading"]}</h3>
 
           <div class="meta">
-            ${card["author-name"]} â€¢ ${card.year} â€¢ ${card.citation}
+            ${card["author-name"]} ${card.year} ${card.citation}
           </div>
 
           <div class="meta">

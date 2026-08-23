@@ -175,11 +175,14 @@ svg {
   margin: auto  !important;
 }
 
-/* 10. Thumb fallback centred SVG                             */
+/* 10. Thumb fallback centred SVG
+      (display is intentionally NOT forced here — each of these is
+      shown/hidden via inline style from JS depending on whether the
+      item actually has a valid image; forcing display:flex here used
+      to override that and keep the fallback visible even on success) */
 .thumb-fallback,
 .modal-img-fallback,
 .img-placeholder {
-  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }

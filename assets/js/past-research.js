@@ -61,7 +61,7 @@ function buildCard(item, index) {
 
       <div class="rcard-body">
 
-        <span class="rcard-index">Research â€” ${cardNum}</span>
+        <span class="rcard-index">Research - ${cardNum}</span>
 
         <h3 class="rcard-title">${item.title}</h3>
 

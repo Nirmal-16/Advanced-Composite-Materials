@@ -131,6 +131,7 @@ function applyFilter(category, clickedBtn) {
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const overlay    = document.getElementById('modalOverlay');
 const modalImg   = document.getElementById('modalImg');
+const modalImgPane  = document.querySelector('.modal-img-pane');
 const modalFallback = document.getElementById('modalFallback');
 const modalTitle    = document.getElementById('modalTitle');
 const modalDesc     = document.getElementById('modalDesc');
@@ -154,17 +155,28 @@ function closeModal() {
 function populateModal(item) {
   // image
   if (item.image) {
-    modalImg.src = `${BASE_PATH}/${item.image}`;
-    modalImg.alt = item.title;
-    modalImg.style.display = 'block';
-    modalFallback.style.display = 'none';
+    modalImgPane.style.aspectRatio = '4 / 3'; // sensible default until the real ratio loads
+    modalImg.onload = () => {
+      modalImgPane.style.aspectRatio = `${modalImg.naturalWidth} / ${modalImg.naturalHeight}`;
+    };
     modalImg.onerror = () => {
       modalImg.style.display = 'none';
       modalFallback.style.display = 'flex';
+      modalImgPane.style.aspectRatio = '4 / 3';
     };
+    modalImg.alt = item.title;
+    modalImg.style.display = 'block';
+    modalFallback.style.display = 'none';
+    modalImg.src = `${BASE_PATH}/${item.image}`;
+    // src may already be cached (e.g. same image reopened) — onload won't
+    // re-fire in that case, so pick up the already-known dimensions directly
+    if (modalImg.complete && modalImg.naturalWidth) {
+      modalImgPane.style.aspectRatio = `${modalImg.naturalWidth} / ${modalImg.naturalHeight}`;
+    }
   } else {
     modalImg.style.display = 'none';
     modalFallback.style.display = 'flex';
+    modalImgPane.style.aspectRatio = '4 / 3';
   }
 
   // text content
