@@ -8,7 +8,7 @@
       "name": "Dharani B",
       "role": "PhD Research Scholar (Structures)",
       "category": "phd",
-      "image": "https://ui-avatars.com/api/?name=Dharani+B&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "image": "./assets/images/Dharani.png",
       "description": "High Strain Rate studies of Polymer Composites using Split Hopkinson Pressure Bar Test (SHPB). Focuses on dynamic stress-strain behaviour of materials at strain rates from 10² to 10⁵ s⁻¹.",
       "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25d019@smail.iitm.ac.in" }
     },
@@ -17,14 +17,14 @@
       "role": "PhD Research Scholar (Structures)",
       "category": "phd",
       "image": "https://ui-avatars.com/api/?name=Uday+Kiran&background=0d3b5e&color=ffffff&size=200&bold=true",
-      "description": "Research in advanced composite materials and finite element analysis. Department of Aerospace Engineering, IIT Madras.",
+      "description": "Advanced composite materials, Finite element analysis",
       "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25d023@smail.iitm.ac.in" }
     },
     {
       "name": "Ashutosh Rai",
       "role": "M.Tech Student, Aerospace Engineering",
       "category": "mtech",
-      "image": "https://ui-avatars.com/api/?name=Ashutosh+Rai&background=1a5276&color=ffffff&size=200&bold=true",
+      "image": "./assets/images/Ashutosh_Rai.png",
       "description": "Area of interest: Composite Structures and Secondary Bonded Joints. Department of Aerospace Engineering, IIT Madras.",
       "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25m001@smail.iitm.ac.in" }
     },
@@ -32,7 +32,7 @@
       "name": "Potula Vamshidhar Reddy",
       "role": "M.Tech Student, Aerospace Engineering",
       "category": "mtech",
-      "image": "https://ui-avatars.com/api/?name=Vamshidhar+Reddy&background=1a5276&color=ffffff&size=200&bold=true",
+      "image": "./assets/images/Potula_Vamshidhar.png",
       "description": "Area of interest: Structural Mechanics and Composite Structural Repairs. Department of Aerospace Engineering, IIT Madras.",
       "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25m004@smail.iitm.ac.in" }
     },
@@ -40,33 +40,32 @@
       "name": "Amit Shailesh Nayak",
       "role": "M.Tech Student, Aerospace Engineering",
       "category": "mtech",
-      "image": "https://ui-avatars.com/api/?name=Amit+Nayak&background=1a5276&color=ffffff&size=200&bold=true",
+      "image": "./assets/images/Amit_Shailesh.png",
       "description": "Area of interest: Finite Element Analysis, Structural Dynamics, Composite Structures, and Fracture Mechanics. Department of Aerospace Engineering, IIT Madras.",
       "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "mailto:ae25m011@smail.iitm.ac.in" }
+    }
+  ],
+  "Collaborators": [
+    {
+      "name": "Collaborator Name",
+      "role": "Role / Institution",
+      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "description": "Short description of the collaboration.",
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
     },
     {
-      "name": "UG / Dual Degree Student",
-      "role": "Undergraduate Researcher",
-      "category": "ug",
-      "image": "https://ui-avatars.com/api/?name=UG+Student&background=145a32&color=ffffff&size=200&bold=true",
-      "description": "Placeholder — replace with actual UG/dual degree student details.",
-      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "#" }
+      "name": "Collaborator Name",
+      "role": "Role / Institution",
+      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "description": "Short description of the collaboration.",
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
     },
     {
-      "name": "Research Student",
-      "role": "Research Intern",
-      "category": "student",
-      "image": "https://ui-avatars.com/api/?name=Research+Intern&background=4a235a&color=ffffff&size=200&bold=true",
-      "description": "Placeholder — replace with actual research student/intern details.",
-      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "#" }
-    },
-    {
-      "name": "Project Staff",
-      "role": "Project Coordinator",
-      "category": "project_staff",
-      "image": "https://ui-avatars.com/api/?name=Project+Staff&background=6e2f1a&color=ffffff&size=200&bold=true",
-      "description": "Placeholder — replace with actual project staff details.",
-      "socials": { "linkedin": "#", "researchGate": "#", "g_scholar": "#", "email": "#" }
+      "name": "Collaborator Name",
+      "role": "Role / Institution",
+      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "description": "Short description of the collaboration.",
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
     }
   ],
   "Stats": [

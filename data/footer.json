@@ -21,6 +21,8 @@
     "link": "https://maps.app.goo.gl/Dg9zmeVz7efspd156",
     "image": "./assets/images/map-preview.png"
   },
+  "instituteLogo": "./assets/images/IIT_Madras_Logo.svg.png",
+  "labLogo": "./assets/images/brand_logo.png",
   "copyright": "© 2026 Advanced Composite Materials and Structures Lab. All rights reserved."
 }
  

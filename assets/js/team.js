@@ -10,6 +10,7 @@ const TABS = [
   { label: "UG / Dual",    key: "ug" },
   { label: "Student",      key: "student" },
   { label: "Project Staff",key: "project_staff" },
+  { label: "Alumni",       key: "alumni" },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -69,6 +70,26 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       }
 
+      // Alumni card: name, project/thesis title, passed-out year — no role/description/socials
+      function alumniCardBody(member) {
+        return `
+          <h3 class="team-name">${member.name}</h3>
+          <p class="team-role">Alumnus · Class of ${member.passedOutYear}</p>
+          <p class="team-desc">${member.project}</p>
+        `;
+      }
+
+      function standardCardBody(member) {
+        return `
+          <h3 class="team-name">${member.name}</h3>
+          <p class="team-role">${member.role}</p>
+          <p class="team-desc">${member.description}</p>
+          <div class="social-links">
+            ${member.category === "student" ? compactSocialLinks(member) : fullSocialLinks(member)}
+          </div>
+        `;
+      }
+
       // Render all team cards
       data.Team.forEach(member => {
         const card = document.createElement("div");
@@ -78,12 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
           <img src="${member.image}" alt="${member.name}" class="team-img" loading="lazy">
           <div class="team-content">
-            <h3 class="team-name">${member.name}</h3>
-            <p class="team-role">${member.role}</p>
-            <p class="team-desc">${member.description}</p>
-            <div class="social-links">
-              ${member.category === "student" ? compactSocialLinks(member) : fullSocialLinks(member)}
-            </div>
+            ${member.category === "alumni" ? alumniCardBody(member) : standardCardBody(member)}
           </div>
         `;
         container.appendChild(card);
@@ -128,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       /* ── Collaborators ── */
       const collabContainer = document.getElementById("teamContainer1");
-      data.Team.forEach(member => {
+      data.Collaborators.forEach(member => {
         const card = document.createElement("div");
         card.classList.add("team-card");
         card.innerHTML = `

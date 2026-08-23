@@ -61,6 +61,10 @@ fetch(`${BASE_PATH}/data/footer.json`)
     mapLink.href = data.map.link;
     mapLink.querySelector(".map-image").src = data.map.image;
 
+    /* â”€â”€ Institute + lab logos â”€â”€ */
+    footer.querySelector(".footer-institute-logo").src = data.instituteLogo;
+    footer.querySelector(".footer-lab-logo").src = data.labLogo;
+
     /* â”€â”€ Copyright â”€â”€ */
     footer.querySelector(".footer-copyright").textContent = data.copyright;
   })
