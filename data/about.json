@@ -63,24 +63,18 @@
     "org": "The University of Edinburgh, Edinburgh Scotland, UK",
     "period": "June 2023 – Nov 2024 ",
     "desc": "Project:Advanced Composites Manufacturing"
-    "logo": "./assets/images/UOE logo.png",
-    "logoInitials": "UOE"
   },
   {
     "role": "Senior Research Fellow",
     "org": "SRIC Indian Institute of Technology Kharagpur,  WB  India",
     "period": "March 2022 – March 2023",
     "desc": "Developed computational fluid labs",
-    "logo": "./assets/images/IITKgp.jpg",
-    "logoInitials": "IITKGP"
   },
   {
     "role": "Graduate Research Assistant",
     "org": "Indian Institute of Technology Kharagpur, WB  India",
     "period": "July 2016 – July 2022",
     "desc": "Experimental Mechanics, Micromechanics, Multiscale modeling, Textile composites"
-    "logo": "./assets/images/IITKgp.jpg",
-    "logoInitials": "IITKGP"
   }
 ],
 
