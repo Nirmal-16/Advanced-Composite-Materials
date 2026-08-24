@@ -34,12 +34,16 @@
     "institution": "Visvesvaraya Technological University, Belgaum",
     "year": "2015",
     "details": "Thesis:Numerical Analysis of Low-Velocity Impact on Fibre Reinforced Laminated Composite Plates.\\ Advisor: Prof. Shravankumar B Kerur"
+    "logo": "./assets/images/VTU Logo.png",
+    "logoInitials": "VTU"
   },
   {
     "degree": "B.E., Mechanical Engineering",
     "institution": "Visvesvaraya Technological University, Belgaum",
     "year": "2013",
     "details": "--"
+    "logo": "./assets/images/VTU Logo.png",
+    "logoInitials": "VTU"
   },
   {
     "degree": "Diploma., Mechanical Engineering",
@@ -69,7 +73,7 @@
     "org": "SRIC Indian Institute of Technology Kharagpur,  WB  India",
     "period": "March 2022 – March 2023",
     "desc": "Developed computational fluid labs",
-    "logo": "",
+    "logo": "./assets/images/IITKgp.jpg",
     "logoInitials": "IITKGP"
   },
   {
@@ -77,6 +81,8 @@
     "org": "Indian Institute of Technology Kharagpur, WB  India",
     "period": "July 2016 – July 2022",
     "desc": "Experimental Mechanics, Micromechanics, Multiscale modeling, Textile composites"
+    "logo": "./assets/images/IITKgp.jpg",
+    "logoInitials": "IITKGP"
   }
 ],
 
