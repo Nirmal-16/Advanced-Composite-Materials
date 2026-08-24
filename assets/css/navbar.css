@@ -23,19 +23,19 @@ header {
 }
 
 .brand {
-  width: 200px;
+  width: 240px;
 }
 
 .iit {
-  height: 72px;
+  height: 92px;
   width: auto;
-  max-width: 320px;
+  max-width: 380px;
   object-fit: contain;
   transition: height 0.3s ease;
 }
 
 header.scrolled .iit {
-  height: 56px;
+  height: 72px;
 }
 
 /* ---------- Desktop Nav ---------- */
@@ -267,6 +267,11 @@ nav.desktop-nav li:hover > .dropdown-content {
   .sidebar {
     display: block;
   }
+
+  .iit {
+    height: 80px;
+    max-width: 320px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -275,7 +280,14 @@ nav.desktop-nav li:hover > .dropdown-content {
   }
 
   .iit {
-    height: 54px;
-    max-width: 230px;
+    height: 68px;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iit {
+    height: 56px;
+    max-width: 200px;
   }
 }
