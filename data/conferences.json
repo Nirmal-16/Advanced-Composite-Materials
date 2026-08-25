@@ -3,6 +3,13 @@
   "description":"Explore our distinguished conference contributions that highlight pioneering research, collaborative innovation, and the global impact of our work in computational multiphysics and interdisciplinary scientific advancements."
 },
 "Conferences": [
+      {
+      "title": "Experimental and Numerical Characterisation of 5-Harness Satin Weave Composites With Void Defects Using ANN and Monte Carlo Simulation",
+      "authors": "Nagappa Siddgonde, and Anup Ghosh.",
+      "journal": "TEXCOMP-2026 Conference, 9-11 September 2026, Bristol Composites Institute (BCI), University Of Bristol, United Kingdom",
+      "citescore": "",
+      "ranking": ""
+    },
     {
       "title": "Investigation of Compressive and Interlaminar Fracture Properties of GF/Acrylic Thermoplastic Composites Under Sea Water Ageing Effect",
       "authors": "Nagappa Siddgonde, J. Quinn, A. Alapati, M. Devine, C. M. Ó Brádaigh and D. Ray.",
