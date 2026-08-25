@@ -22,12 +22,13 @@
     { "value": "4+", "label": "Research Projects" },
     { "value": "8+", "label": "Years of Excellence" }
   ],
+  
 "education": [
   {
     "degree": "PhD., Aerospace Engineering",
     "institution": "Indian Institute of Technology Kharagpur, West Bengal",
     "year": "2022",
-    "details": "Thesis: Experimental and Numerical Characterization of Woven Fabric Composites Considering Void Defects.      Advisor: Prof. Anup Ghosh"
+    "details": "Thesis: Experimental and Numerical Characterization of Woven Fabric Composites Considering Void Defects.   Advisor: Prof. Anup Ghosh"
   },
   {
     "degree": "M.Tech., Machine Design",
