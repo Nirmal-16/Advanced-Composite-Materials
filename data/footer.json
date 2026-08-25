@@ -1,6 +1,6 @@
 {
   "logoTitle": "Advanced Composite Materials and Structures Lab",
-  "description": "Innovating next-generation composite materials through research and innovation.",
+  "description": "Innovating next-generation composite materials through research and development.",
   "quickLinks": [
     { "label": "Home", "url": "./index.html" },
     { "label": "About", "url": "./about.html" },
@@ -14,7 +14,7 @@
     "phone": "+91-44-2257-4047",
     "socials": {
       "linkedin": "https://www.linkedin.com/in/nagappa-siddgonde-phd-442442a2/",
-      "g_scholar": "https://github.com"
+      "g_scholar": "https://scholar.google.com/citations?user=iaasYOwAAAAJ&hl=en"
     }
   },
   "map": {
