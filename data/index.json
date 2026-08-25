@@ -7,17 +7,17 @@
     },
     {
       "title": "Multiscale modeling",
-      "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
+      "description": "Bringing length scles from micro to macro to predict materials bahavior and structural performance.",
       "icon": "🔬"
     },
     {
       "title": "Fracture mechanics",
-      "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
+      "description": "Understanding crack initiation and propogation to improve damage tolerance and sfae design of composite materials andstructures.",
       "icon": "⚗️"
     },
     {
       "title": "Textile composites",
-      "description": "Exerci tation ullamcor suscipit lobortis nisl aliquip commodo.",
+      "description": "Designing and developing high operformance textile reinforced composites for light weight , durable nad sustainable applications.",
       "icon": "📄"
     }
   ],
