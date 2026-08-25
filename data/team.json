@@ -59,7 +59,7 @@
       "role": "Indian Institute of Technology Kharagpur",
       "image": "https://ui-avatars.com/api/?name=Anup+Ghosh&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "",
-      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:anup@aero.iitkgp.ac.in" }
+      "socials": { "linkedin": "#", "g_scholar": "https://scholar.google.com/citations?user=JvIGv_cAAAAJ&hl=en", "email": "mailto:anup@aero.iitkgp.ac.in" }
     },
     {
       "name": "Prof. M R Sunny",
