@@ -23,18 +23,23 @@
   ],
   "aboutSection": {
     "tag": "WHO ARE WE",
-    "title": "Best Medical Test Lab Solution.",
-    "description": "We provide reliable and innovative laboratory testing solutions with modern equipment and expert professionals delivering accurate results.",
+    "title": "Advanced Composite Materials & Structural Research.",
+    "description": "We develop and characterize next-generation composite materials and structures through advanced experimental, computational, and multiscale research approaches.",
     "features": [
       {
         "icon": "🧪",
-        "title": "Environmental Testing",
-        "text": "Accurate chemical and environmental analysis using advanced technologies."
+        "title": "Composite Materials & Manufacturing",
+        "text": "Advanced fabrication and processing of thermoset and thermoplastic composites using vacuum infusion, VARTM, RFI, autoclave curing, and related manufacturing techniques."
       },
       {
         "icon": "🔬",
-        "title": "Biological Evaluation",
-        "text": "Precision biological testing for reliable healthcare insights."
+        "title": "Experimental Mechanics & Characterization",
+        "text": "Comprehensive mechanical characterization of composite materials, including mechanical, thermal, fatigue, and fracture-mechanics testing."
+      },
+      {
+        "icon": "🔬",
+        "title": "Computational Mechanics",
+        "text": "Multiscale modelling, finite element analysis, progressive failure, and fracture mechanics of composite systems."
       }
     ],
     "images": [
