@@ -57,30 +57,30 @@
     {
       "name": "Prof. Anup Ghosh",
       "role": "Indian Institute of Technology Kharagpur",
-      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "image": "https://ui-avatars.com/api/?name=Anup+Ghosh&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "",
-      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:anup@aero.iitkgp.ac.in" }
     },
     {
       "name": "Prof. M R Sunny",
       "role": "Indian Institute of Technology Kharagpur",
-      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "image": "https://ui-avatars.com/api/?name=Mohemmad+Sunny&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "Short description of the collaboration.",
-      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:sunny@aero.iitkgp.ac.in" }
     },
     {
       "name": "Prof. Dipa Roy",
       "role": "The University of Edinburgh, Scotland UK",
-      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "image": "https://ui-avatars.com/api/?name=Dipa+Roy&&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "Short description of the collaboration.",
-      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:Dipa.Roy@ed.ac.uk" }
     },
     {
       "name": "Prof. Conchúr Ó Brádaigh",
       "role": "The University of Sheffield, England UK",
-      "image": "https://ui-avatars.com/api/?name=TODO&background=0d3b5e&color=ffffff&size=200&bold=true",
+      "image": "https://ui-avatars.com/api/?name=Conchur+Obradaigh&&background=0d3b5e&color=ffffff&size=200&bold=true",
       "description": "Short description of the collaboration.",
-      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:TODO@example.com" }
+      "socials": { "linkedin": "#", "g_scholar": "#", "email": "mailto:c.obradaigh@sheffield.ac.uk" }
     }
   ],
   "Stats": [
