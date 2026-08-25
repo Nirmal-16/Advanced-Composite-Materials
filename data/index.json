@@ -23,17 +23,17 @@
   ],
   "aboutSection": {
     "tag": "WHO ARE WE",
-    "title": "Advanced Composite Materials Structural Research.",
+    "title": "Advanced Composite Materials Lab.",
     "description": "We develop and characterize next-generation composite materials and structures through advanced experimental, computational, and multiscale research approaches.",
     "features": [
       {
         "icon": "🧪",
-        "title": "Composite Materials and Manufacturing",
+        "title": "Composites Manufacturing",
         "text": "Advanced fabrication and processing of thermoset and thermoplastic composites using vacuum infusion, VARTM, RFI, autoclave curing, and related manufacturing techniques."
       },
       {
         "icon": "🔬",
-        "title": "Experimental Mechanics and Characterization",
+        "title": "Experimental Mechanics",
         "text": "Comprehensive mechanical characterization of composite materials, including mechanical, thermal, fatigue, and fracture-mechanics testing."
       },
       {
