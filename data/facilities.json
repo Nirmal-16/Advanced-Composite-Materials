@@ -17,7 +17,7 @@
       "model": "Instron 8801",
       "category": "Mechanical",
       "icon": "graph-up",
-      "image": "",
+      "image": "./assets/images/IITKgp.jpg",
       "description": "Servo-hydraulic testing system for fatigue, tensile, compression and fracture testing of composite specimens.",
       "specs": [
         "Load capacity: ±100 kN",
