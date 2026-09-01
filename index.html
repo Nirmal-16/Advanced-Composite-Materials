@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/stats.css" />
+    <link rel="stylesheet" href="./assets/css/updates.css" />
     <link rel="stylesheet" href="./assets/css/testimonials.css" />
     <!-- Current Page Styling -->
     <script type="application/ld+json">
@@ -111,24 +112,40 @@
         </div>
       </div>
     </section>
-    <section class="testimonials-section reveal">
-      <div class="container">
-        <h2 class="section-title">Testimonials</h2>
+    <section class="updates-section reveal">
+      <div class="updates-container">
+        <h2 class="section-title">Blogs & Announcements</h2>
         <p class="section-subtitle">
-          What collaborators and students say about our research
+          Latest workshops, events, and updates from our research group
         </p>
 
-        <div class="testimonial-wrapper">
-          <div class="testimonial-track" id="testimonialTrack">
-            <div class="testimonial-card skeleton-block" aria-hidden="true"></div>
-            <div class="testimonial-card skeleton-block" aria-hidden="true"></div>
-            <div class="testimonial-card skeleton-block" aria-hidden="true"></div>
-          </div>
+        <div class="updates-grid" id="updatesGrid">
+          <div class="update-card skeleton-block" aria-hidden="true"></div>
+          <div class="update-card skeleton-block" aria-hidden="true"></div>
+          <div class="update-card skeleton-block" aria-hidden="true"></div>
         </div>
-
-        <div class="testimonial-dots" id="testimonialDots"></div>
       </div>
     </section>
+
+    <!-- Update details modal -->
+    <div class="update-modal-overlay" id="updateModalOverlay" role="dialog" aria-modal="true" aria-labelledby="updateModalTitle">
+      <div class="update-modal-box">
+        <button class="update-modal-close" id="updateModalClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+
+        <div class="update-modal-meta">
+          <span class="update-tag" id="updateModalTag"></span>
+          <span class="update-date" id="updateModalDate"></span>
+        </div>
+
+        <h2 class="update-modal-title" id="updateModalTitle"></h2>
+        <div class="update-modal-venue" id="updateModalVenue"></div>
+        <p class="update-modal-desc" id="updateModalDesc"></p>
+      </div>
+    </div>
     <section class="cta-section reveal">
       <div class="cta-container">
         <div class="cta-content">
@@ -289,7 +306,7 @@
       loadStats();
     </script>
 
-    <script type="module" src="./assets/js/testimonials.js"></script>
+    <script type="module" src="./assets/js/updates.js"></script>
 
     <!-- Particle canvas animation -->
     <script>

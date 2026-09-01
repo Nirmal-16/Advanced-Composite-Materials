@@ -118,24 +118,13 @@ nav.desktop-nav li:hover > .dropdown-content {
   color: var(--highlight);
 }
 
-/* ---------- Navbar Button ---------- */
+/* ---------- Navbar Logo (right) ---------- */
 
-.navbar-btn {
-  background-color: transparent;
-  color: var(--light-text);
-  font-weight: bold;
-  padding: 12px 24px;
-  border: 2px solid var(--grey-text);
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.navbar-btn:hover {
-  border-color: var(--highlight);
-  color: var(--highlight);
-  transform: scale(1.05);
+.iit-logo-right {
+  height: 88px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
 }
 
 /* ---------- Hamburger ---------- */
@@ -275,10 +264,6 @@ nav.desktop-nav li:hover > .dropdown-content {
 }
 
 @media (max-width: 768px) {
-  .navbar-btn {
-    display: none;
-  }
-
   .iit {
     height: 68px;
     max-width: 260px;

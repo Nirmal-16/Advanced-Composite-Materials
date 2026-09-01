@@ -1,0 +1,55 @@
+[
+  {
+    "type": "Announcement",
+    "title": "New PhD Positions Open for Spring 2027 Intake",
+    "description": "Applications are now open for research scholar positions in sustainable composites and structural health monitoring.",
+    "details": "The Advanced Composite Materials and Structures Lab is inviting applications for full-time PhD research scholar positions starting Spring 2027. Candidates should hold a Master's degree in Mechanical, Aerospace, or Materials Engineering with a strong interest in sustainable composites, structural health monitoring, or computational mechanics. Shortlisted applicants will be contacted for an interview and offered institute fellowship support.",
+    "date": "2026-08-20"
+  },
+  {
+    "type": "Workshop",
+    "title": "Hands-on Workshop: Composite Layup Techniques",
+    "description": "A two-day practical session covering hand layup, vacuum bagging, and quality inspection for fiber-reinforced composites.",
+    "details": "This two-day hands-on workshop introduced participants to industry-standard composite fabrication techniques, including wet layup, vacuum bagging, and autoclave curing. Sessions covered material selection, defect inspection using ultrasonic testing, and best practices for achieving consistent fiber-volume fraction. The workshop concluded with a live demonstration of a laminate panel build from start to finish.",
+    "date": "2026-08-10",
+    "venue": "ACMS Lab, Fabrication Facility"
+  },
+  {
+    "type": "Announcement",
+    "title": "ACMS Lab Receives DST Research Grant for Bio-Composites",
+    "description": "Our proposal on sustainable bio-based composite materials has been awarded funding by the Department of Science & Technology.",
+    "details": "The Department of Science & Technology has approved a three-year research grant supporting our proposal on sustainable, bio-based composite materials derived from natural fibers. The project will explore mechanical characterization, environmental degradation behavior, and scalable manufacturing routes, with the goal of offering viable alternatives to synthetic fiber composites in select structural applications.",
+    "date": "2026-08-02"
+  },
+  {
+    "type": "Blog",
+    "title": "Understanding Fiber-Matrix Interfacial Bonding",
+    "description": "A closer look at how interfacial adhesion governs the mechanical performance of fiber-reinforced composites.",
+    "details": "Interfacial bonding between fiber and matrix is one of the strongest predictors of a composite's mechanical performance under load. This post walks through the chemistry and mechanics of adhesion, common surface treatment methods such as silane coupling, and how interfacial failure modes show up in fractography. We close with a look at how our group models interfacial debonding computationally.",
+    "date": "2026-07-20"
+  },
+  {
+    "type": "Workshop",
+    "title": "Finite Element Modeling of Laminated Structures",
+    "description": "An applied session on simulating laminate behavior under mechanical and thermal loading using FEA tools.",
+    "details": "Participants worked through a guided FEA case study of a multi-layer composite laminate subjected to combined mechanical and thermal loading. The session covered laminate theory fundamentals, ply-by-ply stress recovery, and failure criteria including Tsai-Wu and Hashin, followed by a comparison of simulation results against experimental benchmark data from the lab.",
+    "date": "2026-06-28",
+    "venue": "Computational Mechanics Lab"
+  },
+  {
+    "type": "Event",
+    "title": "International Conference on Advanced Composites — Call for Papers",
+    "description": "Submissions are invited for the upcoming conference session on next-generation composite materials and structures.",
+    "details": "We are pleased to announce the call for papers for the upcoming International Conference on Advanced Composites, featuring a dedicated session on next-generation composite materials and structures organized by our group. Topics of interest include bio-based composites, multiscale modeling, structural health monitoring, and additive manufacturing of fiber-reinforced polymers. Full paper submission deadline and formatting guidelines are available on the conference page.",
+    "date": "2026-09-15",
+    "venue": "IIT Madras Convention Centre"
+  },
+  {
+    "type": "Event",
+    "title": "International Conference on Advanced Composites — Call for Papers",
+    "description": "Submissions are invited for the upcoming conference session on next-generation composite materials and structures.",
+    "details": "We are pleased to announce the call for papers for the upcoming International Conference on Advanced Composites, featuring a dedicated session on next-generation composite materials and structures organized by our group. Topics of interest include bio-based composites, multiscale modeling, structural health monitoring, and additive manufacturing of fiber-reinforced polymers. Full paper submission deadline and formatting guidelines are available on the conference page.",
+    "date": "2026-09-15",
+    "venue": "IIT Madras Convention Centre"
+  }
+]
