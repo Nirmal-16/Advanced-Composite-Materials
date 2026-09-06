@@ -5,6 +5,7 @@ const BASE_PATH = window.location.hostname.includes("github.io")
 // Tab definitions: label → category key in JSON
 const TABS = [
   { label: "All",          key: "all" },
+  { label: "Post Doc",     key: "postdoc" },
   { label: "PhD",          key: "phd" },
   { label: "MTech / MS",   key: "mtech" },
   { label: "UG / Dual",    key: "ug" },
@@ -46,26 +47,30 @@ document.addEventListener("DOMContentLoaded", () => {
       container.insertAdjacentElement("beforebegin", filterBar);
 
       // Icon set: Email, Google Scholar, Profile (LinkedIn) — used for student cards & collaborators
+      // Icons always render, even when a value is missing from the data — a
+      // missing link just falls back to "#" instead of hiding the icon.
       function compactSocialLinks(member) {
+        const s = member.socials || {};
         return `
-          <a href="${member.socials.email}" aria-label="Email"><i class="bi bi-envelope"></i></a>
-          <a href="${member.socials.g_scholar}" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <a href="${s.email || "#"}" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          <a href="${s.g_scholar || "#"}" target="_blank" rel="noopener" aria-label="Google Scholar">
             <svg class="gscholar-icon" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
               <title>Google Scholar icon</title>
               <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
             </svg>
           </a>
-          <a href="${member.socials.linkedin}" target="_blank" rel="noopener" aria-label="Profile"><i class="bi bi-linkedin"></i></a>
+          <a href="${s.linkedin || "#"}" target="_blank" rel="noopener" aria-label="Profile"><i class="bi bi-linkedin"></i></a>
         `;
       }
 
       // Icon set: ResearchGate, Email, LinkedIn, GitHub — default for team cards
       function fullSocialLinks(member) {
+        const s = member.socials || {};
         return `
-          <a href="${member.socials.researchGate}" target="_blank" rel="noopener" aria-label="ResearchGate">
+          <a href="${s.researchGate || "#"}" target="_blank" rel="noopener" aria-label="ResearchGate">
           <span class="researchgate-icon" aria-hidden="true"></span></a>
-          <a href="${member.socials.email}" aria-label="Email"><i class="bi bi-envelope"></i></a>
-          <a href="${member.socials.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="${s.email || "#"}" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          <a href="${s.linkedin || "#"}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
           <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
         `;
       }

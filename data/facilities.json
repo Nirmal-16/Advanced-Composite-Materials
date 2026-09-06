@@ -25,6 +25,7 @@
         "Temperature: -40°C to 250°C",
         "Digital image correlation ready"
       ],
+      "availabilityLabel": "Machine Available",
       "status": "Available"
     },
     {
@@ -40,6 +41,7 @@
         "Max pressure: 20 bar",
         "Multi-zone heating"
       ],
+      "availabilityLabel": "Machine Available",
       "status": "Available"
     },
     {
@@ -55,6 +57,7 @@
         "Sensitivity: 0.2 µW",
         "Auto-sampler available"
       ],
+      "availabilityLabel": "Machine Available",
       "status": "Available"
     },
     {
@@ -70,6 +73,7 @@
         "6-axis CNC control",
         "Compatible with glass, carbon, aramid"
       ],
+      "availabilityLabel": "Machine Available",
       "status": "Available"
     },
     {
@@ -85,6 +89,7 @@
         "Multiple laser lines (532/633/785 nm)",
         "Mapping and imaging mode"
       ],
+      "availabilityLabel": "Machine Available",
       "status": "Available"
     },
     {
@@ -100,6 +105,7 @@
         "512 GB RAM",
         "ABAQUS, ANSYS, LAMMPS licensed"
       ],
+      "availabilityLabel": "Machine Available",
       "status": "Available"
     },
     {
@@ -115,6 +121,7 @@
         "Frequency: 0.01–200 Hz",
         "Multiple clamp geometries"
       ],
+      "availabilityLabel": "Machine Available",
       "status": "Maintenance"
     }
   ],

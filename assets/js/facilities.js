@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((err) => console.error("Facilities load error:", err));
 });
 
-/* â”€â”€ Ribbon â”€â”€ */
+/* Ribbon */
 function renderRibbon({ title, description }) {
   document.getElementById("ribbonTitle").innerText = title;
   document.getElementById("ribbonDesc").innerText  = description;
 }
 
-/* â”€â”€ Stats bar â”€â”€ */
+/* Stats bar */
 function renderStats(stats) {
   const grid = document.getElementById("facStatsGrid");
   grid.innerHTML = stats.map(s => `
@@ -42,7 +42,7 @@ function renderStats(stats) {
   `).join("");
 }
 
-/* â”€â”€ Filter tabs (built from categories in data) â”€â”€ */
+/* Filter tabs (built from categories in data) */
 function renderFilters(equipment) {
   const categories = ["All", ...new Set(equipment.map(e => e.category))];
   const filterBar  = document.getElementById("facFilter");
@@ -64,7 +64,7 @@ function renderFilters(equipment) {
   });
 }
 
-/* â”€â”€ Filter logic â”€â”€ */
+/* Filter logic */
 function applyFilter(selected) {
   const cards  = document.querySelectorAll(".fac-card");
   const empty  = document.getElementById("facEmpty");
@@ -79,7 +79,7 @@ function applyFilter(selected) {
   empty.classList.toggle("hidden", visible > 0);
 }
 
-/* â”€â”€ Equipment cards â”€â”€ */
+/* Equipment cards */
 function renderEquipment(equipment) {
   const grid = document.getElementById("facGrid");
 
@@ -103,6 +103,7 @@ function renderEquipment(equipment) {
           ${item.model ? `<div class="fac-card-model">${item.model}</div>` : "."}
           <p class="fac-card-desc">${item.description}</p>
           <ul class="fac-specs">${specsHTML}</ul>
+          <div class="fac-status-label">${item.availabilityLabel || "Facility Availability"}</div>
           <div class="fac-status ${statusClass}">
             <span class="fac-status-dot"></span>
             ${item.status}
@@ -113,7 +114,7 @@ function renderEquipment(equipment) {
   }).join("");
 }
 
-/* â”€â”€ Info cards (access, safety, contact) â”€â”€ */
+/* Info cards (access, safety, contact) */
 function renderInfoCards(info) {
   const grid = document.getElementById("facInfoGrid");
 

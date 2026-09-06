@@ -249,8 +249,9 @@
               <div class="feature-card edu-card">
                 <div class="institution-logo edu-logo">${institutionLogo(e, e.institution)}</div>
                 <h5 style="font-weight: 1000;">${e.degree}</h5>
-                <p class="text-muted">${e.institution} • ${e.year}</p>
-                <small>${e.details}</small>
+                <p class="text-muted">${e.institution} – ${e.year}</p>
+                <small class="edu-details">${e.details}</small>
+                ${e.advisor ? `<small class="edu-advisor">${e.advisor}</small>` : ""}
               </div>
             </div>`)
           .join("");

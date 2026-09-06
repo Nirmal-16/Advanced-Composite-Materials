@@ -2,6 +2,7 @@
   "ongoing": [
     {
       "title": "AI-Driven Structural Health Monitoring for Smart Infrastructure",
+      "description": "Developing AI-based sensor fusion and predictive analytics to continuously monitor structural integrity of bridges, buildings and critical infrastructure in real time.",
       "duration": "Jan 2023 – Dec 2026",
       "funding": "₹ 85,00,000",
       "agency": "Department of Science & Technology (DST)",
@@ -10,6 +11,7 @@
     },
     {
       "title": "Nanomaterial-Based Biosensors for Early Cancer Detection",
+      "description": "Designing nanomaterial-enabled biosensor platforms for rapid, low-cost and highly sensitive detection of early-stage cancer biomarkers.",
       "duration": "Mar 2022 – Feb 2026",
       "funding": "₹ 1,20,00,000",
       "agency": "Indian Council of Medical Research (ICMR)",
@@ -17,6 +19,7 @@
     },
     {
       "title": "Sustainable Urban Mobility: IoT-Enabled Traffic Flow Optimization",
+      "description": "Building an IoT-enabled traffic management system that uses real-time data to reduce congestion and improve sustainable urban mobility.",
       "duration": "Jul 2023 – Jun 2027",
       "funding": "₹ 65,00,000",
       "agency": "Ministry of Electronics & IT (MeitY)",
@@ -25,6 +28,7 @@
     },
     {
       "title": "Deep Learning for Remote Sensing and Disaster Risk Assessment",
+      "description": "Applying deep learning to satellite and remote-sensing imagery for early disaster risk assessment and rapid post-disaster damage mapping.",
       "duration": "Sep 2022 – Aug 2025",
       "funding": "₹ 48,50,000",
       "agency": "ISRO Space Applications Centre",
@@ -32,6 +36,7 @@
     },
     {
       "title": "Hybrid Renewable Energy Systems for Rural Electrification",
+      "description": "Designing hybrid solar-wind-storage microgrid systems to deliver reliable, low-cost electrification to underserved rural communities.",
       "duration": "Apr 2024 – Mar 2027",
       "funding": "₹ 95,00,000",
       "agency": "Ministry of New & Renewable Energy (MNRE)",
@@ -39,6 +44,7 @@
     },
     {
       "title": "Federated Learning Framework for Privacy-Preserving Healthcare Analytics",
+      "description": "Developing a federated learning framework that enables collaborative healthcare analytics across institutions without sharing raw patient data.",
       "duration": "Jun 2023 – May 2026",
       "funding": "₹ 72,00,000",
       "agency": "Bill & Melinda Gates Foundation",
@@ -48,20 +54,23 @@
   "completed": [
     {
       "title": "Advanced Composites Manufacturing",
+      "description": "Investigated advanced manufacturing routes for high-performance fibre-reinforced composite structures, from layup to cure optimisation.",
       "duration": "June 2023 – Nov 2024",
       "funding": "--",
       "agency": "Engineering and Physical Sciences Research Council (EPSRC)",
-      "My Role": "Research Associate"
+      "role": "Research Associate"
     },
     {
       "title": "Fracture Control of CFRP Laminated Composites using Smart Materials Approach under Cryogenic Environmental Conditions",
+      "description": "Studied fracture behaviour and damage control of CFRP laminates embedded with smart materials under extreme cryogenic conditions.",
       "duration": "Mar 2022 – March 2023",
       "funding": "₹ 35,00,000",
       "agency": "Aeronautics Research & Development Board (AR&DB)",
-      "My Role": "SRF"
+      "role": "SRF"
     },
     {
       "title": "Sustainable Urban Mobility: IoT-Enabled Traffic Flow Optimization",
+      "description": "Delivered an IoT-enabled traffic management pilot that used real-time data to reduce congestion and improve urban mobility.",
       "duration": "Jul 2023 – Jun 2027",
       "funding": "₹ 65,00,000",
       "agency": "Ministry of Electronics & IT (MeitY)",

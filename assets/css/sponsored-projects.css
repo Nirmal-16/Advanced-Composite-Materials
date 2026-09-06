@@ -204,7 +204,7 @@ main {
 ════════════════════════════════ */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 26px;
 }
 
@@ -223,6 +223,9 @@ main {
               box-shadow var(--transition),
               border-color var(--transition);
   cursor: default;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .card::before {
   content: '';
@@ -283,12 +286,26 @@ main {
   font-weight: 700;
   color: var(--navy);
   line-height: 1.35;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   padding-right: 70px;
 }
 
-/*  Meta rows  */
-.card-meta  { display: flex; flex-direction: column; gap: 11px; }
+/*  Description paragraph  */
+.card-desc {
+  font-size: .88rem;
+  line-height: 1.6;
+  color: var(--text-mid);
+  margin-bottom: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+/*  Meta rows — pinned to the bottom of the card so cards with shorter
+    descriptions still line up evenly in a row  */
+.card-meta  { display: flex; flex-direction: column; gap: 11px; margin-top: auto; padding-top: 6px; }
 .meta-row   { display: flex; align-items: flex-start; gap: 11px; }
 .meta-icon {
   width: 30px;
@@ -322,33 +339,23 @@ main {
   line-height: 1.45;
 }
 
-/*  Divider  */
-.card-divider {
-  height: 1px;
-  background: var(--border);
-  margin: 18px 0;
+/*  Role rows (PI / Co-PI / project role) — rendered as extra .meta-row
+    entries in the same list as Duration/Funding/Agency, so the whole card
+    reads as one consistent list. Only the icon box colour distinguishes
+    the role type, instead of a separate cluster of pills.  */
+.meta-icon.role-icon-pi {
+  background: var(--navy);
+  border-color: var(--navy);
 }
+.meta-icon.role-icon-pi svg { color: var(--teal); }
 
-/*  Role pill  */
-.role-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 14px 5px 8px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  font-size: .8rem;
-  font-weight: 600;
-  color: var(--light-text);
-  letter-spacing: .03em;
-  margin-top:10px;
+.meta-icon.role-icon-copi {
+  background: var(--teal-dim);
+  border-color: var(--teal-border);
 }
-.role-pip {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--teal);
-}
+.meta-icon.role-icon-copi svg { color: #007b79; }
+
+.meta-icon.role-icon-other svg { color: var(--text-soft); }
 
 /* ════════════════════════════════
    EMPTY / LOADING / ERROR STATES
@@ -368,9 +375,6 @@ main {
 /* ════════════════════════════════
    RESPONSIVE
 ════════════════════════════════ */
-@media (max-width: 900px) {
-  .card-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-}
 @media (max-width: 700px) {
   .tab-btn   { padding: 10px 22px; font-size: .85rem; }
   .card-grid { grid-template-columns: 1fr; }

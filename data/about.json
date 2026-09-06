@@ -28,7 +28,8 @@
     "degree": "PhD., Aerospace Engineering",
     "institution": "Indian Institute of Technology Kharagpur, West Bengal",
     "year": "2022",
-    "details": "Thesis: Experimental and Numerical Characterization of Woven Fabric Composites Considering Void Defects.   Advisor: Prof. Anup Ghosh",
+    "details": "Thesis: Experimental and Numerical Characterization of Woven Fabric Composites Considering Void Defects.",
+    "advisor": "Advisor: Prof. Anup Ghosh",
     "logo": "./assets/images/IITKgp.jpg",
     "logoInitials": "IITKgp"
   },
@@ -36,7 +37,8 @@
     "degree": "M.Tech., Machine Design",
     "institution": "Visvesvaraya Technological University, Belgaum",
     "year": "2015",
-    "details": "Thesis:Numerical Analysis of Low-Velocity Impact on Fibre Reinforced Laminated Composite Plates.   Advisor: Prof. Shravankumar B Kerur",
+    "details": "Thesis: Numerical Analysis of Low-Velocity Impact on Fibre Reinforced Laminated Composite Plates.",
+    "advisor": "Advisor: Prof. Shravankumar B Kerur",
     "logo": "./assets/images/VTU Logo.png",
     "logoInitials": "VTU"
   },

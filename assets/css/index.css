@@ -34,6 +34,11 @@
   max-width: 100%; /* prevent overflow on small screens */
 }
 
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+
 /* ===============================
    SERVICES SECTION
 ================================= */
@@ -48,6 +53,11 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin-top: -220px;
+  align-items: stretch;
+}
+
+.services-container > .reveal {
+  height: 100%;
 }
 
 /* ===============================
@@ -120,6 +130,7 @@
 
 .about-content h2 {
   font-size: 42px;
+  font-weight: bolder;
   margin-bottom: 20px;
   color: var(--secondary);
 }

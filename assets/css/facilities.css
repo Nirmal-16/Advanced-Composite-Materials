@@ -129,7 +129,7 @@
 .fac-card-img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   background: #f1f5f9;
 }
@@ -224,16 +224,24 @@
   flex-shrink: 0;
 }
 
-/* Status badge */
+/* Status label + badge */
+.fac-status-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #009688;
+  letter-spacing: 0.3px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
 .fac-status {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 12px;
   font-weight: 600;
-  margin-top: auto;
-  padding-top: 12px;
-  border-top: 1px solid #f1f5f9;
+  margin-top: 6px;
 }
 
 .fac-status-dot {

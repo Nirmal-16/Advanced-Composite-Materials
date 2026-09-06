@@ -14,7 +14,9 @@
     "phone": "+91-44-2257-4047",
     "socials": {
       "linkedin": "https://www.linkedin.com/in/nagappa-siddgonde-phd-442442a2/",
-      "g_scholar": "https://scholar.google.com/citations?user=iaasYOwAAAAJ&hl=en"
+      "g_scholar": "https://scholar.google.com/citations?user=iaasYOwAAAAJ&hl=en",
+      "researchgate": "#",
+      "twitter": "#"
     }
   },
   "map": {
@@ -23,6 +25,6 @@
   },
   "instituteLogo": "./assets/images/IIT_Madras_Logo.svg.png",
   "labLogo": "./assets/images/brand_logo_1.png",
-  "copyright": "© 2026 Advanced Composite Materials and Structures Lab(ACMS Lab). All rights reserved."
+  "copyright": "Advanced Composite Materials and Structures Lab (ACMS Lab). All rights reserved."
 }
  

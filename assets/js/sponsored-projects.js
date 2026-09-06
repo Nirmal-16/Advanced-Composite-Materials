@@ -31,6 +31,12 @@ const icons = {
     <path d="M2 12l10 5 10-5"/>
   </svg>`,
 
+  person: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="4"/>
+    <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/>
+  </svg>`,
+
   empty: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/>
@@ -39,10 +45,56 @@ const icons = {
   </svg>`
 };
 
+/* Split a role string like "Co-PI : Nagappa" into a { label, value } pair,
+   and colour it by whatever the text actually says rather than which JSON
+   field it came from — some entries carry a bare role word (e.g. "Co-PI")
+   in the wrong field, and trusting the field name alone would mislabel and
+   miscolour those chips. */
+function parseRole(raw, fallbackVariant, fallbackLabel) {
+  if (!raw) return null;
+  const trimmed = raw.trim();
+  const i = trimmed.indexOf(':');
+  const label = i > -1 ? trimmed.slice(0, i).trim() : null;
+  const value = i > -1 ? trimmed.slice(i + 1).trim() : trimmed;
+
+  const probe = `${label || ''} ${value}`.toLowerCase();
+  let variant = fallbackVariant;
+  if (/co-?pi|co-?principal/.test(probe)) variant = 'copi';
+  else if (/\bpi\b|principal investigator/.test(probe)) variant = 'pi';
+
+  // A bare role keyword with no name attached (e.g. raw === "PI") — show it
+  // on its own instead of pairing it with a label that may not fit it.
+  const bareKeyword = !label && /^(pi|co-pi|role)$/i.test(value);
+
+  return { label: bareKeyword ? null : (label || fallbackLabel), value, variant };
+}
+
+/* Renders a PI/Co-PI/role entry as one more row in the same meta list as
+   Duration/Funding/Agency, so the card reads as a single consistent list
+   instead of a separate pill/chip cluster. Colour lives on the icon box. */
+function roleMetaRow(entry) {
+  if (!entry?.value) return '';
+  return `
+    <div class="meta-row">
+      <div class="meta-icon role-icon-${entry.variant}">${icons.person}</div>
+      <div class="meta-text">
+        <span class="meta-label">${entry.label || 'Investigator'}</span>
+        <span class="meta-value">${entry.value}</span>
+      </div>
+    </div>`;
+}
+
 /* single project card  */
 function buildCard(project, type) {
   const badgeClass = type === 'ongoing' ? 'badge-ongoing' : 'badge-completed';
   const badgeLabel = type === 'ongoing' ? 'Ongoing'       : 'Completed';
+
+  const pi   = parseRole(project.pi,   'pi',   'Principal Investigator');
+  const coPi = parseRole(project.coPi, 'copi', 'Co-Principal Investigator');
+  const role = parseRole(project.role, 'other','Project Role');
+  const roleRowsHTML = [roleMetaRow(pi), roleMetaRow(coPi), roleMetaRow(role)]
+    .filter(Boolean)
+    .join('');
 
   return `
     <article class="card">
@@ -51,6 +103,8 @@ function buildCard(project, type) {
       <div class="card-icon">${icons.cardIcon}</div>
 
       <h3 class="card-title">${project.title}</h3>
+
+      ${project.description ? `<p class="card-desc">${project.description}</p>` : ''}
 
       <div class="card-meta">
 
@@ -78,20 +132,9 @@ function buildCard(project, type) {
           </div>
         </div>
 
+        ${roleRowsHTML}
+
       </div><!-- /.card-meta -->
-
-      <div class="card-divider"></div>
-
-      ${project.pi ? `
-      <div class="role-pill">
-        <span class="role-pip"></span>
-        ${project.pi}
-      </div>` : ''}
-      ${project.coPi ? `
-      <div class="role-pill">
-        <span class="role-pip"></span>
-        ${project.coPi}
-      </div>` : ''}
     </article>`;
 }
 
