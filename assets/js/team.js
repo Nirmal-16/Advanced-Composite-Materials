@@ -180,17 +180,27 @@ document.addEventListener("DOMContentLoaded", () => {
         statsGrid.appendChild(item);
       });
 
-      /* ── Logos ── */
-      const logoContainer = document.getElementById("clientsContainer");
-      data.Logo.forEach(client => {
+      /* ── Logos (rendered twice back-to-back for a seamless, gapless
+             marquee loop — see .clients-track's translateX(-50%) animation) ── */
+      function buildLogoCard(client, isClone) {
         const a = document.createElement("a");
         a.href = client.url;
         a.classList.add("client-card");
         a.target = "_blank";
         a.rel = "noopener noreferrer";
         a.innerHTML = `<img src="${client.logo}" alt="${client.name} logo" loading="lazy">`;
-        logoContainer.appendChild(a);
-      });
+        if (isClone) {
+          // Hide the duplicated set from assistive tech / keyboard nav so
+          // screen readers and tab order don't see each logo twice.
+          a.setAttribute("aria-hidden", "true");
+          a.tabIndex = -1;
+        }
+        return a;
+      }
+
+      const logoContainer = document.getElementById("clientsContainer");
+      data.Logo.forEach(client => logoContainer.appendChild(buildLogoCard(client, false)));
+      data.Logo.forEach(client => logoContainer.appendChild(buildLogoCard(client, true)));
 
       /* ── Expertise ── */
       const expertContainer = document.getElementById("expertiseContainer");

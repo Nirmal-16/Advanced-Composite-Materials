@@ -288,11 +288,34 @@ hr {
   color: #111;
 }
 
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+/* Full-bleed viewport for the ticker, with a soft fade at each edge */
+.clients-marquee {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+/* Track holds the logo set twice back-to-back (see team.js) so that
+   scrolling exactly 50% of its width loops seamlessly with no gap or jump */
+.clients-track {
+  display: flex;
+  width: max-content;
   gap: 30px;
-  align-items: center;
+  animation: clients-scroll 26s linear infinite;
+}
+
+.clients-marquee:hover .clients-track {
+  animation-play-state: paused;
+}
+
+@keyframes clients-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clients-track { animation: none; }
 }
 
 .client-card {
@@ -304,7 +327,9 @@ hr {
   justify-content: center;
   align-items: center;
   filter: grayscale(100%);
-  transition: all 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
+  width: 180px;
 }
 
 .client-card:hover {
@@ -396,7 +421,7 @@ hr {
 
 /* Large tablet */
 @media (max-width: 992px) {
-  .clients-grid {
+  .clients-track {
     gap: 20px;
   }
 }
@@ -440,6 +465,7 @@ hr {
 /* Mobile */
 @media (max-width: 576px) {
   .client-card {
+    width: 140px;
     padding: 20px;
   }
 
