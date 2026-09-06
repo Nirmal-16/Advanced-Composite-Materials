@@ -227,7 +227,9 @@
                 <h5 class="mt-3">${t.name}</h5>
                 <p class="text-dark">${t.role}</p>
                 <p class="text-muted">${t.bio}</p>
-                <button class="d-block founder-btn">View CV</button>
+                ${t.cv
+                  ? `<a class="d-block founder-btn" href="${t.cv}" target="_blank" rel="noopener">View CV</a>`
+                  : `<button class="d-block founder-btn" disabled>View CV</button>`}
                 <button class="d-block founder-btn founder-btn1 highlight contact-btn">Get Connect</button>
               </div>
             </div>`)

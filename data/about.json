@@ -13,7 +13,7 @@
   ],
 
   "founder": [
-    { "initial": "D", "name": "Dr. Nagappa Siddgonde", "role": "Director & PI", "bio": "Ph.D in Advanced Composite Materials, 10+ years research." }
+    { "initial": "D", "name": "Dr. Nagappa Siddgonde", "role": "Director & PI", "bio": "Ph.D in Advanced Composite Materials, 10+ years research.", "cv": "./assets/images/Nagappa_CV.pdf" }
   ],
 
   "stats": [
